@@ -1,0 +1,8 @@
+﻿  Student.cpp
+D:\Users\Lenovo\Desktop\C++\黑马程序员\机房预约系统\机房预约系统\globalFile.h(1,1): warning C4828: 文件包含在偏移 0xe0 处开始的字符，该字符在当前源字符集中无效(代码页 936)。
+  Teacher.cpp
+D:\Users\Lenovo\Desktop\C++\黑马程序员\机房预约系统\机房预约系统\globalFile.h(1,1): warning C4828: 文件包含在偏移 0xe0 处开始的字符，该字符在当前源字符集中无效(代码页 936)。
+  机房预约系统.cpp
+D:\Users\Lenovo\Desktop\C++\黑马程序员\机房预约系统\机房预约系统\globalFile.h(1,1): warning C4828: 文件包含在偏移 0xe0 处开始的字符，该字符在当前源字符集中无效(代码页 936)。
+  正在生成代码...
+  机房预约系统.vcxproj -> D:\Users\Lenovo\Desktop\C++\黑马程序员\机房预约系统\x64\Debug\机房预约系统.exe

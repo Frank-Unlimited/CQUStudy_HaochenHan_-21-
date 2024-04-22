@@ -1,0 +1,23 @@
+﻿  SpeechManager.cpp
+D:\Users\Lenovo\Desktop\C++\黑马程序员\基于stl的比赛流程管理系统（vs）\基于stl的比赛流程管理系统（vs）\SpeechManager.cpp(210,31): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+D:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\numeric(34,26): warning C4244: “=”: 从“double”转换到“_Ty”，可能丢失数据
+          with
+          [
+              _Ty=float
+          ]
+D:\Program Files\Microsoft Visual Studio\2022\Community\VC\Tools\MSVC\14.32.31326\include\numeric(41): message : 查看对正在编译的函数 模板 实例化“_Ty std::accumulate<_InIt,_Ty,std::plus<void>>(const _InIt,const _InIt,_Ty,_Fn)”的引用
+          with
+          [
+              _Ty=float,
+              _InIt=std::_Deque_iterator<std::_Deque_val<std::_Deque_simple_types<double>>>,
+              _Fn=std::plus<void>
+          ]
+D:\Users\Lenovo\Desktop\C++\黑马程序员\基于stl的比赛流程管理系统（vs）\基于stl的比赛流程管理系统（vs）\SpeechManager.cpp(100): message : 查看对正在编译的函数 模板 实例化“_Ty std::accumulate<std::_Deque_iterator<std::_Deque_val<std::_Deque_simple_types<double>>>,float>(const _InIt,const _InIt,_Ty)”的引用
+          with
+          [
+              _Ty=float,
+              _InIt=std::_Deque_iterator<std::_Deque_val<std::_Deque_simple_types<double>>>
+          ]
+  main函数.cpp
+  正在生成代码...
+  基于stl的比赛流程管理系统（vs）.vcxproj -> D:\Users\Lenovo\Desktop\C++\黑马程序员\基于stl的比赛流程管理系统（vs）\x64\Debug\基于stl的比赛流程管理系统（vs）.exe

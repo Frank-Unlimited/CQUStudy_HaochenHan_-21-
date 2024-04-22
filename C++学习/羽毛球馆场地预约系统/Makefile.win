@@ -1,0 +1,40 @@
+# Project: 羽毛球馆场地预约系统
+# Makefile created by Dev-C++ 5.11
+
+CPP      = g++.exe -D__DEBUG__
+CC       = gcc.exe -D__DEBUG__
+WINDRES  = windres.exe
+OBJ      = 预约系统.o Manager.o User.o Boss.o Court.o
+LINKOBJ  = 预约系统.o Manager.o User.o Boss.o Court.o
+LIBS     = -L"D:/Program Files (x86)/Dev-Cpp/MinGW64/lib" -L"D:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc -g3
+INCS     = -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include"
+CXXINCS  = -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/include" -I"D:/Program Files (x86)/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include"
+BIN      = 羽毛球馆场地预约系统.exe
+CXXFLAGS = $(CXXINCS) -g3
+CFLAGS   = $(INCS) -g3
+RM       = rm.exe -f
+
+.PHONY: all all-before all-after clean clean-custom
+
+all: all-before $(BIN) all-after
+
+clean: clean-custom
+	${RM} $(OBJ) $(BIN)
+
+$(BIN): $(OBJ)
+	$(CPP) $(LINKOBJ) -o $(BIN) $(LIBS)
+
+预约系统.o: 预约系统.cpp
+	$(CPP) -c 预约系统.cpp -o 预约系统.o $(CXXFLAGS)
+
+Manager.o: Manager.cpp
+	$(CPP) -c Manager.cpp -o Manager.o $(CXXFLAGS)
+
+User.o: User.cpp
+	$(CPP) -c User.cpp -o User.o $(CXXFLAGS)
+
+Boss.o: Boss.cpp
+	$(CPP) -c Boss.cpp -o Boss.o $(CXXFLAGS)
+
+Court.o: Court.cpp
+	$(CPP) -c Court.cpp -o Court.o $(CXXFLAGS)
