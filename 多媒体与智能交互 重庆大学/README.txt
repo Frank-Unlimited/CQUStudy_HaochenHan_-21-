@@ -9,3 +9,5 @@
 用PS制作一个好看的海报，包会！全是图 - winter号的文章 - 知乎
 https://zhuanlan.zhihu.com/p/693942828
 
+语音控制智能交互【贾维斯】制造记录和未来畅想 - winter号的文章 - 知乎
+https://zhuanlan.zhihu.com/p/700694305
