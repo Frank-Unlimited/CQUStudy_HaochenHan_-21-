@@ -1,0 +1,44 @@
+2025-01-04 11:08:27,324 INFO [PUSH-SUCC] 231ms, all delay time 839ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='product-service', ephemeral=true, revision=1}, originalSize=1, DataSize=1
+
+2025-01-04 11:09:53,213 INFO [PUSH-SUCC] 3ms, all delay time 575ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='user-service', ephemeral=true, revision=1}, originalSize=1, DataSize=1
+
+2025-01-04 11:16:58,046 INFO [PUSH-SUCC] 4ms, all delay time 552ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='order-service', ephemeral=true, revision=0}, originalSize=0, DataSize=0
+
+2025-01-04 11:37:17,325 INFO [PUSH-SUCC] 14ms, all delay time 522ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='product-service', ephemeral=true, revision=3}, originalSize=1, DataSize=1
+
+2025-01-04 11:49:03,892 INFO [PUSH-SUCC] 11ms, all delay time 540ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='product-service', ephemeral=true, revision=5}, originalSize=1, DataSize=1
+
+2025-01-04 11:53:04,114 INFO [PUSH-SUCC] 25ms, all delay time 566ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='product-service', ephemeral=true, revision=5}, originalSize=1, DataSize=1
+
+2025-01-04 11:54:05,454 INFO [PUSH-SUCC] 26ms, all delay time 541ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='product-service', ephemeral=true, revision=7}, originalSize=1, DataSize=1
+
+2025-01-04 12:27:24,927 INFO [PUSH-SUCC] 27ms, all delay time 540ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='product-service', ephemeral=true, revision=1}, originalSize=1, DataSize=1
+
+2025-01-04 12:27:44,885 INFO [PUSH-SUCC] 9ms, all delay time 614ms, SLA 614ms, Service{namespace='public', group='DEFAULT_GROUP', name='product-service', ephemeral=true, revision=2}, originalSize=0, DataSize=0, target=192.168.154.1
+
+2025-01-04 12:27:55,592 INFO [PUSH-SUCC] 5ms, all delay time 588ms, SLA 588ms, Service{namespace='public', group='DEFAULT_GROUP', name='product-service', ephemeral=true, revision=3}, originalSize=1, DataSize=1, target=192.168.154.1
+
+2025-01-04 12:29:20,175 INFO [PUSH-SUCC] 6ms, all delay time 529ms, SLA 529ms, Service{namespace='public', group='DEFAULT_GROUP', name='product-service', ephemeral=true, revision=4}, originalSize=0, DataSize=0, target=192.168.154.1
+
+2025-01-04 12:29:30,198 INFO [PUSH-SUCC] 9ms, all delay time 580ms, SLA 580ms, Service{namespace='public', group='DEFAULT_GROUP', name='product-service', ephemeral=true, revision=5}, originalSize=1, DataSize=1, target=192.168.154.1
+
+2025-01-04 12:30:15,211 INFO [PUSH-SUCC] 18ms, all delay time 531ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='product-service', ephemeral=true, revision=7}, originalSize=1, DataSize=1
+
+2025-01-04 12:30:22,260 INFO [PUSH-SUCC] 9ms, all delay time 555ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='user-service', ephemeral=true, revision=21}, originalSize=1, DataSize=1
+
+2025-01-04 12:31:59,607 INFO [PUSH-SUCC] 16ms, all delay time 517ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='user-service', ephemeral=true, revision=23}, originalSize=1, DataSize=1
+
+2025-01-04 12:42:02,652 INFO [PUSH-SUCC] 25ms, all delay time 594ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='user-service', ephemeral=true, revision=27}, originalSize=1, DataSize=1
+
+2025-01-04 12:42:47,692 INFO [PUSH-SUCC] 5ms, all delay time 561ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='product-service', ephemeral=true, revision=13}, originalSize=1, DataSize=1
+
+2025-01-04 12:48:22,132 INFO [PUSH-SUCC] 19ms, all delay time 587ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='product-service', ephemeral=true, revision=1}, originalSize=1, DataSize=1
+
+2025-01-04 12:49:59,008 INFO [PUSH-SUCC] 16ms, all delay time 607ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='product-service', ephemeral=true, revision=3}, originalSize=1, DataSize=1
+
+2025-01-04 12:56:04,550 INFO [PUSH-SUCC] 15ms, all delay time 518ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='product-service', ephemeral=true, revision=1}, originalSize=1, DataSize=1
+
+2025-01-04 12:56:22,150 INFO [PUSH-SUCC] 5ms, all delay time 509ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='user-service', ephemeral=true, revision=1}, originalSize=1, DataSize=1
+
+2025-01-04 12:56:23,961 INFO [PUSH-SUCC] 4ms, all delay time 572ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='order-service', ephemeral=true, revision=0}, originalSize=0, DataSize=0
+

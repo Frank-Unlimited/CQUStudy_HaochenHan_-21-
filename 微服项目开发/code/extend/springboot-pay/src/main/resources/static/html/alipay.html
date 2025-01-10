@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>支付宝支付页</title>
+    <script src="../js/jquery.1.8.3.min.js"></script>
+    <script src="../js/jquery.qrcode.min.js"></script>
+    <script src="../js/getParameter.js"></script>
+    <script>
+        $(function () {
+            // 获得返回数据
+            var parameter = getParameter("data");
+            // 讲数据转码后转换成json
+            var data= JSON.parse(decodeURI(parameter));
+            console.log(data);
+            var paymenttype=data.data.paymenttype;
+            var orderId=data.data.orderId;
+            var logId=data.data.logId;
+            var total_fee=data.data.total_fee;// 支付宝返回的是元
+            var url=data.data.code_url;
+            $("#orderId").html(orderId+",订单金额: "+total_fee+"元,请及时支付订单...");
+            if(paymenttype=="2"){
+                // 生成二维码
+                createQRCode(url);
+                findStatus(logId,orderId);
+            }
+        });
+
+        function createQRCode(url) {
+            $('#qrcode').makeQRCode({
+                render:'image', //渲染模式,取值:canvas / image / div
+                ecLevel:'M', //容错级别, 取值: L:7% / M:15% / Q:25% / H:30%
+                minVersion:6 , //二维码密度, 取值: 0-10
+                fill:'#666', //二维码颜色
+                background:'#fff', //二维码背景颜色
+                text:url, //扫码时获取到的值
+                size:300, //二维码大小,单位是像素
+                radius:0, //圆滑度,取值50以内
+                quiet:4, //二维码边框
+            });
+
+        }
+        function findStatus(logId,orderId) {
+            $.post("/order/findAliPayStatus",{logId:logId,orderId:orderId},function (data) {
+                if(data.flag==false&&data.data==2){// 支付发送错误
+                    $('#qrcode').hide();
+                    $('#errormsg').html(data.msg);
+                }
+                if(data.flag==false&&data.data==3){// 二维码超时
+                    reLoad(logId,orderId);
+                    //重新放ajax请求
+                }else{
+                    window.location="/html/success.html"
+                }
+            });
+        }
+        function reLoad(logId,orderId) {
+            $.post("/order/alipayreload",{logId:logId,orderId:orderId},function (data) {
+                if(data.flag==false&&data.data=="1"){
+                    window.location="/html/success.html"
+                }else if(data.flag==false&&data.data=="2"){
+                    $('#qrcode').hide();
+                    $('#errormsg').html(data.msg);
+                } else{
+                    var orderId2=data.data.orderId;
+                    var logId2=data.data.logId;
+                    var total_fee=data.data.total_fee;
+                    var url2=data.data.code_url;
+                    createQRCode(url2);
+                    console.log(url2,logId2,orderId2)
+                    findStatus(logId2,orderId2);
+                }
+            });
+
+        }
+
+    </script>
+</head>
+<body>
+<h4 style="text-align: center">订单提交成功，请您打开支付宝扫描及时付款！订单号：<span id="orderId"></span></h4>
+<div style="text-align:center" id="qrcode"></div><br>
+<div id="errormsg" style="text-align: center;margin: auto"  ></div>
+</body>
+</html>

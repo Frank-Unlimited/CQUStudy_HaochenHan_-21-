@@ -1,0 +1,18 @@
+2025-01-09 21:16:26,338 INFO [PUSH-SUCC] 226ms, all delay time 783ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='product-service', ephemeral=true, revision=1}, originalSize=1, DataSize=1
+
+2025-01-09 21:17:03,879 INFO [PUSH-SUCC] 6ms, all delay time 608ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='user-service', ephemeral=true, revision=1}, originalSize=1, DataSize=1
+
+2025-01-09 21:17:24,828 INFO [PUSH-SUCC] 4ms, all delay time 518ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='order-service', ephemeral=true, revision=1}, originalSize=1, DataSize=1
+
+2025-01-09 21:43:07,557 INFO [PUSH-SUCC] 12ms, all delay time 521ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='product-service', ephemeral=true, revision=1}, originalSize=1, DataSize=1
+
+2025-01-09 21:43:13,226 INFO [PUSH-SUCC] 3ms, all delay time 610ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='user-service', ephemeral=true, revision=1}, originalSize=1, DataSize=1
+
+2025-01-09 21:43:21,224 INFO [PUSH-SUCC] 3ms, all delay time 591ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='order-service', ephemeral=true, revision=1}, originalSize=1, DataSize=1
+
+2025-01-09 21:43:24,983 INFO [PUSH-SUCC] 8ms, all delay time 595ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='product-service', ephemeral=true, revision=1}, originalSize=1, DataSize=1
+
+2025-01-09 21:43:30,942 INFO [PUSH-SUCC] 1ms, all delay time 576ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='user-service', ephemeral=true, revision=1}, originalSize=1, DataSize=1
+
+2025-01-09 21:44:56,372 INFO [PUSH-SUCC] 4ms, all delay time 545ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='order-service', ephemeral=true, revision=1}, originalSize=1, DataSize=1
+

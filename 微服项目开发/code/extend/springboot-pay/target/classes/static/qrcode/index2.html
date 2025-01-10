@@ -1,0 +1,33 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta charset="UTF-8">
+<!-- 1.导入js文件 -->
+<script type="text/javascript" src="../js/jquery.1.8.3.min.js"></script>
+<script type="text/javascript" src="../js/jquery.qrcode.min.js"></script>
+</head>
+
+<body>
+<!-- 2.隐藏的logo图片 -->
+	<img src="../img/itcast.png" id="img" style="display:none"/>
+	<!-- 2.提供一个div用于显示二维码 -->
+	<div style="text-align:center" id="qrcode"></div>
+</body>
+<!-- 3.使用qrcode.js生成二维码 -->
+<script type="text/javascript">
+	$('#qrcode').makeQRCode({
+		render:'canvas', //渲染模式,取值:canvas / image / div
+		ecLevel:'H', //容错级别, 取值: L:7% / M:15% / Q:25% / H:30% 
+		minVersion:6 , //二维码密度, 取值: 0-10
+		fill:'#911c00', //二维码颜色
+		background:'#fdffff', //二维码背景颜色
+		text:'扫我...再扫我....', //扫码时获取到的值
+		size:300, //二维码大小,单位是像素
+		radius:20, //圆滑度,取值50以内
+		quiet:4, //二维码边框
+		mode:4, //显示模式, 取值: 不显示LOGO:0 / 文字且占整行:1 / 文字居中:2 / 图片且占整行:3 / 图片居中:4
+		mSize:10 //logo大小
+		,image:$("#img")[0] // 需要将 mode  改为3或者4  render 改为 canvas
+	});
+</script>
+</html>

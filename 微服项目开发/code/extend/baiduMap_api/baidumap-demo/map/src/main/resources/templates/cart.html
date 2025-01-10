@@ -1,0 +1,421 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <title>购物车页面</title>-->
+<!--    <style>-->
+<!--        /* 设置整个页面居中 */-->
+<!--        body {-->
+<!--            display: flex;-->
+<!--            flex-direction: column; /* 垂直方向排列 */-->
+<!--            align-items: center; /* 水平居中 */-->
+<!--            justify-content: center; /* 垂直居中 */-->
+<!--            min-height: 100vh; /* 占满整个视口高度 */-->
+<!--            margin: 0;-->
+<!--            font-family: Arial, sans-serif;-->
+<!--            background-color: #f8f9fa; /* 设置背景色 */-->
+<!--        }-->
+
+<!--        /* 标题样式 */-->
+<!--        h1 {-->
+<!--            text-align: center;-->
+<!--            color: #333;-->
+<!--            margin-bottom: 5px;-->
+<!--        }-->
+
+<!--        /* 地图容器的样式 */-->
+<!--        #map {-->
+<!--            width: 660px;-->
+<!--            height: 440px;-->
+<!--            margin: 5px 0;-->
+<!--            border: 2px solid #ddd;-->
+<!--            border-radius: 8px;-->
+<!--        }-->
+
+<!--        /* 地址显示样式 */-->
+<!--        #address {-->
+<!--            font-weight: bold;-->
+<!--            color: #007BFF; /* 地址字体颜色 */-->
+<!--        }-->
+
+<!--        /* 按钮的样式 */-->
+<!--        button {-->
+<!--            background-color: #007BFF; /* 浅蓝色背景 */-->
+<!--            color: white; /* 白色文字 */-->
+<!--            border: none;-->
+<!--            padding: 10px 20px;-->
+<!--            margin: 10px;-->
+<!--            border-radius: 5px;-->
+<!--            cursor: pointer;-->
+<!--            font-size: 14px;-->
+<!--        }-->
+
+<!--        button:hover {-->
+<!--            background-color: #0056b3; /* 鼠标悬浮时变深蓝 */-->
+<!--        }-->
+
+<!--        /* 弹框样式 */-->
+<!--        #usedAddressesModal {-->
+<!--            display: none; /* 默认隐藏 */-->
+<!--            position: fixed;-->
+<!--            top: 50%;-->
+<!--            left: 50%;-->
+<!--            transform: translate(-50%, -50%);-->
+<!--            width: 400px;-->
+<!--            background: #fff;-->
+<!--            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);-->
+<!--            border-radius: 10px;-->
+<!--            z-index: 1000;-->
+<!--            padding: 20px;-->
+<!--            text-align: center;-->
+<!--        }-->
+
+<!--        /* 弹框中的列表样式 */-->
+<!--        #usedAddressesList {-->
+<!--            list-style-type: none;-->
+<!--            padding: 0;-->
+<!--            margin: 20px 0;-->
+<!--            text-align: left;-->
+<!--        }-->
+
+<!--        #usedAddressesList li {-->
+<!--            background: #f9f9f9;-->
+<!--            padding: 10px;-->
+<!--            margin: 5px 0;-->
+<!--            border-radius: 5px;-->
+<!--            font-family: Arial, sans-serif;-->
+<!--        }-->
+
+<!--        #usedAddressesList li:hover {-->
+<!--            background: #f0f0f0;-->
+<!--        }-->
+
+<!--        /* 遮罩层样式 */-->
+<!--        #modalOverlay {-->
+<!--            display: none;-->
+<!--            position: fixed;-->
+<!--            top: 0;-->
+<!--            left: 0;-->
+<!--            width: 100%;-->
+<!--            height: 100%;-->
+<!--            background: rgba(0, 0, 0, 0.5);-->
+<!--            z-index: 999;-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h1>购物车页面</h1>-->
+<!--<p>-->
+<!--    请选择您的收货地址:-->
+<!--    <span id="address">点击地图获取地址</span>-->
+<!--    <button id="saveAddressBtn">确定</button> &lt;!&ndash; 确定按钮 &ndash;&gt;-->
+<!--</p>-->
+<!--<div id="map"></div>-->
+<!--<button id="UsedAddressBtn">常用地址</button>-->
+
+<!--&lt;!&ndash; 弹框：常用地址 &ndash;&gt;-->
+<!--<div id="modalOverlay"></div>-->
+<!--<div id="usedAddressesModal">-->
+<!--    <h2>常用地址</h2>-->
+<!--    <ul id="usedAddressesList"></ul>-->
+<!--    <button id="closeModalBtn">关闭</button>-->
+<!--</div>-->
+
+<!--&lt;!&ndash; 配置高德地图安全密钥 &ndash;&gt;-->
+<!--<script type="text/javascript">-->
+<!--    window._AMapSecurityConfig = {-->
+<!--        securityJsCode: "06cb26d38eac33cb9ed2fc87523579f8" // 替换为你的安全密钥-->
+<!--    };-->
+<!--</script>-->
+
+<!--&lt;!&ndash; 高德地图 JS API &ndash;&gt;-->
+<!--<script type="text/javascript" src="https://webapi.amap.com/maps?v=2.0&key=b9214bd34078409cd624052cfa02655f"></script>-->
+
+<!--<script>-->
+<!--    // 初始化地图-->
+<!--    var map = new AMap.Map('map', {-->
+<!--        resizeEnable: true,-->
+<!--        zoom: 13 // 设置默认缩放级别-->
+<!--    });-->
+
+<!--    // 在地图上添加标记点-->
+<!--    var marker = new AMap.Marker();-->
+<!--    marker.setMap(map);-->
+
+<!--    // 定义全局变量，用于保存当前选中的地址-->
+<!--    var currentAddress = "";-->
+
+<!--    // 监听地图点击事件-->
+<!--    map.on('click', function (e) {-->
+<!--        var lat = e.lnglat.getLat(); // 获取纬度-->
+<!--        var lon = e.lnglat.getLng(); // 获取经度-->
+
+<!--        marker.setPosition(e.lnglat); // 移动标记点-->
+
+<!--        // 调用后端接口获取地址-->
+<!--        fetch(`/getAddress?lat=${lat}&lon=${lon}`)-->
+<!--            .then(response => response.text())-->
+<!--            .then(data => {-->
+<!--                document.getElementById('address').textContent = data; // 显示选中的地址-->
+<!--                currentAddress = data; // 保存当前的地址到全局变量-->
+<!--            })-->
+<!--            .catch(error => console.error('Error:', error));-->
+<!--    });-->
+
+<!--    // 保存地址按钮功能-->
+<!--    document.getElementById('saveAddressBtn').addEventListener('click', function () {-->
+<!--        if (currentAddress === "") {-->
+<!--            alert("请先点击地图选择一个地址！");-->
+<!--            return;-->
+<!--        }-->
+
+<!--        fetch('/api/address/save', {-->
+<!--            method: 'POST',-->
+<!--            headers: {-->
+<!--                'Content-Type': 'application/json'-->
+<!--            },-->
+<!--            body: JSON.stringify({ address: currentAddress }) // 将地址包装为 JSON-->
+<!--        })-->
+<!--            .then(response => response.text())-->
+<!--            .then(data => {-->
+<!--                alert(data); // 提示保存成功-->
+<!--            })-->
+<!--            .catch(error => {-->
+<!--                console.error('保存地址时发生错误:', error);-->
+<!--                alert('保存地址失败，请查看控制台日志！');-->
+<!--            });-->
+<!--    });-->
+
+<!--    // 保存地址按钮功能-->
+<!--    document.getElementById('saveAddressBtn').addEventListener('click', function () {-->
+<!--        if (currentAddress === "") {-->
+<!--            alert("请先点击地图选择一个地址！");-->
+<!--            return;-->
+<!--        }-->
+
+<!--        fetch('/api/address/save', {-->
+<!--            method: 'POST',-->
+<!--            headers: {-->
+<!--                'Content-Type': 'application/json'-->
+<!--            },-->
+<!--            body: JSON.stringify({ address: currentAddress }) // 将地址包装为 JSON-->
+<!--        })-->
+<!--            .then(response => response.text())-->
+<!--            .then(data => {-->
+<!--                alert(data); // 提示保存成功-->
+<!--            })-->
+<!--            .catch(error => {-->
+<!--                console.error('保存地址时发生错误:', error);-->
+<!--                alert('保存地址失败，请查看控制台日志！');-->
+<!--            });-->
+<!--    });-->
+<!--</script>-->
+<!--</body>-->
+<!--</html>-->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>购物车页面</title>
+    <style>
+        /* 地图容器的样式 */
+        #map {
+            width: 600px;
+            height: 400px;
+            margin: 20px 0;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+        }
+
+        /* 标题样式 */
+        h1 {
+            text-align: center;
+            color: #333;
+            font-family: Arial, sans-serif;
+        }
+
+        /* 地址显示样式 */
+        #address {
+            font-weight: bold; /* 加粗地址 */
+            color: #007BFF; /* 地址字体颜色 */
+        }
+
+        /* 按钮的样式 */
+        button {
+            background-color: #007BFF; /* 浅蓝色背景 */
+            color: white; /* 白色文字 */
+            border: none;
+            padding: 10px 20px;
+            margin: 10px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            font-family: Arial, sans-serif;
+        }
+
+        button:hover {
+            background-color: #0056b3; /* 鼠标悬浮时变深蓝 */
+        }
+
+        /* 弹框样式 */
+        #usedAddressesModal {
+            display: none; /* 默认隐藏 */
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 400px;
+            background: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+            z-index: 1000;
+            padding: 20px;
+            text-align: center;
+        }
+
+        /* 弹框中的列表样式 */
+        #usedAddressesList {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        #usedAddressesList li {
+            background: #f9f9f9;
+            padding: 10px;
+            margin: 5px 0;
+            border-radius: 5px;
+            font-family: Arial, sans-serif;
+        }
+
+        #usedAddressesList li:hover {
+            background: #f0f0f0;
+        }
+
+        /* 遮罩层样式 */
+        #modalOverlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+<h1>购物车页面</h1>
+<p>
+    请选择您的收货地址: <span id="address">点击地图获取地址</span>
+    <button id="saveAddressBtn">确定</button> <!-- 确定按钮 -->
+</p>
+<div id="map"></div>
+<button id="UsedAddressBtn">常用地址</button>
+
+<!-- 弹框：常用地址 -->
+<div id="modalOverlay"></div>
+<div id="usedAddressesModal">
+    <h2>常用地址</h2>
+    <ul id="usedAddressesList"></ul>
+    <button id="closeModalBtn">关闭</button>
+</div>
+
+<!-- 配置高德地图安全密钥 -->
+<script type="text/javascript">
+    window._AMapSecurityConfig = {
+        securityJsCode: "06cb26d38eac33cb9ed2fc87523579f8" // 替换为你的安全密钥
+    };
+</script>
+
+<!-- 高德地图 JS API -->
+<script type="text/javascript" src="https://webapi.amap.com/maps?v=2.0&key=b9214bd34078409cd624052cfa02655f"></script>
+
+<script>
+    // 初始化地图
+    var map = new AMap.Map('map', {
+        resizeEnable: true,
+        zoom: 13 // 设置默认缩放级别
+    });
+
+    // 在地图上添加标记点
+    var marker = new AMap.Marker();
+    marker.setMap(map);
+
+    // 定义全局变量，用于保存当前选中的地址
+    var currentAddress = "";
+
+    // 监听地图点击事件
+    map.on('click', function (e) {
+        var lat = e.lnglat.getLat(); // 获取纬度
+        var lon = e.lnglat.getLng(); // 获取经度
+
+        marker.setPosition(e.lnglat); // 移动标记点
+
+        // 调用后端接口获取地址
+        fetch(`/getAddress?lat=${lat}&lon=${lon}`)
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('address').textContent = data; // 显示选中的地址
+                currentAddress = data; // 保存当前的地址到全局变量
+            })
+            .catch(error => console.error('Error:', error));
+    });
+
+    // 保存地址按钮功能
+    document.getElementById('saveAddressBtn').addEventListener('click', function () {
+        if (currentAddress === "") {
+            alert("请先点击地图选择一个地址！");
+            return;
+        }
+
+        fetch('/api/address/save', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify({ address: currentAddress }) // 将地址包装为 JSON
+        })
+            .then(response => response.text())
+            .then(data => {
+                alert(data); // 提示保存成功
+            })
+            .catch(error => {
+                console.error('保存地址时发生错误:', error);
+                alert('保存地址失败，请查看控制台日志！');
+            });
+    });
+
+    // 常用地址按钮功能
+    document.getElementById('UsedAddressBtn').addEventListener('click', function () {
+        fetch('/api/address/all')
+            .then(response => response.json())
+            .then(data => {
+                const usedAddressesList = document.getElementById('usedAddressesList');
+                usedAddressesList.innerHTML = ''; // 清空列表
+
+                data.forEach(address => {
+                    const li = document.createElement('li');
+                    li.textContent = address.address;
+                    usedAddressesList.appendChild(li);
+                });
+
+                // 显示弹框和遮罩
+                document.getElementById('usedAddressesModal').style.display = 'block';
+                document.getElementById('modalOverlay').style.display = 'block';
+            })
+            .catch(error => console.error('Error:', error));
+    });
+
+    // 关闭弹框
+    document.getElementById('closeModalBtn').addEventListener('click', function () {
+        document.getElementById('usedAddressesModal').style.display = 'none';
+        document.getElementById('modalOverlay').style.display = 'none';
+    });
+</script>
+</body>
+</html>

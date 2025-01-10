@@ -1,0 +1,59 @@
+server:
+  port: 9003
+spring:
+  data:
+    redis:
+      sentinel:
+        master: mymaster               # 主节点的名称
+        nodes:
+          - 127.0.0.1:26379           # Sentinel 节点的地址和端口
+          - 127.0.0.1:26380           # 另一个 Sentinel 节点（可选）
+          - 127.0.0.1:26381           # 另一个 Sentinel 节点（可选）
+  application:
+    name: order-service
+  datasource:
+    driver-class-name:  com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db_zx?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true
+    username: root
+    password: password
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+# 设置Mapper接口所对应的XML文件位置，如果你在Mapper接口中有自定义方法，需要进行该配置
+mybatis-plus:
+  mapper-locations: classpath*:mapper/*.xml
+  # 设置别名包扫描路径，通过该属性可以给包中的类注册别名
+  type-aliases-package: com.usian.model.admin.pojos
+  global-config:
+    datacenter-id: 1
+    workerId: 1
+  configuration:
+    map-underscore-to-camel-case: true  #是否关闭驼峰到下划线的映射
+    cache-enabled: false  #是否开启二级缓存
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl  #打印sql语句
+
+
+alipay:
+  appId: 2021000143626382
+  privateKey:
+    MIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCcGFOhPjYjJttsj9LLppAWIZsdwa279/MyWQVZPe3uGE1FM0XMp3RHipIIa3qdBW99NJR88Z56MmpO+1ku9cqLtIKkSRqa31MaWNMyy900nfXisJvN8MKYGszZf+jpqyeYtAkGfMf/FiSw5tAOBZS1+mtX9zaVGdpx1yvqQzLSPTspqnsfaoS+Ghw0o2Y/3v1QhPJ7v4buSOIs/Yg5BOzLWLWwqJ5zidHJQ6PcqCBwtK5x4g6AzhmkFbv9ZUdxtkFx0ULVvjigddSiPInQBSHwRq35O+BpQ/ycR4oJlbywQ55Bm8v8Ep/66Q021EjsxZBBEHFZWTG5vkUQh/1MwLTPAgMBAAECggEAMMHshYZANNSzX4LBTnmVskQHBtFzqi42GfjykcClbGTM5huw5s87pAklulmQMDH9dDeTVj/Gx9atnEQoxGFkRiU5VYW8OLofZDBwsAI7826P2qJd2IMm1YoxiJLKtwqOUMWTuCIL+qL5DQTb4jVeEUXKd+yxcPtlX3/dqMwauM6H1xMWKxpsPj2AhX55592wkoY5bNlIfimnwG0WRSbnb8cE01SxyNb6Gq7xurxjPLAM7ru3y4Su3urR2D+f7Jck3fhOvB0Paat91ytoHWhqLKQpvruq+BX5Z8lLoq/CaWodrY0djNKYvF1vKEJctsAQXKgy+B69SQvqwHQpmtMBeQKBgQDf70PC3aKULk1FTNOgCgKz6gA+WTGN4oHAUzB9jVjnGsU+aKtUwyQf8Xz9vxehNECnkUs0YfQVJ6+RiA/hBCE/+wXsLRXDGKpSO7bZiywVDGTnfSx3Z+6zL9D0HaHFFBOjN2/E6J+ifFw5tGNdyrMTwACJtAIEjtmOv+GWkARfowKBgQCyckbXF9e61G756I/dvdATbI+iU4RqE9335NH/ZnB56EUS7sf87HOdMCOidJOC3J65sjLAXmYJZKFIRUTkBJ9hKsvUdXaOO3AGeapARaQ+r7Rs8lHLBr+ta63ayiiAZ9IAK9B5QH388c+mJ+t5AaxaQU1WJya2awTg+qnNVR645QKBgQDCQ/kO1eMylbBnDC0Sy1xo4/luHUaGBhf11rVcVgDoDCtM5tSrZday93YtU1eWe5QTSlJpkQiESbdfkx/jXwfRT11l8/7LD1zClhccRkXpxKTMxaSLudg0DqlA/WvXYoFeuLr3oa7K8QO486q4NR6BZbGRxF1zwtEtq3xyd2Gz7QKBgQCAkzCRyN8rAefYb4ZBmoOzizRPHOg62ofEFv5sjO4cGIy0oJI+nkyLhOUYJ/EliDthx5Ej5KCWwggnn6mMtfv0sjZdpik/QHpuX/mZB9TZShaxrUPcCsfPd9ez3peiNawtbWRwCVT+DWm16euTq+34tja4DcuqAqBoTpRMm7lgNQKBgAiGh7iJBUHZlgP0w1ylJ+ueO/McJm1tXmoLsHhFTEH1+TsH6POa2I3Ck0UfuqaMcSpKR5NjT4umH01P31rOzc2xj61cXH1siondPYZWyp2DtbihDtT0hadnEVas+lvsWN9fK2zseisATY/U5FI8pv2+xxjj+36rn8pUs53qh4v7
+  publicKey:
+    MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEApZEbB1xCVP07u5GhL2DcGCcViTEQ9HrZ93+2yb47jcxYVDuNEYppc2FPYGPJmrppMHDttxn6ddwptoMmWEtPAlIom84pVHij+AMtOVoD786pYlKbR3zn73Kwfys+zV2tCbjgWYBjPbEtyikqLyDRJbFOSWVcUIsdbRg/IAfV6AfWxNa4jl4I9agcV+5bP5q2bqF1BPRzBz9aV7216L4NS4st3EV5AVHQplGWhfOcK9aofpOSLPvPQ/wlszswch6H6kYUmZhWruqklDR8fiGbwacQIU1YAmUiIxf+jJasV5XUG27SgD1rGapqxOVmz9WFE5YProtA7WHswWRum+10ZQIDAQAB
+  notifyUrl: http://43167ff.r12.cpolar.top/api/order/alipay/callback/notify
+  returnUrl: http://43167ff.r12.cpolar.top/api/order/alipay/show
+  serverUrl: https://openapi-sandbox.dl.alipaydev.com/gateway.do
+
+seata:
+  registry: # TC服务注册中心的配置，微服务根据这些信息去注册中心获取tc服务地址
+    type: nacos # 注册中心类型 nacos
+    nacos:
+      server-addr: 127.0.0.1:8848 # nacos地址
+      namespace: "" # namespace，默认为空
+      group: DEFAULT_GROUP # 分组，默认是DEFAULT_GROUP
+      application: seata-server # seata服务名称
+      username: nacos
+      password: nacos
+  tx-service-group: seata-demo # 事务组名称
+  service:
+    vgroup-mapping: # 事务组与cluster的映射关系
+      seata-demo: SH

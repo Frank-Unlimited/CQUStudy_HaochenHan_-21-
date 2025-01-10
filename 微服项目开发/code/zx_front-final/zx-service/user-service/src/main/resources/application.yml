@@ -1,0 +1,53 @@
+server:
+  port: 9002
+spring:
+  data:
+    redis:
+      sentinel:
+        master: mymaster               # 主节点的名称
+        nodes:
+          - 127.0.0.1:26379           # Sentinel 节点的地址和端口
+          - 127.0.0.1:26380           # 另一个 Sentinel 节点（可选）
+          - 127.0.0.1:26381           # 另一个 Sentinel 节点（可选）
+  application:
+    name: user-service
+  datasource:
+    driver-class-name:  com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/db_zx?useUnicode=true&characterEncoding=UTF-8&useSSL=false&serverTimezone=UTC&rewriteBatchedStatements=true
+    username: root
+    password: password
+  cloud:
+    nacos:
+      server-addr: 127.0.0.1:8848
+# 设置Mapper接口所对应的XML文件位置，如果你在Mapper接口中有自定义方法，需要进行该配置
+mybatis-plus:
+  mapper-locations: classpath*:mapper/*.xml
+  # 设置别名包扫描路径，通过该属性可以给包中的类注册别名
+  type-aliases-package: com.zx.domain.entity.user
+  global-config:
+    datacenter-id: 1
+    workerId: 1
+  configuration:
+    map-underscore-to-camel-case: true  #是否关闭驼峰到下划线的映射
+    cache-enabled: false  #是否开启二级缓存
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl  #打印sql语句
+
+
+jwt:
+  secretKey: jyzx_zhangXueQuan
+  expirationMinutes: 36000000
+
+seata:
+  registry: # TC服务注册中心的配置，微服务根据这些信息去注册中心获取tc服务地址
+    type: nacos # 注册中心类型 nacos
+    nacos:
+      server-addr: 127.0.0.1:8848 # nacos地址
+      namespace: "" # namespace，默认为空
+      group: DEFAULT_GROUP # 分组，默认是DEFAULT_GROUP
+      application: seata-server # seata服务名称
+      username: nacos
+      password: nacos
+  tx-service-group: seata-demo # 事务组名称
+  service:
+    vgroup-mapping: # 事务组与cluster的映射关系
+      seata-demo: SH

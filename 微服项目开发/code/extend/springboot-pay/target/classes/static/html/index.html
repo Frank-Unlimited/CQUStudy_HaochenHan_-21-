@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>订单确认</title>
+    <script src="../js/jquery.1.8.3.min.js"></script>
+    <script src="../js/jquery.qrcode.min.js"></script>
+    <script>
+        $(function () {
+            // 绑定点击事件
+            $("#bt").click(function () {
+                //
+                $.post("http://localhost:8080/order/add",$("#fm").serialize(),function (data) {
+                    if(data.flag){
+                        // 让支付宝和微信支付跳转不同的页面,未来可以针对不同的支付做不同的美化
+                        // 可扩展性更好
+                        if(data.data.paymenttype==1) {
+                            console.log("跳转微信支付");
+                            window.location = "./pay.html?data=" + encodeURI(JSON.stringify(data));
+                        }
+                        if(data.data.paymenttype==2){
+                            console.log("跳转支付宝支付");
+                            window.location="./alipay.html?data="+encodeURI(JSON.stringify(data));
+                        }
+
+                    }  else{
+                        window.location="./ordererror.html?data="+encodeURI(JSON.stringify(data));
+                    }
+                 });
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <form name="fm" id="fm" action="/order/add" method="post">
+
+<table style="text-align: center;margin: auto" border="1" >
+    <tr>
+        <td style="text-align: center" colspan="2">订单确认</td>
+    </tr>
+
+    <tr>
+        <td> 订单金额:</td>
+        <td><input name="payment" value="0.01"></td>
+    </tr>
+    <tr>
+        <td>邮费</td>
+        <td> <input type="text" name="postfee" value="0"></td>
+    </tr>
+    <tr>
+        <td>用户id:</td>
+        <td><input type="text" name="userid" value="0001"></td>
+    </tr>
+    <tr>
+        <td>留言:</td>
+        <td> <input type="text" name="buyermessage" value="快点发货"></td>
+    </tr>
+    <tr>
+        <td>昵称:</td>
+        <td> <input type="text" name="buyernick" value="itcast"></td>
+    </tr>
+    <tr>
+        <td> 收获地址:</td>
+        <td><input type="text" name="receiverareaname" value="开封市明伦街85号"></td>
+    </tr>
+    <tr>
+        <td>收货人手机号:</td>
+        <td><input type="text" name="receivermobile" value="1388888888"></td>
+    </tr>
+
+    <tr>
+        <td>收货人:</td>
+        <td><input type="text" name="receiver" value="张三"></td>
+    </tr>
+    <tr>
+        <td>邮编:</td>
+        <td><input type="text" name="receiverzipcode" value="45000000"></td>
+    </tr>
+    <tr>
+        <td>商家id:</td>
+        <td><input type="text" name="sellerid" value="8900001"></td>
+    </tr>
+    <tr>
+        <td>商品id:</td>
+        <td><input type="text" name="goodsid" value="IPhone 2020 256G"></td>
+    </tr>
+    <tr>
+        <td>支付方式:</td>
+        <td><input type="radio" name="paymenttype" checked value="1">微信
+        <input type="radio" name="paymenttype" value="2">支付宝</td>
+    </tr>
+    <tr>
+        <td colspan="2"><input type="button" id="bt"  value="确认订单"></td>
+    </tr>
+    </table>
+
+    </form>
+</body>
+</html>

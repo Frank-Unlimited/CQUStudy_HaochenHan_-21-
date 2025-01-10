@@ -1,0 +1,1037 @@
+2025-01-09 20:50:04.067  INFO [main] (io.mycat.backend.datasource.PhysicalDBPool.<init>(PhysicalDBPool.java:127)) - total resources of dataHost localhost is :1
+2025-01-09 20:50:04.073  INFO [main] (io.mycat.cache.CacheService.createLayeredPool(CacheService.java:125)) - create layer cache pool TableID2DataNodeCache of type encache ,default cache size 10000 ,default expire seconds18000
+2025-01-09 20:50:04.074  INFO [main] (io.mycat.cache.DefaultLayedCachePool.createChildCache(DefaultLayedCachePool.java:80)) - create child Cache: TESTDB_ORDERS for layered cache TableID2DataNodeCache, size 50000, expire seconds 18000
+2025-01-09 20:50:04.121  INFO [main] (io.mycat.config.classloader.DynaClassLoader.<init>(DynaClassLoader.java:34)) - dyna class load from D:\Users\Lenovo\Desktop\mycat\catlet,and auto check for class file modified every 60 seconds
+2025-01-09 20:50:04.133  INFO [main] (io.mycat.MycatServer.startup(MycatServer.java:328)) - MyCat is ready to startup ...
+2025-01-09 20:50:04.133  INFO [main] (io.mycat.MycatServer.startup(MycatServer.java:340)) - Startup processors ...,total processors:16,aio thread pool size:32    
+ each process allocated socket buffer pool  bytes ,a page size:2097152  a page's chunk number(PageSize/ChunkSize) is:512  buffer page's number is:320
+2025-01-09 20:50:04.133  INFO [main] (io.mycat.MycatServer.startup(MycatServer.java:341)) - sysconfig params:SystemConfig [processorBufferLocalPercent=100, frontSocketSoRcvbuf=1048576, frontSocketSoSndbuf=4194304, backSocketSoRcvbuf=4194304, backSocketSoSndbuf=1048576, frontSocketNoDelay=1, backSocketNoDelay=1, maxStringLiteralLength=65535, frontWriteQueueSize=2048, bindIp=0.0.0.0, serverPort=8066, managerPort=9066, charset=utf8, processors=16, processorExecutor=32, timerExecutor=2, managerExecutor=2, idleTimeout=1800000, catletClassCheckSeconds=60, sqlExecuteTimeout=300, processorCheckPeriod=1000, dataNodeIdleCheckPeriod=300000, dataNodeHeartbeatPeriod=10000, clusterHeartbeatUser=_HEARTBEAT_USER_, clusterHeartbeatPass=_HEARTBEAT_PASS_, clusterHeartbeatPeriod=5000, clusterHeartbeatTimeout=10000, clusterHeartbeatRetry=10, txIsolation=3, parserCommentVersion=50148, sqlRecordCount=10, bufferPoolPageSize=2097152, bufferPoolChunkSize=4096, bufferPoolPageNumber=320, maxResultSet=524288, bigResultSizeSqlCount=10, bufferUsagePercent=80, flowControlRejectStrategy=0, clearBigSqLResultSetMapMs=600000, defaultMaxLimit=100, sequenceHandlerType=1, sqlInterceptor=io.mycat.server.interceptor.impl.DefaultSqlInterceptor, sqlInterceptorType=select, sqlInterceptorFile=D:\Users\Lenovo\Desktop\mycat\bin/logs/sql.txt, mutiNodeLimitType=0, mutiNodePatchSize=100, defaultSqlParser=druidparser, usingAIO=0, packetHeaderSize=4, maxPacketSize=16777216, mycatNodeId=1,ignoreUnknownCommand=0,parallExecute=0,removeGraveAccent=1]
+2025-01-09 20:50:04.251  INFO [main] (io.mycat.MycatServer.startup(MycatServer.java:450)) - using nio network handler 
+2025-01-09 20:50:04.302  INFO [main] (io.mycat.MycatServer.startup(MycatServer.java:466)) - $_MyCatManager is started and listening on 9066
+2025-01-09 20:50:04.303  INFO [main] (io.mycat.MycatServer.startup(MycatServer.java:470)) - $_MyCatServer is started and listening on 8066
+2025-01-09 20:50:04.303  INFO [main] (io.mycat.MycatServer.startup(MycatServer.java:472)) - ===============================================
+2025-01-09 20:50:04.303  INFO [main] (io.mycat.MycatServer.startup(MycatServer.java:476)) - Initialize dataHost ...
+2025-01-09 20:50:04.303  INFO [main] (io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:394)) - init backend mysql source ,create connections total 10 for hostM1 index :0
+2025-01-09 20:50:04.303  INFO [main] (io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:564)) - no ilde connection in pool 259630944 ,create new connection for hostM1 of schema mycat3 totalConnectionCount: 0 increamentCount: 1
+2025-01-09 20:50:04.304  INFO [main] (io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:564)) - no ilde connection in pool 259630944 ,create new connection for hostM1 of schema mycat2 totalConnectionCount: 0 increamentCount: 2
+2025-01-09 20:50:04.304  INFO [main] (io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:564)) - no ilde connection in pool 259630944 ,create new connection for hostM1 of schema mycat1 totalConnectionCount: 0 increamentCount: 3
+2025-01-09 20:50:04.304  INFO [main] (io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:564)) - no ilde connection in pool 259630944 ,create new connection for hostM1 of schema mycat3 totalConnectionCount: 0 increamentCount: 4
+2025-01-09 20:50:04.309  INFO [main] (io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:564)) - no ilde connection in pool 259630944 ,create new connection for hostM1 of schema mycat2 totalConnectionCount: 0 increamentCount: 5
+2025-01-09 20:50:04.309  INFO [main] (io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:564)) - no ilde connection in pool 259630944 ,create new connection for hostM1 of schema mycat1 totalConnectionCount: 0 increamentCount: 6
+2025-01-09 20:50:04.309  INFO [main] (io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:564)) - no ilde connection in pool 259630944 ,create new connection for hostM1 of schema mycat3 totalConnectionCount: 0 increamentCount: 7
+2025-01-09 20:50:04.309  INFO [main] (io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:564)) - no ilde connection in pool 259630944 ,create new connection for hostM1 of schema mycat2 totalConnectionCount: 0 increamentCount: 8
+2025-01-09 20:50:04.310  INFO [main] (io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:564)) - no ilde connection in pool 259630944 ,create new connection for hostM1 of schema mycat1 totalConnectionCount: 0 increamentCount: 9
+2025-01-09 20:50:04.310  INFO [main] (io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:564)) - no ilde connection in pool 259630944 ,create new connection for hostM1 of schema mycat3 totalConnectionCount: 0 increamentCount: 10
+2025-01-09 20:50:04.448  WARN [BusinessExecutor1] (io.mycat.backend.mysql.nio.handler.GetConnectionHandler.connectionError(GetConnectionHandler.java:74)) - connect error JDBCConnection [id=10,autocommit=true,pool=io.mycat.backend.jdbc.JDBCDatasource@f79a760, schema=mycat2, dbType=MYSQL, oldSchema=null, packetId=0, txIsolation=0, running=false, borrowed=false, host=localhost, port=3306, con=null, respHandler=null, attachement=null, headerOutputed=false, modifiedSQLExecuted=false, startTime=1736427004311, lastTime=0, isSpark=false, processor=io.mycat.net.NIOProcessor@17f0dd38]com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+2025-01-09 20:50:04.448  WARN [BusinessExecutor4] (io.mycat.backend.mysql.nio.handler.GetConnectionHandler.connectionError(GetConnectionHandler.java:74)) - connect error JDBCConnection [id=1,autocommit=true,pool=io.mycat.backend.jdbc.JDBCDatasource@f79a760, schema=mycat2, dbType=MYSQL, oldSchema=null, packetId=0, txIsolation=0, running=false, borrowed=false, host=localhost, port=3306, con=null, respHandler=null, attachement=null, headerOutputed=false, modifiedSQLExecuted=false, startTime=1736427004311, lastTime=0, isSpark=false, processor=io.mycat.net.NIOProcessor@423ce04a]com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+2025-01-09 20:50:04.448  WARN [BusinessExecutor6] (io.mycat.backend.mysql.nio.handler.GetConnectionHandler.connectionError(GetConnectionHandler.java:74)) - connect error JDBCConnection [id=3,autocommit=true,pool=io.mycat.backend.jdbc.JDBCDatasource@f79a760, schema=mycat3, dbType=MYSQL, oldSchema=null, packetId=0, txIsolation=0, running=false, borrowed=false, host=localhost, port=3306, con=null, respHandler=null, attachement=null, headerOutputed=false, modifiedSQLExecuted=false, startTime=1736427004311, lastTime=0, isSpark=false, processor=io.mycat.net.NIOProcessor@30c4eb19]com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+2025-01-09 20:50:04.448  WARN [BusinessExecutor7] (io.mycat.backend.mysql.nio.handler.GetConnectionHandler.connectionError(GetConnectionHandler.java:74)) - connect error JDBCConnection [id=4,autocommit=true,pool=io.mycat.backend.jdbc.JDBCDatasource@f79a760, schema=mycat2, dbType=MYSQL, oldSchema=null, packetId=0, txIsolation=0, running=false, borrowed=false, host=localhost, port=3306, con=null, respHandler=null, attachement=null, headerOutputed=false, modifiedSQLExecuted=false, startTime=1736427004311, lastTime=0, isSpark=false, processor=io.mycat.net.NIOProcessor@423ce04a]com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+2025-01-09 20:50:04.448  WARN [BusinessExecutor2] (io.mycat.backend.mysql.nio.handler.GetConnectionHandler.connectionError(GetConnectionHandler.java:74)) - connect error JDBCConnection [id=7,autocommit=true,pool=io.mycat.backend.jdbc.JDBCDatasource@f79a760, schema=mycat1, dbType=MYSQL, oldSchema=null, packetId=0, txIsolation=0, running=false, borrowed=false, host=localhost, port=3306, con=null, respHandler=null, attachement=null, headerOutputed=false, modifiedSQLExecuted=false, startTime=1736427004311, lastTime=0, isSpark=false, processor=io.mycat.net.NIOProcessor@30c4eb19]com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+2025-01-09 20:50:04.448  WARN [BusinessExecutor9] (io.mycat.backend.mysql.nio.handler.GetConnectionHandler.connectionError(GetConnectionHandler.java:74)) - connect error JDBCConnection [id=5,autocommit=true,pool=io.mycat.backend.jdbc.JDBCDatasource@f79a760, schema=mycat3, dbType=MYSQL, oldSchema=null, packetId=0, txIsolation=0, running=false, borrowed=false, host=localhost, port=3306, con=null, respHandler=null, attachement=null, headerOutputed=false, modifiedSQLExecuted=false, startTime=1736427004311, lastTime=0, isSpark=false, processor=io.mycat.net.NIOProcessor@423ce04a]com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+2025-01-09 20:50:04.448  WARN [BusinessExecutor0] (io.mycat.backend.mysql.nio.handler.GetConnectionHandler.connectionError(GetConnectionHandler.java:74)) - connect error JDBCConnection [id=6,autocommit=true,pool=io.mycat.backend.jdbc.JDBCDatasource@f79a760, schema=mycat3, dbType=MYSQL, oldSchema=null, packetId=0, txIsolation=0, running=false, borrowed=false, host=localhost, port=3306, con=null, respHandler=null, attachement=null, headerOutputed=false, modifiedSQLExecuted=false, startTime=1736427004311, lastTime=0, isSpark=false, processor=io.mycat.net.NIOProcessor@30c4eb19]com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+2025-01-09 20:50:04.448  WARN [BusinessExecutor3] (io.mycat.backend.mysql.nio.handler.GetConnectionHandler.connectionError(GetConnectionHandler.java:74)) - connect error JDBCConnection [id=2,autocommit=true,pool=io.mycat.backend.jdbc.JDBCDatasource@f79a760, schema=mycat3, dbType=MYSQL, oldSchema=null, packetId=0, txIsolation=0, running=false, borrowed=false, host=localhost, port=3306, con=null, respHandler=null, attachement=null, headerOutputed=false, modifiedSQLExecuted=false, startTime=1736427004311, lastTime=0, isSpark=false, processor=io.mycat.net.NIOProcessor@1509601d]com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+2025-01-09 20:50:04.448  WARN [BusinessExecutor5] (io.mycat.backend.mysql.nio.handler.GetConnectionHandler.connectionError(GetConnectionHandler.java:74)) - connect error JDBCConnection [id=8,autocommit=true,pool=io.mycat.backend.jdbc.JDBCDatasource@f79a760, schema=mycat1, dbType=MYSQL, oldSchema=null, packetId=0, txIsolation=0, running=false, borrowed=false, host=localhost, port=3306, con=null, respHandler=null, attachement=null, headerOutputed=false, modifiedSQLExecuted=false, startTime=1736427004311, lastTime=0, isSpark=false, processor=io.mycat.net.NIOProcessor@5bb7aa2d]com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+2025-01-09 20:50:04.448  WARN [BusinessExecutor8] (io.mycat.backend.mysql.nio.handler.GetConnectionHandler.connectionError(GetConnectionHandler.java:74)) - connect error JDBCConnection [id=9,autocommit=true,pool=io.mycat.backend.jdbc.JDBCDatasource@f79a760, schema=mycat1, dbType=MYSQL, oldSchema=null, packetId=0, txIsolation=0, running=false, borrowed=false, host=localhost, port=3306, con=null, respHandler=null, attachement=null, headerOutputed=false, modifiedSQLExecuted=false, startTime=1736427004311, lastTime=0, isSpark=false, processor=io.mycat.net.NIOProcessor@30c4eb19]com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+2025-01-09 20:50:04.525  INFO [main] (io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:419)) - init result :finished 10 success 0 target count:10
+2025-01-09 20:50:04.525 ERROR [main] (io.mycat.backend.datasource.PhysicalDBPool.init(PhysicalDBPool.java:379)) - #!MyCat#localhost init failure
+2025-01-09 20:50:04.527  INFO [Timer0] (io.mycat.backend.datasource.PhysicalDatasource.createByIdleLitte(PhysicalDatasource.java:397)) - create connections ,because idle connection not enough ,cur is 0, minCon is 10 for hostM1
+2025-01-09 20:50:04.527  INFO [main] (io.mycat.MycatServer.startup(MycatServer.java:515)) - ===============================================
+2025-01-09 20:50:04.527  INFO [main] (io.mycat.MycatServer.startup(MycatServer.java:516)) - Perform XA recovery log ...
+2025-01-09 20:50:04.528  INFO [main] (io.mycat.MycatServer.startup(MycatServer.java:520)) - Perform XA recovery log end...
+2025-01-09 20:50:04.530 ERROR [Timer1] (io.mycat.backend.jdbc.JDBCHeartbeat.heartbeat(JDBCHeartbeat.java:123)) - JDBCHeartBeat error
+com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.Util.getInstance(Util.java:372) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:958) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:937) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:926) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:872) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2316) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2069) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:794) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at java.sql.DriverManager.getConnection(DriverManager.java:681) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:229) ~[java.sql:?]
+	at io.mycat.backend.jdbc.JDBCDatasource.getConnection(JDBCDatasource.java:125) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.jdbc.JDBCHeartbeat.heartbeat(JDBCHeartbeat.java:108) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDatasource.doHeartbeat(PhysicalDatasource.java:464) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.doHeartbeat(PhysicalDBPool.java:436) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.MycatServer$8$1.run(MycatServer.java:964) [Mycat-server-1.6.7.6-release.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) [?:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+Caused by: java.lang.NullPointerException: Cannot invoke "java.util.Map.get(Object)" because "this.serverVariables" is null
+	at com.mysql.jdbc.ConnectionImpl.getServerCharset(ConnectionImpl.java:2989) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.sendConnectionAttributes(MysqlIO.java:1873) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1802) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2239) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2270) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	... 21 more
+2025-01-09 20:50:04.530  WARN [BusinessExecutor10] (io.mycat.backend.mysql.nio.handler.NewConnectionRespHandler.connectionError(NewConnectionRespHandler.java:37)) - JDBCConnection [id=11,autocommit=true,pool=io.mycat.backend.jdbc.JDBCDatasource@f79a760, schema=mycat3, dbType=MYSQL, oldSchema=null, packetId=0, txIsolation=0, running=false, borrowed=false, host=localhost, port=3306, con=null, respHandler=null, attachement=null, headerOutputed=false, modifiedSQLExecuted=false, startTime=1736427004528, lastTime=0, isSpark=false, processor=io.mycat.net.NIOProcessor@693bfb2] connectionError com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+2025-01-09 20:50:04.530  WARN [BusinessExecutor11] (io.mycat.backend.mysql.nio.handler.NewConnectionRespHandler.connectionError(NewConnectionRespHandler.java:37)) - JDBCConnection [id=12,autocommit=true,pool=io.mycat.backend.jdbc.JDBCDatasource@f79a760, schema=mycat2, dbType=MYSQL, oldSchema=null, packetId=0, txIsolation=0, running=false, borrowed=false, host=localhost, port=3306, con=null, respHandler=null, attachement=null, headerOutputed=false, modifiedSQLExecuted=false, startTime=1736427004528, lastTime=0, isSpark=false, processor=io.mycat.net.NIOProcessor@304ec1fb] connectionError com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+2025-01-09 20:50:04.530  WARN [BusinessExecutor12] (io.mycat.backend.mysql.nio.handler.NewConnectionRespHandler.connectionError(NewConnectionRespHandler.java:37)) - JDBCConnection [id=13,autocommit=true,pool=io.mycat.backend.jdbc.JDBCDatasource@f79a760, schema=mycat1, dbType=MYSQL, oldSchema=null, packetId=0, txIsolation=0, running=false, borrowed=false, host=localhost, port=3306, con=null, respHandler=null, attachement=null, headerOutputed=false, modifiedSQLExecuted=false, startTime=1736427004528, lastTime=0, isSpark=false, processor=io.mycat.net.NIOProcessor@5811c770] connectionError com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+2025-01-09 20:50:11.765  INFO [$_NIOREACTOR-1-RW] (io.mycat.net.handler.FrontendAuthenticator.success(FrontendAuthenticator.java:226)) - Mycat does not support the allowMultiQueries value to be true, maybe occur some error.Client connection is[io.mycat.net.handler.FrontendAuthenticator@26e45f5d]
+2025-01-09 20:50:11.766  INFO [$_NIOREACTOR-1-RW] (io.mycat.net.handler.FrontendAuthenticator.success(FrontendAuthenticator.java:241)) - ServerConnection [id=1, schema=null, host=127.0.0.1, user=root,txIsolation=3, autocommit=true, schema=null, executeSql=null]'root' login success
+2025-01-09 20:50:11.783  INFO [$_NIOREACTOR-1-RW] (io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:394)) - init backend mysql source ,create connections total 10 for hostM1 index :0
+2025-01-09 20:50:11.783  INFO [$_NIOREACTOR-1-RW] (io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:564)) - no ilde connection in pool 259630944 ,create new connection for hostM1 of schema mycat3 totalConnectionCount: 0 increamentCount: 1
+2025-01-09 20:50:11.783  INFO [$_NIOREACTOR-1-RW] (io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:564)) - no ilde connection in pool 259630944 ,create new connection for hostM1 of schema mycat2 totalConnectionCount: 0 increamentCount: 2
+2025-01-09 20:50:11.784  INFO [$_NIOREACTOR-1-RW] (io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:564)) - no ilde connection in pool 259630944 ,create new connection for hostM1 of schema mycat1 totalConnectionCount: 0 increamentCount: 3
+2025-01-09 20:50:11.784  INFO [$_NIOREACTOR-1-RW] (io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:564)) - no ilde connection in pool 259630944 ,create new connection for hostM1 of schema mycat3 totalConnectionCount: 0 increamentCount: 4
+2025-01-09 20:50:11.784  INFO [$_NIOREACTOR-1-RW] (io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:564)) - no ilde connection in pool 259630944 ,create new connection for hostM1 of schema mycat2 totalConnectionCount: 0 increamentCount: 5
+2025-01-09 20:50:11.784  INFO [$_NIOREACTOR-1-RW] (io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:564)) - no ilde connection in pool 259630944 ,create new connection for hostM1 of schema mycat1 totalConnectionCount: 0 increamentCount: 6
+2025-01-09 20:50:11.784  INFO [$_NIOREACTOR-1-RW] (io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:564)) - no ilde connection in pool 259630944 ,create new connection for hostM1 of schema mycat3 totalConnectionCount: 0 increamentCount: 7
+2025-01-09 20:50:11.784  INFO [$_NIOREACTOR-1-RW] (io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:564)) - no ilde connection in pool 259630944 ,create new connection for hostM1 of schema mycat2 totalConnectionCount: 0 increamentCount: 8
+2025-01-09 20:50:11.785  INFO [$_NIOREACTOR-1-RW] (io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:564)) - no ilde connection in pool 259630944 ,create new connection for hostM1 of schema mycat1 totalConnectionCount: 0 increamentCount: 9
+2025-01-09 20:50:11.785  INFO [$_NIOREACTOR-1-RW] (io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:564)) - no ilde connection in pool 259630944 ,create new connection for hostM1 of schema mycat3 totalConnectionCount: 0 increamentCount: 10
+2025-01-09 20:50:11.787  WARN [BusinessExecutor19] (io.mycat.backend.mysql.nio.handler.GetConnectionHandler.connectionError(GetConnectionHandler.java:74)) - connect error JDBCConnection [id=20,autocommit=true,pool=io.mycat.backend.jdbc.JDBCDatasource@f79a760, schema=mycat3, dbType=MYSQL, oldSchema=null, packetId=0, txIsolation=0, running=false, borrowed=false, host=localhost, port=3306, con=null, respHandler=null, attachement=null, headerOutputed=false, modifiedSQLExecuted=false, startTime=1736427011784, lastTime=0, isSpark=false, processor=io.mycat.net.NIOProcessor@2e2fa9]com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+2025-01-09 20:50:11.787  WARN [BusinessExecutor18] (io.mycat.backend.mysql.nio.handler.GetConnectionHandler.connectionError(GetConnectionHandler.java:74)) - connect error JDBCConnection [id=19,autocommit=true,pool=io.mycat.backend.jdbc.JDBCDatasource@f79a760, schema=mycat1, dbType=MYSQL, oldSchema=null, packetId=0, txIsolation=0, running=false, borrowed=false, host=localhost, port=3306, con=null, respHandler=null, attachement=null, headerOutputed=false, modifiedSQLExecuted=false, startTime=1736427011784, lastTime=0, isSpark=false, processor=io.mycat.net.NIOProcessor@72dbe036]com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+2025-01-09 20:50:11.787  WARN [BusinessExecutor13] (io.mycat.backend.mysql.nio.handler.GetConnectionHandler.connectionError(GetConnectionHandler.java:74)) - connect error JDBCConnection [id=14,autocommit=true,pool=io.mycat.backend.jdbc.JDBCDatasource@f79a760, schema=mycat3, dbType=MYSQL, oldSchema=null, packetId=0, txIsolation=0, running=false, borrowed=false, host=localhost, port=3306, con=null, respHandler=null, attachement=null, headerOutputed=false, modifiedSQLExecuted=false, startTime=1736427011784, lastTime=0, isSpark=false, processor=io.mycat.net.NIOProcessor@11a6f42e]com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+2025-01-09 20:50:11.787  WARN [BusinessExecutor14] (io.mycat.backend.mysql.nio.handler.GetConnectionHandler.connectionError(GetConnectionHandler.java:74)) - connect error JDBCConnection [id=15,autocommit=true,pool=io.mycat.backend.jdbc.JDBCDatasource@f79a760, schema=mycat2, dbType=MYSQL, oldSchema=null, packetId=0, txIsolation=0, running=false, borrowed=false, host=localhost, port=3306, con=null, respHandler=null, attachement=null, headerOutputed=false, modifiedSQLExecuted=false, startTime=1736427011784, lastTime=0, isSpark=false, processor=io.mycat.net.NIOProcessor@65c5243f]com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+2025-01-09 20:50:11.787  WARN [BusinessExecutor20] (io.mycat.backend.mysql.nio.handler.GetConnectionHandler.connectionError(GetConnectionHandler.java:74)) - connect error JDBCConnection [id=21,autocommit=true,pool=io.mycat.backend.jdbc.JDBCDatasource@f79a760, schema=mycat2, dbType=MYSQL, oldSchema=null, packetId=0, txIsolation=0, running=false, borrowed=false, host=localhost, port=3306, con=null, respHandler=null, attachement=null, headerOutputed=false, modifiedSQLExecuted=false, startTime=1736427011785, lastTime=0, isSpark=false, processor=io.mycat.net.NIOProcessor@30c4eb19]com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+2025-01-09 20:50:11.787  WARN [BusinessExecutor16] (io.mycat.backend.mysql.nio.handler.GetConnectionHandler.connectionError(GetConnectionHandler.java:74)) - connect error JDBCConnection [id=17,autocommit=true,pool=io.mycat.backend.jdbc.JDBCDatasource@f79a760, schema=mycat3, dbType=MYSQL, oldSchema=null, packetId=0, txIsolation=0, running=false, borrowed=false, host=localhost, port=3306, con=null, respHandler=null, attachement=null, headerOutputed=false, modifiedSQLExecuted=false, startTime=1736427011784, lastTime=0, isSpark=false, processor=io.mycat.net.NIOProcessor@18c36af0]com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+2025-01-09 20:50:11.787  WARN [BusinessExecutor15] (io.mycat.backend.mysql.nio.handler.GetConnectionHandler.connectionError(GetConnectionHandler.java:74)) - connect error JDBCConnection [id=16,autocommit=true,pool=io.mycat.backend.jdbc.JDBCDatasource@f79a760, schema=mycat1, dbType=MYSQL, oldSchema=null, packetId=0, txIsolation=0, running=false, borrowed=false, host=localhost, port=3306, con=null, respHandler=null, attachement=null, headerOutputed=false, modifiedSQLExecuted=false, startTime=1736427011784, lastTime=0, isSpark=false, processor=io.mycat.net.NIOProcessor@59028184]com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+2025-01-09 20:50:11.787  WARN [BusinessExecutor17] (io.mycat.backend.mysql.nio.handler.GetConnectionHandler.connectionError(GetConnectionHandler.java:74)) - connect error JDBCConnection [id=18,autocommit=true,pool=io.mycat.backend.jdbc.JDBCDatasource@f79a760, schema=mycat2, dbType=MYSQL, oldSchema=null, packetId=0, txIsolation=0, running=false, borrowed=false, host=localhost, port=3306, con=null, respHandler=null, attachement=null, headerOutputed=false, modifiedSQLExecuted=false, startTime=1736427011784, lastTime=0, isSpark=false, processor=io.mycat.net.NIOProcessor@637398e2]com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+2025-01-09 20:50:11.787  WARN [BusinessExecutor21] (io.mycat.backend.mysql.nio.handler.GetConnectionHandler.connectionError(GetConnectionHandler.java:74)) - connect error JDBCConnection [id=22,autocommit=true,pool=io.mycat.backend.jdbc.JDBCDatasource@f79a760, schema=mycat1, dbType=MYSQL, oldSchema=null, packetId=0, txIsolation=0, running=false, borrowed=false, host=localhost, port=3306, con=null, respHandler=null, attachement=null, headerOutputed=false, modifiedSQLExecuted=false, startTime=1736427011785, lastTime=0, isSpark=false, processor=io.mycat.net.NIOProcessor@423ce04a]com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+2025-01-09 20:50:11.788  WARN [BusinessExecutor22] (io.mycat.backend.mysql.nio.handler.GetConnectionHandler.connectionError(GetConnectionHandler.java:74)) - connect error JDBCConnection [id=23,autocommit=true,pool=io.mycat.backend.jdbc.JDBCDatasource@f79a760, schema=mycat3, dbType=MYSQL, oldSchema=null, packetId=0, txIsolation=0, running=false, borrowed=false, host=localhost, port=3306, con=null, respHandler=null, attachement=null, headerOutputed=false, modifiedSQLExecuted=false, startTime=1736427011785, lastTime=0, isSpark=false, processor=io.mycat.net.NIOProcessor@5bb7aa2d]com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+2025-01-09 20:50:11.892  INFO [$_NIOREACTOR-1-RW] (io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:419)) - init result :finished 10 success 0 target count:10
+2025-01-09 20:50:11.892 ERROR [$_NIOREACTOR-1-RW] (io.mycat.backend.datasource.PhysicalDBPool.init(PhysicalDBPool.java:379)) - #!MyCat#localhost init failure
+2025-01-09 20:50:11.893  WARN [$_NIOREACTOR-1-RW] (io.mycat.backend.mysql.nio.handler.SingleNodeHandler.execute(SingleNodeHandler.java:208)) - ServerConnection [id=1, schema=null, host=127.0.0.1, user=root,txIsolation=3, autocommit=true, schema=null, executeSql=SHOW VARIABLES LIKE 'lower_case_%']SHOW VARIABLES LIKE 'lower_case_%', route={
+   1 -> dn1{SHOW VARIABLES LIKE 'lower_case_%'}
+}
+java.lang.IllegalArgumentException: Invalid DataSource:0
+	at io.mycat.backend.datasource.PhysicalDBNode.getConnection(PhysicalDBNode.java:146) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.mysql.nio.handler.SingleNodeHandler.execute(SingleNodeHandler.java:204) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.NonBlockingSession.execute(NonBlockingSession.java:151) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerConnection.routeEndExecuteSQL(ServerConnection.java:360) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerConnection.execute(ServerConnection.java:275) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.handler.ShowHandler.handle(ShowHandler.java:60) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerQueryHandler.query(ServerQueryHandler.java:92) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.query(FrontendConnection.java:397) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.query(FrontendConnection.java:417) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.handler.FrontendCommandHandler.handle(FrontendCommandHandler.java:76) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.rawHandle(FrontendConnection.java:591) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.handle(FrontendConnection.java:573) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.AbstractConnection.onReadData(AbstractConnection.java:338) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.NIOSocketWR.asynRead(NIOSocketWR.java:216) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.AbstractConnection.asynRead(AbstractConnection.java:290) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.NIOReactor$RW.run(NIOReactor.java:113) [Mycat-server-1.6.7.6-release.jar:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2025-01-09 20:50:11.893 ERROR [$_NIOREACTOR-1-RW] (io.mycat.net.FrontendConnection.writeErrMessage(FrontendConnection.java:231)) - ServerConnection [id=1, schema=null, host=127.0.0.1, user=root,txIsolation=3, autocommit=true, schema=null, executeSql=SHOW VARIABLES LIKE 'lower_case_%']Invalid DataSource:0java.lang.Thread .getStackTrace1610
+io.mycat.net.FrontendConnection .getStack245
+io.mycat.net.FrontendConnection .writeErrMessage231
+io.mycat.backend.mysql.nio.handler.SingleNodeHandler .connectionError264
+io.mycat.backend.mysql.nio.handler.SingleNodeHandler .execute210
+io.mycat.server.NonBlockingSession .execute151
+io.mycat.server.ServerConnection .routeEndExecuteSQL360
+io.mycat.server.ServerConnection .execute275
+io.mycat.server.handler.ShowHandler .handle60
+io.mycat.server.ServerQueryHandler .query92
+io.mycat.net.FrontendConnection .query397
+io.mycat.net.FrontendConnection .query417
+io.mycat.net.handler.FrontendCommandHandler .handle76
+io.mycat.net.FrontendConnection .rawHandle591
+io.mycat.net.FrontendConnection .handle573
+io.mycat.net.AbstractConnection .onReadData338
+io.mycat.net.NIOSocketWR .asynRead216
+io.mycat.net.AbstractConnection .asynRead290
+io.mycat.net.NIOReactor$RW .run113
+java.lang.Thread .run833
+ write errorMsg:{} error
+2025-01-09 20:50:11.896  INFO [$_NIOREACTOR-1-RW] (io.mycat.net.AbstractConnection.close(AbstractConnection.java:531)) - close connection,reason:quit cmd ,ServerConnection [id=1, schema=null, host=127.0.0.1, user=root,txIsolation=3, autocommit=true, schema=null, executeSql=null]
+2025-01-09 20:50:14.530 ERROR [Timer0] (io.mycat.backend.jdbc.JDBCHeartbeat.heartbeat(JDBCHeartbeat.java:123)) - JDBCHeartBeat error
+com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method) ~[?:?]
+	at jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.Util.getInstance(Util.java:372) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:958) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:937) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:926) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:872) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2316) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2069) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:794) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at jdk.internal.reflect.GeneratedConstructorAccessor11.newInstance(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at java.sql.DriverManager.getConnection(DriverManager.java:681) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:229) ~[java.sql:?]
+	at io.mycat.backend.jdbc.JDBCDatasource.getConnection(JDBCDatasource.java:125) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.jdbc.JDBCHeartbeat.heartbeat(JDBCHeartbeat.java:108) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDatasource.doHeartbeat(PhysicalDatasource.java:464) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.doHeartbeat(PhysicalDBPool.java:436) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.MycatServer$8$1.run(MycatServer.java:964) [Mycat-server-1.6.7.6-release.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) [?:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+Caused by: java.lang.NullPointerException: Cannot invoke "java.util.Map.get(Object)" because "this.serverVariables" is null
+	at com.mysql.jdbc.ConnectionImpl.getServerCharset(ConnectionImpl.java:2989) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.sendConnectionAttributes(MysqlIO.java:1873) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1802) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2239) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2270) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	... 20 more
+2025-01-09 20:50:16.757  INFO [$_NIOREACTOR-2-RW] (io.mycat.net.handler.FrontendAuthenticator.success(FrontendAuthenticator.java:226)) - Mycat does not support the allowMultiQueries value to be true, maybe occur some error.Client connection is[io.mycat.net.handler.FrontendAuthenticator@add2be0]
+2025-01-09 20:50:16.757  INFO [$_NIOREACTOR-2-RW] (io.mycat.net.handler.FrontendAuthenticator.success(FrontendAuthenticator.java:241)) - ServerConnection [id=2, schema=null, host=127.0.0.1, user=root,txIsolation=3, autocommit=true, schema=null, executeSql=null]'root' login success
+2025-01-09 20:50:16.758  INFO [$_NIOREACTOR-2-RW] (io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:394)) - init backend mysql source ,create connections total 10 for hostM1 index :0
+2025-01-09 20:50:16.758  WARN [$_NIOREACTOR-2-RW] (io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:405)) - localhost index:0 init connection error.
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.isClosed()" because "this.con" is null
+	at io.mycat.backend.jdbc.JDBCConnection.checkAlive(JDBCConnection.java:988) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConQueue.takeIdleCon(ConQueue.java:22) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConMap.tryTakeCon(ConMap.java:52) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConMap.tryTakeCon(ConMap.java:32) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:534) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:403) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.init(PhysicalDBPool.java:354) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.init(PhysicalDBPool.java:342) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBNode.checkRequest(PhysicalDBNode.java:89) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBNode.getConnection(PhysicalDBNode.java:95) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.mysql.nio.handler.SingleNodeHandler.execute(SingleNodeHandler.java:204) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.NonBlockingSession.execute(NonBlockingSession.java:151) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerConnection.routeEndExecuteSQL(ServerConnection.java:360) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerConnection.execute(ServerConnection.java:275) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.handler.ShowHandler.handle(ShowHandler.java:60) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerQueryHandler.query(ServerQueryHandler.java:92) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.query(FrontendConnection.java:397) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.query(FrontendConnection.java:417) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.handler.FrontendCommandHandler.handle(FrontendCommandHandler.java:76) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.rawHandle(FrontendConnection.java:591) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.handle(FrontendConnection.java:573) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.AbstractConnection.onReadData(AbstractConnection.java:338) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.NIOSocketWR.asynRead(NIOSocketWR.java:216) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.AbstractConnection.asynRead(AbstractConnection.java:290) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.NIOReactor$RW.run(NIOReactor.java:113) [Mycat-server-1.6.7.6-release.jar:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2025-01-09 20:50:16.759  WARN [$_NIOREACTOR-2-RW] (io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:405)) - localhost index:0 init connection error.
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.isClosed()" because "this.con" is null
+	at io.mycat.backend.jdbc.JDBCConnection.checkAlive(JDBCConnection.java:988) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConQueue.takeIdleCon(ConQueue.java:22) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConMap.tryTakeCon(ConMap.java:52) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConMap.tryTakeCon(ConMap.java:32) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:534) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:403) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.init(PhysicalDBPool.java:354) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.init(PhysicalDBPool.java:342) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBNode.checkRequest(PhysicalDBNode.java:89) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBNode.getConnection(PhysicalDBNode.java:95) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.mysql.nio.handler.SingleNodeHandler.execute(SingleNodeHandler.java:204) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.NonBlockingSession.execute(NonBlockingSession.java:151) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerConnection.routeEndExecuteSQL(ServerConnection.java:360) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerConnection.execute(ServerConnection.java:275) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.handler.ShowHandler.handle(ShowHandler.java:60) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerQueryHandler.query(ServerQueryHandler.java:92) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.query(FrontendConnection.java:397) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.query(FrontendConnection.java:417) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.handler.FrontendCommandHandler.handle(FrontendCommandHandler.java:76) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.rawHandle(FrontendConnection.java:591) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.handle(FrontendConnection.java:573) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.AbstractConnection.onReadData(AbstractConnection.java:338) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.NIOSocketWR.asynRead(NIOSocketWR.java:216) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.AbstractConnection.asynRead(AbstractConnection.java:290) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.NIOReactor$RW.run(NIOReactor.java:113) [Mycat-server-1.6.7.6-release.jar:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2025-01-09 20:50:16.759  WARN [$_NIOREACTOR-2-RW] (io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:405)) - localhost index:0 init connection error.
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.isClosed()" because "this.con" is null
+	at io.mycat.backend.jdbc.JDBCConnection.checkAlive(JDBCConnection.java:988) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConQueue.takeIdleCon(ConQueue.java:22) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConMap.tryTakeCon(ConMap.java:52) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConMap.tryTakeCon(ConMap.java:32) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:534) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:403) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.init(PhysicalDBPool.java:354) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.init(PhysicalDBPool.java:342) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBNode.checkRequest(PhysicalDBNode.java:89) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBNode.getConnection(PhysicalDBNode.java:95) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.mysql.nio.handler.SingleNodeHandler.execute(SingleNodeHandler.java:204) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.NonBlockingSession.execute(NonBlockingSession.java:151) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerConnection.routeEndExecuteSQL(ServerConnection.java:360) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerConnection.execute(ServerConnection.java:275) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.handler.ShowHandler.handle(ShowHandler.java:60) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerQueryHandler.query(ServerQueryHandler.java:92) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.query(FrontendConnection.java:397) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.query(FrontendConnection.java:417) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.handler.FrontendCommandHandler.handle(FrontendCommandHandler.java:76) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.rawHandle(FrontendConnection.java:591) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.handle(FrontendConnection.java:573) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.AbstractConnection.onReadData(AbstractConnection.java:338) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.NIOSocketWR.asynRead(NIOSocketWR.java:216) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.AbstractConnection.asynRead(AbstractConnection.java:290) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.NIOReactor$RW.run(NIOReactor.java:113) [Mycat-server-1.6.7.6-release.jar:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2025-01-09 20:50:16.759  WARN [$_NIOREACTOR-2-RW] (io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:405)) - localhost index:0 init connection error.
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.isClosed()" because "this.con" is null
+	at io.mycat.backend.jdbc.JDBCConnection.checkAlive(JDBCConnection.java:988) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConQueue.takeIdleCon(ConQueue.java:22) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConMap.tryTakeCon(ConMap.java:52) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConMap.tryTakeCon(ConMap.java:32) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:534) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:403) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.init(PhysicalDBPool.java:354) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.init(PhysicalDBPool.java:342) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBNode.checkRequest(PhysicalDBNode.java:89) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBNode.getConnection(PhysicalDBNode.java:95) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.mysql.nio.handler.SingleNodeHandler.execute(SingleNodeHandler.java:204) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.NonBlockingSession.execute(NonBlockingSession.java:151) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerConnection.routeEndExecuteSQL(ServerConnection.java:360) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerConnection.execute(ServerConnection.java:275) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.handler.ShowHandler.handle(ShowHandler.java:60) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerQueryHandler.query(ServerQueryHandler.java:92) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.query(FrontendConnection.java:397) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.query(FrontendConnection.java:417) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.handler.FrontendCommandHandler.handle(FrontendCommandHandler.java:76) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.rawHandle(FrontendConnection.java:591) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.handle(FrontendConnection.java:573) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.AbstractConnection.onReadData(AbstractConnection.java:338) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.NIOSocketWR.asynRead(NIOSocketWR.java:216) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.AbstractConnection.asynRead(AbstractConnection.java:290) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.NIOReactor$RW.run(NIOReactor.java:113) [Mycat-server-1.6.7.6-release.jar:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2025-01-09 20:50:16.759  WARN [$_NIOREACTOR-2-RW] (io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:405)) - localhost index:0 init connection error.
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.isClosed()" because "this.con" is null
+	at io.mycat.backend.jdbc.JDBCConnection.checkAlive(JDBCConnection.java:988) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConQueue.takeIdleCon(ConQueue.java:22) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConMap.tryTakeCon(ConMap.java:52) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConMap.tryTakeCon(ConMap.java:32) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:534) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:403) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.init(PhysicalDBPool.java:354) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.init(PhysicalDBPool.java:342) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBNode.checkRequest(PhysicalDBNode.java:89) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBNode.getConnection(PhysicalDBNode.java:95) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.mysql.nio.handler.SingleNodeHandler.execute(SingleNodeHandler.java:204) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.NonBlockingSession.execute(NonBlockingSession.java:151) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerConnection.routeEndExecuteSQL(ServerConnection.java:360) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerConnection.execute(ServerConnection.java:275) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.handler.ShowHandler.handle(ShowHandler.java:60) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerQueryHandler.query(ServerQueryHandler.java:92) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.query(FrontendConnection.java:397) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.query(FrontendConnection.java:417) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.handler.FrontendCommandHandler.handle(FrontendCommandHandler.java:76) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.rawHandle(FrontendConnection.java:591) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.handle(FrontendConnection.java:573) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.AbstractConnection.onReadData(AbstractConnection.java:338) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.NIOSocketWR.asynRead(NIOSocketWR.java:216) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.AbstractConnection.asynRead(AbstractConnection.java:290) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.NIOReactor$RW.run(NIOReactor.java:113) [Mycat-server-1.6.7.6-release.jar:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2025-01-09 20:50:16.759  WARN [$_NIOREACTOR-2-RW] (io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:405)) - localhost index:0 init connection error.
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.isClosed()" because "this.con" is null
+	at io.mycat.backend.jdbc.JDBCConnection.checkAlive(JDBCConnection.java:988) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConQueue.takeIdleCon(ConQueue.java:22) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConMap.tryTakeCon(ConMap.java:52) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConMap.tryTakeCon(ConMap.java:32) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:534) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:403) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.init(PhysicalDBPool.java:354) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.init(PhysicalDBPool.java:342) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBNode.checkRequest(PhysicalDBNode.java:89) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBNode.getConnection(PhysicalDBNode.java:95) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.mysql.nio.handler.SingleNodeHandler.execute(SingleNodeHandler.java:204) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.NonBlockingSession.execute(NonBlockingSession.java:151) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerConnection.routeEndExecuteSQL(ServerConnection.java:360) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerConnection.execute(ServerConnection.java:275) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.handler.ShowHandler.handle(ShowHandler.java:60) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerQueryHandler.query(ServerQueryHandler.java:92) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.query(FrontendConnection.java:397) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.query(FrontendConnection.java:417) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.handler.FrontendCommandHandler.handle(FrontendCommandHandler.java:76) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.rawHandle(FrontendConnection.java:591) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.handle(FrontendConnection.java:573) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.AbstractConnection.onReadData(AbstractConnection.java:338) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.NIOSocketWR.asynRead(NIOSocketWR.java:216) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.AbstractConnection.asynRead(AbstractConnection.java:290) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.NIOReactor$RW.run(NIOReactor.java:113) [Mycat-server-1.6.7.6-release.jar:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2025-01-09 20:50:16.759  WARN [$_NIOREACTOR-2-RW] (io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:405)) - localhost index:0 init connection error.
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.isClosed()" because "this.con" is null
+	at io.mycat.backend.jdbc.JDBCConnection.checkAlive(JDBCConnection.java:988) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConQueue.takeIdleCon(ConQueue.java:22) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConMap.tryTakeCon(ConMap.java:52) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConMap.tryTakeCon(ConMap.java:32) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:534) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:403) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.init(PhysicalDBPool.java:354) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.init(PhysicalDBPool.java:342) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBNode.checkRequest(PhysicalDBNode.java:89) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBNode.getConnection(PhysicalDBNode.java:95) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.mysql.nio.handler.SingleNodeHandler.execute(SingleNodeHandler.java:204) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.NonBlockingSession.execute(NonBlockingSession.java:151) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerConnection.routeEndExecuteSQL(ServerConnection.java:360) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerConnection.execute(ServerConnection.java:275) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.handler.ShowHandler.handle(ShowHandler.java:60) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerQueryHandler.query(ServerQueryHandler.java:92) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.query(FrontendConnection.java:397) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.query(FrontendConnection.java:417) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.handler.FrontendCommandHandler.handle(FrontendCommandHandler.java:76) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.rawHandle(FrontendConnection.java:591) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.handle(FrontendConnection.java:573) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.AbstractConnection.onReadData(AbstractConnection.java:338) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.NIOSocketWR.asynRead(NIOSocketWR.java:216) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.AbstractConnection.asynRead(AbstractConnection.java:290) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.NIOReactor$RW.run(NIOReactor.java:113) [Mycat-server-1.6.7.6-release.jar:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2025-01-09 20:50:16.759  WARN [$_NIOREACTOR-2-RW] (io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:405)) - localhost index:0 init connection error.
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.isClosed()" because "this.con" is null
+	at io.mycat.backend.jdbc.JDBCConnection.checkAlive(JDBCConnection.java:988) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConQueue.takeIdleCon(ConQueue.java:22) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConMap.tryTakeCon(ConMap.java:52) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConMap.tryTakeCon(ConMap.java:32) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:534) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:403) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.init(PhysicalDBPool.java:354) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.init(PhysicalDBPool.java:342) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBNode.checkRequest(PhysicalDBNode.java:89) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBNode.getConnection(PhysicalDBNode.java:95) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.mysql.nio.handler.SingleNodeHandler.execute(SingleNodeHandler.java:204) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.NonBlockingSession.execute(NonBlockingSession.java:151) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerConnection.routeEndExecuteSQL(ServerConnection.java:360) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerConnection.execute(ServerConnection.java:275) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.handler.ShowHandler.handle(ShowHandler.java:60) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerQueryHandler.query(ServerQueryHandler.java:92) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.query(FrontendConnection.java:397) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.query(FrontendConnection.java:417) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.handler.FrontendCommandHandler.handle(FrontendCommandHandler.java:76) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.rawHandle(FrontendConnection.java:591) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.handle(FrontendConnection.java:573) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.AbstractConnection.onReadData(AbstractConnection.java:338) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.NIOSocketWR.asynRead(NIOSocketWR.java:216) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.AbstractConnection.asynRead(AbstractConnection.java:290) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.NIOReactor$RW.run(NIOReactor.java:113) [Mycat-server-1.6.7.6-release.jar:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2025-01-09 20:50:16.760  WARN [$_NIOREACTOR-2-RW] (io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:405)) - localhost index:0 init connection error.
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.isClosed()" because "this.con" is null
+	at io.mycat.backend.jdbc.JDBCConnection.checkAlive(JDBCConnection.java:988) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConQueue.takeIdleCon(ConQueue.java:22) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConMap.tryTakeCon(ConMap.java:52) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConMap.tryTakeCon(ConMap.java:32) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:534) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:403) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.init(PhysicalDBPool.java:354) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.init(PhysicalDBPool.java:342) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBNode.checkRequest(PhysicalDBNode.java:89) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBNode.getConnection(PhysicalDBNode.java:95) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.mysql.nio.handler.SingleNodeHandler.execute(SingleNodeHandler.java:204) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.NonBlockingSession.execute(NonBlockingSession.java:151) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerConnection.routeEndExecuteSQL(ServerConnection.java:360) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerConnection.execute(ServerConnection.java:275) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.handler.ShowHandler.handle(ShowHandler.java:60) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerQueryHandler.query(ServerQueryHandler.java:92) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.query(FrontendConnection.java:397) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.query(FrontendConnection.java:417) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.handler.FrontendCommandHandler.handle(FrontendCommandHandler.java:76) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.rawHandle(FrontendConnection.java:591) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.handle(FrontendConnection.java:573) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.AbstractConnection.onReadData(AbstractConnection.java:338) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.NIOSocketWR.asynRead(NIOSocketWR.java:216) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.AbstractConnection.asynRead(AbstractConnection.java:290) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.NIOReactor$RW.run(NIOReactor.java:113) [Mycat-server-1.6.7.6-release.jar:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2025-01-09 20:50:16.760  WARN [$_NIOREACTOR-2-RW] (io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:405)) - localhost index:0 init connection error.
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.isClosed()" because "this.con" is null
+	at io.mycat.backend.jdbc.JDBCConnection.checkAlive(JDBCConnection.java:988) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConQueue.takeIdleCon(ConQueue.java:22) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConMap.tryTakeCon(ConMap.java:52) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConMap.tryTakeCon(ConMap.java:32) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:534) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:403) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.init(PhysicalDBPool.java:354) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.init(PhysicalDBPool.java:342) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBNode.checkRequest(PhysicalDBNode.java:89) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBNode.getConnection(PhysicalDBNode.java:95) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.mysql.nio.handler.SingleNodeHandler.execute(SingleNodeHandler.java:204) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.NonBlockingSession.execute(NonBlockingSession.java:151) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerConnection.routeEndExecuteSQL(ServerConnection.java:360) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerConnection.execute(ServerConnection.java:275) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.handler.ShowHandler.handle(ShowHandler.java:60) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerQueryHandler.query(ServerQueryHandler.java:92) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.query(FrontendConnection.java:397) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.query(FrontendConnection.java:417) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.handler.FrontendCommandHandler.handle(FrontendCommandHandler.java:76) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.rawHandle(FrontendConnection.java:591) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.handle(FrontendConnection.java:573) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.AbstractConnection.onReadData(AbstractConnection.java:338) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.NIOSocketWR.asynRead(NIOSocketWR.java:216) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.AbstractConnection.asynRead(AbstractConnection.java:290) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.NIOReactor$RW.run(NIOReactor.java:113) [Mycat-server-1.6.7.6-release.jar:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2025-01-09 20:50:24.534 ERROR [Timer1] (io.mycat.backend.jdbc.JDBCHeartbeat.heartbeat(JDBCHeartbeat.java:123)) - JDBCHeartBeat error
+com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+	at jdk.internal.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.Util.getInstance(Util.java:372) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:958) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:937) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:926) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:872) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2316) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2069) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:794) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at jdk.internal.reflect.GeneratedConstructorAccessor11.newInstance(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at java.sql.DriverManager.getConnection(DriverManager.java:681) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:229) ~[java.sql:?]
+	at io.mycat.backend.jdbc.JDBCDatasource.getConnection(JDBCDatasource.java:125) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.jdbc.JDBCHeartbeat.heartbeat(JDBCHeartbeat.java:108) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDatasource.doHeartbeat(PhysicalDatasource.java:464) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.doHeartbeat(PhysicalDBPool.java:436) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.MycatServer$8$1.run(MycatServer.java:964) [Mycat-server-1.6.7.6-release.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) [?:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+Caused by: java.lang.NullPointerException: Cannot invoke "java.util.Map.get(Object)" because "this.serverVariables" is null
+	at com.mysql.jdbc.ConnectionImpl.getServerCharset(ConnectionImpl.java:2989) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.sendConnectionAttributes(MysqlIO.java:1873) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1802) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2239) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2270) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	... 20 more
+2025-01-09 20:50:34.545 ERROR [Timer0] (io.mycat.backend.jdbc.JDBCHeartbeat.heartbeat(JDBCHeartbeat.java:123)) - JDBCHeartBeat error
+com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+	at jdk.internal.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.Util.getInstance(Util.java:372) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:958) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:937) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:926) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:872) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2316) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2069) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:794) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at jdk.internal.reflect.GeneratedConstructorAccessor11.newInstance(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at java.sql.DriverManager.getConnection(DriverManager.java:681) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:229) ~[java.sql:?]
+	at io.mycat.backend.jdbc.JDBCDatasource.getConnection(JDBCDatasource.java:125) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.jdbc.JDBCHeartbeat.heartbeat(JDBCHeartbeat.java:108) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDatasource.doHeartbeat(PhysicalDatasource.java:464) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.doHeartbeat(PhysicalDBPool.java:436) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.MycatServer$8$1.run(MycatServer.java:964) [Mycat-server-1.6.7.6-release.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) [?:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+Caused by: java.lang.NullPointerException: Cannot invoke "java.util.Map.get(Object)" because "this.serverVariables" is null
+	at com.mysql.jdbc.ConnectionImpl.getServerCharset(ConnectionImpl.java:2989) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.sendConnectionAttributes(MysqlIO.java:1873) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1802) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2239) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2270) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	... 20 more
+2025-01-09 20:50:42.909  INFO [$_NIOREACTOR-3-RW] (io.mycat.net.handler.FrontendAuthenticator.success(FrontendAuthenticator.java:226)) - Mycat does not support the allowMultiQueries value to be true, maybe occur some error.Client connection is[io.mycat.net.handler.FrontendAuthenticator@6dc13d4d]
+2025-01-09 20:50:42.909  INFO [$_NIOREACTOR-3-RW] (io.mycat.net.handler.FrontendAuthenticator.success(FrontendAuthenticator.java:241)) - ServerConnection [id=3, schema=null, host=127.0.0.1, user=root,txIsolation=3, autocommit=true, schema=null, executeSql=null]'root' login success
+2025-01-09 20:50:42.910  INFO [$_NIOREACTOR-3-RW] (io.mycat.net.AbstractConnection.close(AbstractConnection.java:531)) - close connection,reason:quit cmd ,ServerConnection [id=3, schema=null, host=127.0.0.1, user=root,txIsolation=3, autocommit=true, schema=null, executeSql=null]
+2025-01-09 20:50:44.544 ERROR [Timer0] (io.mycat.backend.jdbc.JDBCHeartbeat.heartbeat(JDBCHeartbeat.java:123)) - JDBCHeartBeat error
+com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+	at jdk.internal.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.Util.getInstance(Util.java:372) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:958) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:937) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:926) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:872) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2316) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2069) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:794) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at jdk.internal.reflect.GeneratedConstructorAccessor11.newInstance(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at java.sql.DriverManager.getConnection(DriverManager.java:681) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:229) ~[java.sql:?]
+	at io.mycat.backend.jdbc.JDBCDatasource.getConnection(JDBCDatasource.java:125) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.jdbc.JDBCHeartbeat.heartbeat(JDBCHeartbeat.java:108) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDatasource.doHeartbeat(PhysicalDatasource.java:464) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.doHeartbeat(PhysicalDBPool.java:436) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.MycatServer$8$1.run(MycatServer.java:964) [Mycat-server-1.6.7.6-release.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) [?:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+Caused by: java.lang.NullPointerException: Cannot invoke "java.util.Map.get(Object)" because "this.serverVariables" is null
+	at com.mysql.jdbc.ConnectionImpl.getServerCharset(ConnectionImpl.java:2989) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.sendConnectionAttributes(MysqlIO.java:1873) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1802) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2239) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2270) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	... 20 more
+2025-01-09 20:50:47.503  INFO [$_NIOREACTOR-4-RW] (io.mycat.net.handler.FrontendAuthenticator.success(FrontendAuthenticator.java:226)) - Mycat does not support the allowMultiQueries value to be true, maybe occur some error.Client connection is[io.mycat.net.handler.FrontendAuthenticator@262e6347]
+2025-01-09 20:50:47.503  INFO [$_NIOREACTOR-4-RW] (io.mycat.net.handler.FrontendAuthenticator.success(FrontendAuthenticator.java:241)) - ServerConnection [id=4, schema=null, host=127.0.0.1, user=root,txIsolation=3, autocommit=true, schema=null, executeSql=null]'root' login success
+2025-01-09 20:50:48.442  INFO [$_NIOREACTOR-5-RW] (io.mycat.net.handler.FrontendAuthenticator.success(FrontendAuthenticator.java:226)) - Mycat does not support the allowMultiQueries value to be true, maybe occur some error.Client connection is[io.mycat.net.handler.FrontendAuthenticator@5ad97d6e]
+2025-01-09 20:50:48.442  INFO [$_NIOREACTOR-5-RW] (io.mycat.net.handler.FrontendAuthenticator.success(FrontendAuthenticator.java:241)) - ServerConnection [id=5, schema=null, host=127.0.0.1, user=root,txIsolation=3, autocommit=true, schema=null, executeSql=null]'root' login success
+2025-01-09 20:50:48.443  INFO [$_NIOREACTOR-5-RW] (io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:394)) - init backend mysql source ,create connections total 10 for hostM1 index :0
+2025-01-09 20:50:48.444  INFO [$_NIOREACTOR-5-RW] (io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:564)) - no ilde connection in pool 259630944 ,create new connection for hostM1 of schema mycat3 totalConnectionCount: 0 increamentCount: 1
+2025-01-09 20:50:48.444  INFO [$_NIOREACTOR-5-RW] (io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:564)) - no ilde connection in pool 259630944 ,create new connection for hostM1 of schema mycat2 totalConnectionCount: 0 increamentCount: 2
+2025-01-09 20:50:48.444  INFO [$_NIOREACTOR-5-RW] (io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:564)) - no ilde connection in pool 259630944 ,create new connection for hostM1 of schema mycat1 totalConnectionCount: 0 increamentCount: 3
+2025-01-09 20:50:48.444  INFO [$_NIOREACTOR-5-RW] (io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:564)) - no ilde connection in pool 259630944 ,create new connection for hostM1 of schema mycat3 totalConnectionCount: 0 increamentCount: 4
+2025-01-09 20:50:48.444  INFO [$_NIOREACTOR-5-RW] (io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:564)) - no ilde connection in pool 259630944 ,create new connection for hostM1 of schema mycat2 totalConnectionCount: 0 increamentCount: 5
+2025-01-09 20:50:48.444  INFO [$_NIOREACTOR-5-RW] (io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:564)) - no ilde connection in pool 259630944 ,create new connection for hostM1 of schema mycat1 totalConnectionCount: 0 increamentCount: 6
+2025-01-09 20:50:48.444  INFO [$_NIOREACTOR-5-RW] (io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:564)) - no ilde connection in pool 259630944 ,create new connection for hostM1 of schema mycat3 totalConnectionCount: 0 increamentCount: 7
+2025-01-09 20:50:48.445  INFO [$_NIOREACTOR-5-RW] (io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:564)) - no ilde connection in pool 259630944 ,create new connection for hostM1 of schema mycat2 totalConnectionCount: 0 increamentCount: 8
+2025-01-09 20:50:48.445  INFO [$_NIOREACTOR-5-RW] (io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:564)) - no ilde connection in pool 259630944 ,create new connection for hostM1 of schema mycat1 totalConnectionCount: 0 increamentCount: 9
+2025-01-09 20:50:48.445  INFO [$_NIOREACTOR-5-RW] (io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:564)) - no ilde connection in pool 259630944 ,create new connection for hostM1 of schema mycat3 totalConnectionCount: 0 increamentCount: 10
+2025-01-09 20:50:48.447  WARN [BusinessExecutor23] (io.mycat.backend.mysql.nio.handler.GetConnectionHandler.connectionError(GetConnectionHandler.java:74)) - connect error JDBCConnection [id=24,autocommit=true,pool=io.mycat.backend.jdbc.JDBCDatasource@f79a760, schema=mycat3, dbType=MYSQL, oldSchema=null, packetId=0, txIsolation=0, running=false, borrowed=false, host=localhost, port=3306, con=null, respHandler=null, attachement=null, headerOutputed=false, modifiedSQLExecuted=false, startTime=1736427048444, lastTime=0, isSpark=false, processor=io.mycat.net.NIOProcessor@5811c770]com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+2025-01-09 20:50:48.447  WARN [BusinessExecutor29] (io.mycat.backend.mysql.nio.handler.GetConnectionHandler.connectionError(GetConnectionHandler.java:74)) - connect error JDBCConnection [id=30,autocommit=true,pool=io.mycat.backend.jdbc.JDBCDatasource@f79a760, schema=mycat3, dbType=MYSQL, oldSchema=null, packetId=0, txIsolation=0, running=false, borrowed=false, host=localhost, port=3306, con=null, respHandler=null, attachement=null, headerOutputed=false, modifiedSQLExecuted=false, startTime=1736427048445, lastTime=0, isSpark=false, processor=io.mycat.net.NIOProcessor@637398e2]com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+2025-01-09 20:50:48.447  WARN [BusinessExecutor28] (io.mycat.backend.mysql.nio.handler.GetConnectionHandler.connectionError(GetConnectionHandler.java:74)) - connect error JDBCConnection [id=29,autocommit=true,pool=io.mycat.backend.jdbc.JDBCDatasource@f79a760, schema=mycat1, dbType=MYSQL, oldSchema=null, packetId=0, txIsolation=0, running=false, borrowed=false, host=localhost, port=3306, con=null, respHandler=null, attachement=null, headerOutputed=false, modifiedSQLExecuted=false, startTime=1736427048444, lastTime=0, isSpark=false, processor=io.mycat.net.NIOProcessor@18c36af0]com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+2025-01-09 20:50:48.447  WARN [BusinessExecutor30] (io.mycat.backend.mysql.nio.handler.GetConnectionHandler.connectionError(GetConnectionHandler.java:74)) - connect error JDBCConnection [id=31,autocommit=true,pool=io.mycat.backend.jdbc.JDBCDatasource@f79a760, schema=mycat2, dbType=MYSQL, oldSchema=null, packetId=0, txIsolation=0, running=false, borrowed=false, host=localhost, port=3306, con=null, respHandler=null, attachement=null, headerOutputed=false, modifiedSQLExecuted=false, startTime=1736427048445, lastTime=0, isSpark=false, processor=io.mycat.net.NIOProcessor@72dbe036]com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+2025-01-09 20:50:48.447  WARN [BusinessExecutor5] (io.mycat.backend.mysql.nio.handler.GetConnectionHandler.connectionError(GetConnectionHandler.java:74)) - connect error JDBCConnection [id=32,autocommit=true,pool=io.mycat.backend.jdbc.JDBCDatasource@f79a760, schema=mycat3, dbType=MYSQL, oldSchema=null, packetId=0, txIsolation=0, running=false, borrowed=false, host=localhost, port=3306, con=null, respHandler=null, attachement=null, headerOutputed=false, modifiedSQLExecuted=false, startTime=1736427048445, lastTime=0, isSpark=false, processor=io.mycat.net.NIOProcessor@2e2fa9]com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+2025-01-09 20:50:48.447  WARN [BusinessExecutor26] (io.mycat.backend.mysql.nio.handler.GetConnectionHandler.connectionError(GetConnectionHandler.java:74)) - connect error JDBCConnection [id=27,autocommit=true,pool=io.mycat.backend.jdbc.JDBCDatasource@f79a760, schema=mycat3, dbType=MYSQL, oldSchema=null, packetId=0, txIsolation=0, running=false, borrowed=false, host=localhost, port=3306, con=null, respHandler=null, attachement=null, headerOutputed=false, modifiedSQLExecuted=false, startTime=1736427048444, lastTime=0, isSpark=false, processor=io.mycat.net.NIOProcessor@65c5243f]com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+2025-01-09 20:50:48.447  WARN [BusinessExecutor27] (io.mycat.backend.mysql.nio.handler.GetConnectionHandler.connectionError(GetConnectionHandler.java:74)) - connect error JDBCConnection [id=28,autocommit=true,pool=io.mycat.backend.jdbc.JDBCDatasource@f79a760, schema=mycat2, dbType=MYSQL, oldSchema=null, packetId=0, txIsolation=0, running=false, borrowed=false, host=localhost, port=3306, con=null, respHandler=null, attachement=null, headerOutputed=false, modifiedSQLExecuted=false, startTime=1736427048444, lastTime=0, isSpark=false, processor=io.mycat.net.NIOProcessor@59028184]com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+2025-01-09 20:50:48.447  WARN [BusinessExecutor24] (io.mycat.backend.mysql.nio.handler.GetConnectionHandler.connectionError(GetConnectionHandler.java:74)) - connect error JDBCConnection [id=25,autocommit=true,pool=io.mycat.backend.jdbc.JDBCDatasource@f79a760, schema=mycat2, dbType=MYSQL, oldSchema=null, packetId=0, txIsolation=0, running=false, borrowed=false, host=localhost, port=3306, con=null, respHandler=null, attachement=null, headerOutputed=false, modifiedSQLExecuted=false, startTime=1736427048444, lastTime=0, isSpark=false, processor=io.mycat.net.NIOProcessor@6447c3ba]com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+2025-01-09 20:50:48.447  WARN [BusinessExecutor25] (io.mycat.backend.mysql.nio.handler.GetConnectionHandler.connectionError(GetConnectionHandler.java:74)) - connect error JDBCConnection [id=26,autocommit=true,pool=io.mycat.backend.jdbc.JDBCDatasource@f79a760, schema=mycat1, dbType=MYSQL, oldSchema=null, packetId=0, txIsolation=0, running=false, borrowed=false, host=localhost, port=3306, con=null, respHandler=null, attachement=null, headerOutputed=false, modifiedSQLExecuted=false, startTime=1736427048444, lastTime=0, isSpark=false, processor=io.mycat.net.NIOProcessor@11a6f42e]com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+2025-01-09 20:50:48.448  WARN [BusinessExecutor31] (io.mycat.backend.mysql.nio.handler.GetConnectionHandler.connectionError(GetConnectionHandler.java:74)) - connect error JDBCConnection [id=33,autocommit=true,pool=io.mycat.backend.jdbc.JDBCDatasource@f79a760, schema=mycat1, dbType=MYSQL, oldSchema=null, packetId=0, txIsolation=0, running=false, borrowed=false, host=localhost, port=3306, con=null, respHandler=null, attachement=null, headerOutputed=false, modifiedSQLExecuted=false, startTime=1736427048445, lastTime=0, isSpark=false, processor=io.mycat.net.NIOProcessor@30c4eb19]com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+2025-01-09 20:50:48.449  INFO [$_NIOREACTOR-4-RW] (io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:394)) - init backend mysql source ,create connections total 10 for hostM1 index :0
+2025-01-09 20:50:48.449  WARN [$_NIOREACTOR-4-RW] (io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:405)) - localhost index:0 init connection error.
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.isClosed()" because "this.con" is null
+	at io.mycat.backend.jdbc.JDBCConnection.checkAlive(JDBCConnection.java:988) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConQueue.takeIdleCon(ConQueue.java:22) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConMap.tryTakeCon(ConMap.java:52) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConMap.tryTakeCon(ConMap.java:32) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:534) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:403) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.init(PhysicalDBPool.java:354) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.init(PhysicalDBPool.java:342) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBNode.checkRequest(PhysicalDBNode.java:89) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBNode.getConnection(PhysicalDBNode.java:95) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.mysql.nio.handler.SingleNodeHandler.execute(SingleNodeHandler.java:204) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.NonBlockingSession.execute(NonBlockingSession.java:151) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerConnection.routeEndExecuteSQL(ServerConnection.java:360) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerConnection.execute(ServerConnection.java:275) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.handler.SelectHandler.handle(SelectHandler.java:129) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerQueryHandler.query(ServerQueryHandler.java:95) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.query(FrontendConnection.java:397) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.query(FrontendConnection.java:417) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.handler.FrontendCommandHandler.handle(FrontendCommandHandler.java:76) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.rawHandle(FrontendConnection.java:591) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.handle(FrontendConnection.java:573) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.AbstractConnection.onReadData(AbstractConnection.java:338) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.NIOSocketWR.asynRead(NIOSocketWR.java:216) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.AbstractConnection.asynRead(AbstractConnection.java:290) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.NIOReactor$RW.run(NIOReactor.java:113) [Mycat-server-1.6.7.6-release.jar:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2025-01-09 20:50:48.449  WARN [$_NIOREACTOR-4-RW] (io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:405)) - localhost index:0 init connection error.
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.isClosed()" because "this.con" is null
+	at io.mycat.backend.jdbc.JDBCConnection.checkAlive(JDBCConnection.java:988) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConQueue.takeIdleCon(ConQueue.java:22) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConMap.tryTakeCon(ConMap.java:52) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConMap.tryTakeCon(ConMap.java:32) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:534) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:403) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.init(PhysicalDBPool.java:354) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.init(PhysicalDBPool.java:342) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBNode.checkRequest(PhysicalDBNode.java:89) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBNode.getConnection(PhysicalDBNode.java:95) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.mysql.nio.handler.SingleNodeHandler.execute(SingleNodeHandler.java:204) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.NonBlockingSession.execute(NonBlockingSession.java:151) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerConnection.routeEndExecuteSQL(ServerConnection.java:360) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerConnection.execute(ServerConnection.java:275) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.handler.SelectHandler.handle(SelectHandler.java:129) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerQueryHandler.query(ServerQueryHandler.java:95) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.query(FrontendConnection.java:397) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.query(FrontendConnection.java:417) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.handler.FrontendCommandHandler.handle(FrontendCommandHandler.java:76) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.rawHandle(FrontendConnection.java:591) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.handle(FrontendConnection.java:573) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.AbstractConnection.onReadData(AbstractConnection.java:338) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.NIOSocketWR.asynRead(NIOSocketWR.java:216) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.AbstractConnection.asynRead(AbstractConnection.java:290) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.NIOReactor$RW.run(NIOReactor.java:113) [Mycat-server-1.6.7.6-release.jar:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2025-01-09 20:50:48.450  WARN [$_NIOREACTOR-4-RW] (io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:405)) - localhost index:0 init connection error.
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.isClosed()" because "this.con" is null
+	at io.mycat.backend.jdbc.JDBCConnection.checkAlive(JDBCConnection.java:988) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConQueue.takeIdleCon(ConQueue.java:22) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConMap.tryTakeCon(ConMap.java:52) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConMap.tryTakeCon(ConMap.java:32) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:534) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:403) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.init(PhysicalDBPool.java:354) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.init(PhysicalDBPool.java:342) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBNode.checkRequest(PhysicalDBNode.java:89) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBNode.getConnection(PhysicalDBNode.java:95) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.mysql.nio.handler.SingleNodeHandler.execute(SingleNodeHandler.java:204) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.NonBlockingSession.execute(NonBlockingSession.java:151) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerConnection.routeEndExecuteSQL(ServerConnection.java:360) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerConnection.execute(ServerConnection.java:275) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.handler.SelectHandler.handle(SelectHandler.java:129) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerQueryHandler.query(ServerQueryHandler.java:95) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.query(FrontendConnection.java:397) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.query(FrontendConnection.java:417) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.handler.FrontendCommandHandler.handle(FrontendCommandHandler.java:76) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.rawHandle(FrontendConnection.java:591) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.handle(FrontendConnection.java:573) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.AbstractConnection.onReadData(AbstractConnection.java:338) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.NIOSocketWR.asynRead(NIOSocketWR.java:216) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.AbstractConnection.asynRead(AbstractConnection.java:290) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.NIOReactor$RW.run(NIOReactor.java:113) [Mycat-server-1.6.7.6-release.jar:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2025-01-09 20:50:48.450  WARN [$_NIOREACTOR-4-RW] (io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:405)) - localhost index:0 init connection error.
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.isClosed()" because "this.con" is null
+	at io.mycat.backend.jdbc.JDBCConnection.checkAlive(JDBCConnection.java:988) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConQueue.takeIdleCon(ConQueue.java:22) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConMap.tryTakeCon(ConMap.java:52) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConMap.tryTakeCon(ConMap.java:32) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:534) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:403) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.init(PhysicalDBPool.java:354) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.init(PhysicalDBPool.java:342) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBNode.checkRequest(PhysicalDBNode.java:89) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBNode.getConnection(PhysicalDBNode.java:95) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.mysql.nio.handler.SingleNodeHandler.execute(SingleNodeHandler.java:204) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.NonBlockingSession.execute(NonBlockingSession.java:151) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerConnection.routeEndExecuteSQL(ServerConnection.java:360) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerConnection.execute(ServerConnection.java:275) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.handler.SelectHandler.handle(SelectHandler.java:129) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerQueryHandler.query(ServerQueryHandler.java:95) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.query(FrontendConnection.java:397) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.query(FrontendConnection.java:417) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.handler.FrontendCommandHandler.handle(FrontendCommandHandler.java:76) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.rawHandle(FrontendConnection.java:591) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.handle(FrontendConnection.java:573) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.AbstractConnection.onReadData(AbstractConnection.java:338) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.NIOSocketWR.asynRead(NIOSocketWR.java:216) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.AbstractConnection.asynRead(AbstractConnection.java:290) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.NIOReactor$RW.run(NIOReactor.java:113) [Mycat-server-1.6.7.6-release.jar:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2025-01-09 20:50:48.450  WARN [$_NIOREACTOR-4-RW] (io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:405)) - localhost index:0 init connection error.
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.isClosed()" because "this.con" is null
+	at io.mycat.backend.jdbc.JDBCConnection.checkAlive(JDBCConnection.java:988) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConQueue.takeIdleCon(ConQueue.java:22) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConMap.tryTakeCon(ConMap.java:52) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConMap.tryTakeCon(ConMap.java:32) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:534) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:403) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.init(PhysicalDBPool.java:354) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.init(PhysicalDBPool.java:342) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBNode.checkRequest(PhysicalDBNode.java:89) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBNode.getConnection(PhysicalDBNode.java:95) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.mysql.nio.handler.SingleNodeHandler.execute(SingleNodeHandler.java:204) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.NonBlockingSession.execute(NonBlockingSession.java:151) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerConnection.routeEndExecuteSQL(ServerConnection.java:360) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerConnection.execute(ServerConnection.java:275) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.handler.SelectHandler.handle(SelectHandler.java:129) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerQueryHandler.query(ServerQueryHandler.java:95) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.query(FrontendConnection.java:397) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.query(FrontendConnection.java:417) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.handler.FrontendCommandHandler.handle(FrontendCommandHandler.java:76) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.rawHandle(FrontendConnection.java:591) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.handle(FrontendConnection.java:573) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.AbstractConnection.onReadData(AbstractConnection.java:338) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.NIOSocketWR.asynRead(NIOSocketWR.java:216) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.AbstractConnection.asynRead(AbstractConnection.java:290) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.NIOReactor$RW.run(NIOReactor.java:113) [Mycat-server-1.6.7.6-release.jar:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2025-01-09 20:50:48.450  WARN [$_NIOREACTOR-4-RW] (io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:405)) - localhost index:0 init connection error.
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.isClosed()" because "this.con" is null
+	at io.mycat.backend.jdbc.JDBCConnection.checkAlive(JDBCConnection.java:988) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConQueue.takeIdleCon(ConQueue.java:22) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConMap.tryTakeCon(ConMap.java:52) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConMap.tryTakeCon(ConMap.java:32) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:534) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:403) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.init(PhysicalDBPool.java:354) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.init(PhysicalDBPool.java:342) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBNode.checkRequest(PhysicalDBNode.java:89) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBNode.getConnection(PhysicalDBNode.java:95) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.mysql.nio.handler.SingleNodeHandler.execute(SingleNodeHandler.java:204) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.NonBlockingSession.execute(NonBlockingSession.java:151) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerConnection.routeEndExecuteSQL(ServerConnection.java:360) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerConnection.execute(ServerConnection.java:275) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.handler.SelectHandler.handle(SelectHandler.java:129) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerQueryHandler.query(ServerQueryHandler.java:95) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.query(FrontendConnection.java:397) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.query(FrontendConnection.java:417) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.handler.FrontendCommandHandler.handle(FrontendCommandHandler.java:76) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.rawHandle(FrontendConnection.java:591) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.handle(FrontendConnection.java:573) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.AbstractConnection.onReadData(AbstractConnection.java:338) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.NIOSocketWR.asynRead(NIOSocketWR.java:216) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.AbstractConnection.asynRead(AbstractConnection.java:290) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.NIOReactor$RW.run(NIOReactor.java:113) [Mycat-server-1.6.7.6-release.jar:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2025-01-09 20:50:48.450  WARN [$_NIOREACTOR-4-RW] (io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:405)) - localhost index:0 init connection error.
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.isClosed()" because "this.con" is null
+	at io.mycat.backend.jdbc.JDBCConnection.checkAlive(JDBCConnection.java:988) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConQueue.takeIdleCon(ConQueue.java:22) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConMap.tryTakeCon(ConMap.java:52) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConMap.tryTakeCon(ConMap.java:32) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:534) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:403) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.init(PhysicalDBPool.java:354) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.init(PhysicalDBPool.java:342) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBNode.checkRequest(PhysicalDBNode.java:89) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBNode.getConnection(PhysicalDBNode.java:95) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.mysql.nio.handler.SingleNodeHandler.execute(SingleNodeHandler.java:204) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.NonBlockingSession.execute(NonBlockingSession.java:151) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerConnection.routeEndExecuteSQL(ServerConnection.java:360) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerConnection.execute(ServerConnection.java:275) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.handler.SelectHandler.handle(SelectHandler.java:129) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerQueryHandler.query(ServerQueryHandler.java:95) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.query(FrontendConnection.java:397) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.query(FrontendConnection.java:417) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.handler.FrontendCommandHandler.handle(FrontendCommandHandler.java:76) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.rawHandle(FrontendConnection.java:591) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.handle(FrontendConnection.java:573) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.AbstractConnection.onReadData(AbstractConnection.java:338) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.NIOSocketWR.asynRead(NIOSocketWR.java:216) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.AbstractConnection.asynRead(AbstractConnection.java:290) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.NIOReactor$RW.run(NIOReactor.java:113) [Mycat-server-1.6.7.6-release.jar:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2025-01-09 20:50:48.450  WARN [$_NIOREACTOR-4-RW] (io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:405)) - localhost index:0 init connection error.
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.isClosed()" because "this.con" is null
+	at io.mycat.backend.jdbc.JDBCConnection.checkAlive(JDBCConnection.java:988) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConQueue.takeIdleCon(ConQueue.java:22) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConMap.tryTakeCon(ConMap.java:52) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConMap.tryTakeCon(ConMap.java:32) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:534) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:403) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.init(PhysicalDBPool.java:354) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.init(PhysicalDBPool.java:342) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBNode.checkRequest(PhysicalDBNode.java:89) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBNode.getConnection(PhysicalDBNode.java:95) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.mysql.nio.handler.SingleNodeHandler.execute(SingleNodeHandler.java:204) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.NonBlockingSession.execute(NonBlockingSession.java:151) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerConnection.routeEndExecuteSQL(ServerConnection.java:360) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerConnection.execute(ServerConnection.java:275) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.handler.SelectHandler.handle(SelectHandler.java:129) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerQueryHandler.query(ServerQueryHandler.java:95) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.query(FrontendConnection.java:397) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.query(FrontendConnection.java:417) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.handler.FrontendCommandHandler.handle(FrontendCommandHandler.java:76) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.rawHandle(FrontendConnection.java:591) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.handle(FrontendConnection.java:573) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.AbstractConnection.onReadData(AbstractConnection.java:338) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.NIOSocketWR.asynRead(NIOSocketWR.java:216) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.AbstractConnection.asynRead(AbstractConnection.java:290) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.NIOReactor$RW.run(NIOReactor.java:113) [Mycat-server-1.6.7.6-release.jar:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2025-01-09 20:50:48.451  WARN [$_NIOREACTOR-4-RW] (io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:405)) - localhost index:0 init connection error.
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.isClosed()" because "this.con" is null
+	at io.mycat.backend.jdbc.JDBCConnection.checkAlive(JDBCConnection.java:988) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConQueue.takeIdleCon(ConQueue.java:22) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConMap.tryTakeCon(ConMap.java:52) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConMap.tryTakeCon(ConMap.java:32) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:534) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:403) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.init(PhysicalDBPool.java:354) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.init(PhysicalDBPool.java:342) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBNode.checkRequest(PhysicalDBNode.java:89) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBNode.getConnection(PhysicalDBNode.java:95) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.mysql.nio.handler.SingleNodeHandler.execute(SingleNodeHandler.java:204) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.NonBlockingSession.execute(NonBlockingSession.java:151) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerConnection.routeEndExecuteSQL(ServerConnection.java:360) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerConnection.execute(ServerConnection.java:275) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.handler.SelectHandler.handle(SelectHandler.java:129) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerQueryHandler.query(ServerQueryHandler.java:95) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.query(FrontendConnection.java:397) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.query(FrontendConnection.java:417) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.handler.FrontendCommandHandler.handle(FrontendCommandHandler.java:76) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.rawHandle(FrontendConnection.java:591) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.handle(FrontendConnection.java:573) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.AbstractConnection.onReadData(AbstractConnection.java:338) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.NIOSocketWR.asynRead(NIOSocketWR.java:216) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.AbstractConnection.asynRead(AbstractConnection.java:290) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.NIOReactor$RW.run(NIOReactor.java:113) [Mycat-server-1.6.7.6-release.jar:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2025-01-09 20:50:48.451  WARN [$_NIOREACTOR-4-RW] (io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:405)) - localhost index:0 init connection error.
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.isClosed()" because "this.con" is null
+	at io.mycat.backend.jdbc.JDBCConnection.checkAlive(JDBCConnection.java:988) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConQueue.takeIdleCon(ConQueue.java:22) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConMap.tryTakeCon(ConMap.java:52) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.ConMap.tryTakeCon(ConMap.java:32) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDatasource.getConnection(PhysicalDatasource.java:534) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:403) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.init(PhysicalDBPool.java:354) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.init(PhysicalDBPool.java:342) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBNode.checkRequest(PhysicalDBNode.java:89) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBNode.getConnection(PhysicalDBNode.java:95) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.mysql.nio.handler.SingleNodeHandler.execute(SingleNodeHandler.java:204) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.NonBlockingSession.execute(NonBlockingSession.java:151) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerConnection.routeEndExecuteSQL(ServerConnection.java:360) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerConnection.execute(ServerConnection.java:275) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.handler.SelectHandler.handle(SelectHandler.java:129) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerQueryHandler.query(ServerQueryHandler.java:95) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.query(FrontendConnection.java:397) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.query(FrontendConnection.java:417) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.handler.FrontendCommandHandler.handle(FrontendCommandHandler.java:76) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.rawHandle(FrontendConnection.java:591) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.handle(FrontendConnection.java:573) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.AbstractConnection.onReadData(AbstractConnection.java:338) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.NIOSocketWR.asynRead(NIOSocketWR.java:216) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.AbstractConnection.asynRead(AbstractConnection.java:290) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.NIOReactor$RW.run(NIOReactor.java:113) [Mycat-server-1.6.7.6-release.jar:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2025-01-09 20:50:48.555  INFO [$_NIOREACTOR-5-RW] (io.mycat.backend.datasource.PhysicalDBPool.initSource(PhysicalDBPool.java:419)) - init result :finished 10 success 0 target count:10
+2025-01-09 20:50:48.555 ERROR [$_NIOREACTOR-5-RW] (io.mycat.backend.datasource.PhysicalDBPool.init(PhysicalDBPool.java:379)) - #!MyCat#localhost init failure
+2025-01-09 20:50:48.555  WARN [$_NIOREACTOR-5-RW] (io.mycat.backend.mysql.nio.handler.SingleNodeHandler.execute(SingleNodeHandler.java:208)) - ServerConnection [id=5, schema=TESTDB, host=127.0.0.1, user=root,txIsolation=3, autocommit=true, schema=TESTDB, executeSql=SHOW TABLE STATUS]SHOW TABLE STATUS, route={
+   1 -> dn1{SHOW TABLE STATUS}
+}
+java.lang.IllegalArgumentException: Invalid DataSource:0
+	at io.mycat.backend.datasource.PhysicalDBNode.getConnection(PhysicalDBNode.java:146) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.mysql.nio.handler.SingleNodeHandler.execute(SingleNodeHandler.java:204) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.NonBlockingSession.execute(NonBlockingSession.java:151) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerConnection.routeEndExecuteSQL(ServerConnection.java:360) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerConnection.execute(ServerConnection.java:275) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.handler.ShowHandler.handle(ShowHandler.java:60) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.server.ServerQueryHandler.query(ServerQueryHandler.java:92) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.query(FrontendConnection.java:397) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.query(FrontendConnection.java:417) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.handler.FrontendCommandHandler.handle(FrontendCommandHandler.java:76) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.rawHandle(FrontendConnection.java:591) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.FrontendConnection.handle(FrontendConnection.java:573) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.AbstractConnection.onReadData(AbstractConnection.java:338) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.NIOSocketWR.asynRead(NIOSocketWR.java:216) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.AbstractConnection.asynRead(AbstractConnection.java:290) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.net.NIOReactor$RW.run(NIOReactor.java:113) [Mycat-server-1.6.7.6-release.jar:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+2025-01-09 20:50:48.556 ERROR [$_NIOREACTOR-5-RW] (io.mycat.net.FrontendConnection.writeErrMessage(FrontendConnection.java:231)) - ServerConnection [id=5, schema=TESTDB, host=127.0.0.1, user=root,txIsolation=3, autocommit=true, schema=TESTDB, executeSql=SHOW TABLE STATUS]Invalid DataSource:0java.lang.Thread .getStackTrace1610
+io.mycat.net.FrontendConnection .getStack245
+io.mycat.net.FrontendConnection .writeErrMessage231
+io.mycat.backend.mysql.nio.handler.SingleNodeHandler .connectionError264
+io.mycat.backend.mysql.nio.handler.SingleNodeHandler .execute210
+io.mycat.server.NonBlockingSession .execute151
+io.mycat.server.ServerConnection .routeEndExecuteSQL360
+io.mycat.server.ServerConnection .execute275
+io.mycat.server.handler.ShowHandler .handle60
+io.mycat.server.ServerQueryHandler .query92
+io.mycat.net.FrontendConnection .query397
+io.mycat.net.FrontendConnection .query417
+io.mycat.net.handler.FrontendCommandHandler .handle76
+io.mycat.net.FrontendConnection .rawHandle591
+io.mycat.net.FrontendConnection .handle573
+io.mycat.net.AbstractConnection .onReadData338
+io.mycat.net.NIOSocketWR .asynRead216
+io.mycat.net.AbstractConnection .asynRead290
+io.mycat.net.NIOReactor$RW .run113
+java.lang.Thread .run833
+ write errorMsg:{} error
+2025-01-09 20:50:54.537 ERROR [Timer0] (io.mycat.backend.jdbc.JDBCHeartbeat.heartbeat(JDBCHeartbeat.java:123)) - JDBCHeartBeat error
+com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+	at jdk.internal.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.Util.getInstance(Util.java:372) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:958) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:937) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:926) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:872) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2316) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2069) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:794) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at jdk.internal.reflect.GeneratedConstructorAccessor11.newInstance(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at java.sql.DriverManager.getConnection(DriverManager.java:681) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:229) ~[java.sql:?]
+	at io.mycat.backend.jdbc.JDBCDatasource.getConnection(JDBCDatasource.java:125) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.jdbc.JDBCHeartbeat.heartbeat(JDBCHeartbeat.java:108) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDatasource.doHeartbeat(PhysicalDatasource.java:464) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.doHeartbeat(PhysicalDBPool.java:436) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.MycatServer$8$1.run(MycatServer.java:964) [Mycat-server-1.6.7.6-release.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) [?:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+Caused by: java.lang.NullPointerException: Cannot invoke "java.util.Map.get(Object)" because "this.serverVariables" is null
+	at com.mysql.jdbc.ConnectionImpl.getServerCharset(ConnectionImpl.java:2989) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.sendConnectionAttributes(MysqlIO.java:1873) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1802) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2239) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2270) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	... 20 more
+2025-01-09 20:51:04.542 ERROR [Timer0] (io.mycat.backend.jdbc.JDBCHeartbeat.heartbeat(JDBCHeartbeat.java:123)) - JDBCHeartBeat error
+com.mysql.jdbc.exceptions.jdbc4.MySQLNonTransientConnectionException: Could not create connection to database server.
+	at jdk.internal.reflect.GeneratedConstructorAccessor15.newInstance(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.Util.getInstance(Util.java:372) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:958) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:937) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:926) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:872) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2316) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:2069) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:794) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.JDBC4Connection.<init>(JDBC4Connection.java:44) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at jdk.internal.reflect.GeneratedConstructorAccessor11.newInstance(Unknown Source) ~[?:?]
+	at jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45) ~[?:?]
+	at java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499) ~[?:?]
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:480) ~[?:?]
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:389) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:399) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.NonRegisteringDriver.connect(NonRegisteringDriver.java:325) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at java.sql.DriverManager.getConnection(DriverManager.java:681) ~[java.sql:?]
+	at java.sql.DriverManager.getConnection(DriverManager.java:229) ~[java.sql:?]
+	at io.mycat.backend.jdbc.JDBCDatasource.getConnection(JDBCDatasource.java:125) ~[Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.jdbc.JDBCHeartbeat.heartbeat(JDBCHeartbeat.java:108) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDatasource.doHeartbeat(PhysicalDatasource.java:464) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.backend.datasource.PhysicalDBPool.doHeartbeat(PhysicalDBPool.java:436) [Mycat-server-1.6.7.6-release.jar:?]
+	at io.mycat.MycatServer$8$1.run(MycatServer.java:964) [Mycat-server-1.6.7.6-release.jar:?]
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136) [?:?]
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635) [?:?]
+	at java.lang.Thread.run(Thread.java:833) [?:?]
+Caused by: java.lang.NullPointerException: Cannot invoke "java.util.Map.get(Object)" because "this.serverVariables" is null
+	at com.mysql.jdbc.ConnectionImpl.getServerCharset(ConnectionImpl.java:2989) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.sendConnectionAttributes(MysqlIO.java:1873) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.proceedHandshakeWithPluggableAuthentication(MysqlIO.java:1802) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.MysqlIO.doHandshake(MysqlIO.java:1206) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.coreConnect(ConnectionImpl.java:2239) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	at com.mysql.jdbc.ConnectionImpl.connectOneTryOnly(ConnectionImpl.java:2270) ~[mysql-connector-java-5.1.35.jar:5.1.35]
+	... 20 more

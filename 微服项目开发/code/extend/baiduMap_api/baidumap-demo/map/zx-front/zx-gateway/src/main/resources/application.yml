@@ -1,0 +1,52 @@
+server:
+  port: 10086
+spring:
+  data:
+    redis:
+      host: localhost
+      port: 6379
+  application:
+    name: zx-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+    gateway:
+      globalcors: # 全局跨域配置
+        cors-configurations:
+          '[/**]': # 匹配所有请求
+            allowCredentials: true
+            allowedHeaders: '*'
+            allowedMethods: '*'
+            allowedOrigins: 'http://localhost:8088'
+            maxAge: 3600
+
+      routes:
+        # 商品微服务
+        - id: product
+          uri: lb://product-service
+          predicates:
+            - Path=/api/product/**
+          filters:
+            - StripPrefix= 1
+        # 商品微服务
+        - id: product
+          uri: lb://product-service
+          predicates:
+            - Path=/api/productSku/**
+          filters:
+            - StripPrefix= 1
+        # 用户微服务
+        - id: user
+          uri: lb://user-service
+          predicates:
+            - Path=/api/user/**
+          filters:
+            - StripPrefix= 1
+        # 订单微服务
+        - id: order
+          uri: lb://order-service
+          predicates:
+            - Path=/api/order/**
+          filters:
+            - StripPrefix= 1

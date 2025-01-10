@@ -1,0 +1,184 @@
+2025-01-07 11:45:14,412 INFO [SelectorManager] Load SelectorContextBuilder(class com.alibaba.nacos.naming.selector.context.CmdbSelectorContextBuilder) contextType(CMDB) successfully.
+
+2025-01-07 11:45:14,412 INFO [SelectorManager] Load SelectorContextBuilder(class com.alibaba.nacos.naming.selector.context.NoneSelectorContextBuilder) contextType(NONE) successfully.
+
+2025-01-07 11:45:14,413 INFO [SelectorManager] Load Selector(class com.alibaba.nacos.naming.selector.LabelSelector) type(label) contextType(CMDB) successfully.
+
+2025-01-07 11:45:14,413 INFO [SelectorManager] Load Selector(class com.alibaba.nacos.naming.selector.NoneSelector) type(none) contextType(NONE) successfully.
+
+2025-01-07 11:45:15,214 INFO Load instance extension handler []
+
+2025-01-07 11:45:17,781 INFO Client connection 192.168.154.1:8091#true connect
+
+2025-01-07 11:45:17,788 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='seata-server', ephemeral=true, revision=0}, 192.168.154.1:8091#true
+
+2025-01-07 11:46:26,594 INFO Client connection 1736221586444_127.0.0.1_50758 connect
+
+2025-01-07 11:46:26,720 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='user-service', ephemeral=true, revision=0}, 1736221586444_127.0.0.1_50758
+
+2025-01-07 11:46:41,774 INFO Client connection 1736221601658_127.0.0.1_50873 connect
+
+2025-01-07 11:46:41,897 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='product-service', ephemeral=true, revision=0}, 1736221601658_127.0.0.1_50873
+
+2025-01-07 11:46:46,796 INFO Client connection 1736221606710_127.0.0.1_50893 connect
+
+2025-01-07 11:46:46,924 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='order-service', ephemeral=true, revision=0}, 1736221606710_127.0.0.1_50893
+
+2025-01-07 11:47:01,721 INFO Client connection 1736221621618_127.0.0.1_50976 connect
+
+2025-01-07 11:47:01,834 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='zx-gateway', ephemeral=true, revision=0}, 1736221621618_127.0.0.1_50976
+
+2025-01-07 11:51:46,743 INFO Client remove for service Service{namespace='public', group='DEFAULT_GROUP', name='product-service', ephemeral=true, revision=1}, 1736221601658_127.0.0.1_50873
+
+2025-01-07 11:51:46,755 INFO Client connection 1736221601658_127.0.0.1_50873 disconnect, remove instances and subscribers
+
+2025-01-07 11:51:59,985 INFO Client connection 1736221919912_127.0.0.1_51610 connect
+
+2025-01-07 11:52:00,101 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='product-service', ephemeral=true, revision=2}, 1736221919912_127.0.0.1_51610
+
+2025-01-07 12:07:02,843 INFO Client remove for service Service{namespace='public', group='DEFAULT_GROUP', name='user-service', ephemeral=true, revision=1}, 1736221586444_127.0.0.1_50758
+
+2025-01-07 12:07:02,852 INFO Client connection 1736221586444_127.0.0.1_50758 disconnect, remove instances and subscribers
+
+2025-01-07 12:07:12,924 INFO Client connection 1736222832832_127.0.0.1_52976 connect
+
+2025-01-07 12:07:13,049 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='user-service', ephemeral=true, revision=2}, 1736222832832_127.0.0.1_52976
+
+2025-01-07 15:23:21,086 INFO Client remove for service Service{namespace='public', group='DEFAULT_GROUP', name='product-service', ephemeral=true, revision=3}, 1736221919912_127.0.0.1_51610
+
+2025-01-07 15:23:21,103 INFO Client connection 1736221919912_127.0.0.1_51610 disconnect, remove instances and subscribers
+
+2025-01-07 15:24:46,765 WARN namespace : public, [DEFAULT_GROUP@@product-service] services are automatically cleaned
+
+2025-01-07 15:24:48,043 INFO Client remove for service Service{namespace='public', group='DEFAULT_GROUP', name='zx-gateway', ephemeral=true, revision=1}, 1736221621618_127.0.0.1_50976
+
+2025-01-07 15:24:48,053 INFO Client connection 1736221621618_127.0.0.1_50976 disconnect, remove instances and subscribers
+
+2025-01-07 15:24:48,091 INFO Client remove for service Service{namespace='public', group='DEFAULT_GROUP', name='order-service', ephemeral=true, revision=1}, 1736221606710_127.0.0.1_50893
+
+2025-01-07 15:24:48,100 INFO Client connection 1736221606710_127.0.0.1_50893 disconnect, remove instances and subscribers
+
+2025-01-07 15:24:48,111 INFO Client remove for service Service{namespace='public', group='DEFAULT_GROUP', name='user-service', ephemeral=true, revision=3}, 1736222832832_127.0.0.1_52976
+
+2025-01-07 15:24:48,121 INFO Client connection 1736222832832_127.0.0.1_52976 disconnect, remove instances and subscribers
+
+2025-01-07 15:25:01,129 INFO Client connection 1736234701007_127.0.0.1_59890 connect
+
+2025-01-07 15:25:01,249 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='order-service', ephemeral=true, revision=2}, 1736234701007_127.0.0.1_59890
+
+2025-01-07 15:25:01,330 INFO Client connection 1736234701194_127.0.0.1_59891 connect
+
+2025-01-07 15:25:01,452 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='product-service', ephemeral=true, revision=0}, 1736234701194_127.0.0.1_59891
+
+2025-01-07 15:25:03,770 INFO Client connection 1736234703702_127.0.0.1_59910 connect
+
+2025-01-07 15:25:03,891 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='zx-gateway', ephemeral=true, revision=2}, 1736234703702_127.0.0.1_59910
+
+2025-01-07 15:25:05,199 INFO Client connection 1736234705122_127.0.0.1_59913 connect
+
+2025-01-07 15:25:05,316 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='user-service', ephemeral=true, revision=4}, 1736234705122_127.0.0.1_59913
+
+2025-01-07 16:06:58,201 INFO Client remove for service Service{namespace='public', group='DEFAULT_GROUP', name='zx-gateway', ephemeral=true, revision=3}, 1736234703702_127.0.0.1_59910
+
+2025-01-07 16:06:58,211 INFO Client connection 1736234703702_127.0.0.1_59910 disconnect, remove instances and subscribers
+
+2025-01-07 16:06:58,253 INFO Client remove for service Service{namespace='public', group='DEFAULT_GROUP', name='order-service', ephemeral=true, revision=3}, 1736234701007_127.0.0.1_59890
+
+2025-01-07 16:06:58,284 INFO Client connection 1736234701007_127.0.0.1_59890 disconnect, remove instances and subscribers
+
+2025-01-07 16:06:58,334 INFO Client remove for service Service{namespace='public', group='DEFAULT_GROUP', name='user-service', ephemeral=true, revision=5}, 1736234705122_127.0.0.1_59913
+
+2025-01-07 16:06:58,335 INFO Client remove for service Service{namespace='public', group='DEFAULT_GROUP', name='product-service', ephemeral=true, revision=1}, 1736234701194_127.0.0.1_59891
+
+2025-01-07 16:06:58,343 INFO Client connection 1736234705122_127.0.0.1_59913 disconnect, remove instances and subscribers
+
+2025-01-07 16:06:58,345 INFO Client connection 1736234701194_127.0.0.1_59891 disconnect, remove instances and subscribers
+
+2025-01-07 16:08:47,054 WARN namespace : public, [DEFAULT_GROUP@@product-service] services are automatically cleaned
+
+2025-01-07 16:08:47,054 WARN namespace : public, [DEFAULT_GROUP@@user-service] services are automatically cleaned
+
+2025-01-07 16:08:47,054 WARN namespace : public, [DEFAULT_GROUP@@order-service] services are automatically cleaned
+
+2025-01-07 16:08:47,054 WARN namespace : public, [DEFAULT_GROUP@@zx-gateway] services are automatically cleaned
+
+2025-01-07 16:10:47,331 INFO Client connection 1736237447060_127.0.0.1_64200 connect
+
+2025-01-07 16:10:47,477 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='zx-gateway', ephemeral=true, revision=0}, 1736237447060_127.0.0.1_64200
+
+2025-01-07 16:11:03,002 INFO Client connection 1736237462927_127.0.0.1_64317 connect
+
+2025-01-07 16:11:03,120 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='product-service', ephemeral=true, revision=0}, 1736237462927_127.0.0.1_64317
+
+2025-01-07 16:12:20,801 INFO Client connection 1736237540726_127.0.0.1_64442 connect
+
+2025-01-07 16:12:20,924 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='order-service', ephemeral=true, revision=0}, 1736237540726_127.0.0.1_64442
+
+2025-01-07 16:12:24,161 INFO Client connection 1736237544082_127.0.0.1_64455 connect
+
+2025-01-07 16:12:24,271 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='user-service', ephemeral=true, revision=0}, 1736237544082_127.0.0.1_64455
+
+2025-01-07 16:25:52,271 INFO Client remove for service Service{namespace='public', group='DEFAULT_GROUP', name='user-service', ephemeral=true, revision=1}, 1736237544082_127.0.0.1_64455
+
+2025-01-07 16:25:52,279 INFO Client connection 1736237544082_127.0.0.1_64455 disconnect, remove instances and subscribers
+
+2025-01-07 16:25:52,314 INFO Client remove for service Service{namespace='public', group='DEFAULT_GROUP', name='product-service', ephemeral=true, revision=1}, 1736237462927_127.0.0.1_64317
+
+2025-01-07 16:25:52,322 INFO Client connection 1736237462927_127.0.0.1_64317 disconnect, remove instances and subscribers
+
+2025-01-07 16:25:52,353 INFO Client remove for service Service{namespace='public', group='DEFAULT_GROUP', name='order-service', ephemeral=true, revision=1}, 1736237540726_127.0.0.1_64442
+
+2025-01-07 16:25:52,359 INFO Client remove for service Service{namespace='public', group='DEFAULT_GROUP', name='zx-gateway', ephemeral=true, revision=1}, 1736237447060_127.0.0.1_64200
+
+2025-01-07 16:25:52,364 INFO Client connection 1736237540726_127.0.0.1_64442 disconnect, remove instances and subscribers
+
+2025-01-07 16:25:52,367 INFO Client connection 1736237447060_127.0.0.1_64200 disconnect, remove instances and subscribers
+
+2025-01-07 16:27:47,258 WARN namespace : public, [DEFAULT_GROUP@@product-service] services are automatically cleaned
+
+2025-01-07 16:27:47,258 WARN namespace : public, [DEFAULT_GROUP@@order-service] services are automatically cleaned
+
+2025-01-07 16:27:47,258 WARN namespace : public, [DEFAULT_GROUP@@user-service] services are automatically cleaned
+
+2025-01-07 16:27:47,258 WARN namespace : public, [DEFAULT_GROUP@@zx-gateway] services are automatically cleaned
+
+2025-01-07 16:30:48,335 INFO Client connection 1736238648239_127.0.0.1_49609 connect
+
+2025-01-07 16:30:48,453 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='zx-gateway', ephemeral=true, revision=0}, 1736238648239_127.0.0.1_49609
+
+2025-01-07 16:31:00,120 INFO Client connection 1736238659966_127.0.0.1_49642 connect
+
+2025-01-07 16:31:00,247 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='order-service', ephemeral=true, revision=0}, 1736238659966_127.0.0.1_49642
+
+2025-01-07 16:31:06,244 INFO Client connection 1736238666136_127.0.0.1_49753 connect
+
+2025-01-07 16:31:06,369 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='product-service', ephemeral=true, revision=0}, 1736238666136_127.0.0.1_49753
+
+2025-01-07 16:31:08,926 INFO Client connection 1736238668849_127.0.0.1_49769 connect
+
+2025-01-07 16:31:09,046 INFO Client change for service Service{namespace='public', group='DEFAULT_GROUP', name='user-service', ephemeral=true, revision=0}, 1736238668849_127.0.0.1_49769
+
+2025-01-07 16:55:33,163 INFO Client remove for service Service{namespace='public', group='DEFAULT_GROUP', name='user-service', ephemeral=true, revision=1}, 1736238668849_127.0.0.1_49769
+
+2025-01-07 16:55:33,170 INFO Client connection 1736238668849_127.0.0.1_49769 disconnect, remove instances and subscribers
+
+2025-01-07 16:55:38,671 INFO Client remove for service Service{namespace='public', group='DEFAULT_GROUP', name='product-service', ephemeral=true, revision=1}, 1736238666136_127.0.0.1_49753
+
+2025-01-07 16:55:38,677 INFO Client connection 1736238666136_127.0.0.1_49753 disconnect, remove instances and subscribers
+
+2025-01-07 16:55:40,126 INFO Client remove for service Service{namespace='public', group='DEFAULT_GROUP', name='order-service', ephemeral=true, revision=1}, 1736238659966_127.0.0.1_49642
+
+2025-01-07 16:55:40,131 INFO Client connection 1736238659966_127.0.0.1_49642 disconnect, remove instances and subscribers
+
+2025-01-07 16:55:41,238 INFO Client remove for service Service{namespace='public', group='DEFAULT_GROUP', name='zx-gateway', ephemeral=true, revision=1}, 1736238648239_127.0.0.1_49609
+
+2025-01-07 16:55:41,245 INFO Client connection 1736238648239_127.0.0.1_49609 disconnect, remove instances and subscribers
+
+2025-01-07 16:56:47,508 WARN namespace : public, [DEFAULT_GROUP@@product-service] services are automatically cleaned
+
+2025-01-07 16:56:47,508 WARN namespace : public, [DEFAULT_GROUP@@order-service] services are automatically cleaned
+
+2025-01-07 16:56:47,508 WARN namespace : public, [DEFAULT_GROUP@@user-service] services are automatically cleaned
+
+2025-01-07 16:56:47,508 WARN namespace : public, [DEFAULT_GROUP@@zx-gateway] services are automatically cleaned
+

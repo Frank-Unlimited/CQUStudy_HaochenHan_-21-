@@ -1,0 +1,1 @@
+startup.cmd -m standalone 

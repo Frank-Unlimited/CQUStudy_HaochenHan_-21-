@@ -1,0 +1,84 @@
+2025-01-10 09:02:25,215 INFO [PUSH-SUCC] 537ms, all delay time 1046ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='seata-server', ephemeral=true, revision=1}, originalSize=1, DataSize=1
+
+2025-01-10 09:02:31,817 INFO [PUSH-SUCC] 25ms, all delay time 628ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='seata-server', ephemeral=true, revision=1}, originalSize=1, DataSize=1
+
+2025-01-10 09:02:41,294 INFO [PUSH-SUCC] 51ms, all delay time 630ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='seata-server', ephemeral=true, revision=1}, originalSize=1, DataSize=1
+
+2025-01-10 09:03:41,667 INFO [PUSH-SUCC] 11ms, all delay time 514ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='product-service', ephemeral=true, revision=1}, originalSize=1, DataSize=1
+
+2025-01-10 09:04:00,818 INFO [PUSH-SUCC] 4ms, all delay time 566ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='user-service', ephemeral=true, revision=1}, originalSize=1, DataSize=1
+
+2025-01-10 09:04:55,976 INFO [PUSH-SUCC] 4ms, all delay time 520ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='order-service', ephemeral=true, revision=1}, originalSize=1, DataSize=1
+
+2025-01-10 09:11:55,509 INFO [PUSH-SUCC] 47ms, all delay time 612ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='seata-server', ephemeral=true, revision=1}, originalSize=1, DataSize=1
+
+2025-01-10 09:12:03,850 INFO [PUSH-SUCC] 47ms, all delay time 654ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='seata-server', ephemeral=true, revision=1}, originalSize=1, DataSize=1
+
+2025-01-10 09:12:11,267 INFO [PUSH-SUCC] 15ms, all delay time 595ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='seata-server', ephemeral=true, revision=1}, originalSize=1, DataSize=1
+
+2025-01-10 09:13:33,465 INFO [PUSH-SUCC] 15ms, all delay time 519ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='seata-server', ephemeral=true, revision=1}, originalSize=1, DataSize=1
+
+2025-01-10 09:14:07,770 INFO [PUSH-SUCC] 12ms, all delay time 611ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='seata-server', ephemeral=true, revision=1}, originalSize=1, DataSize=1
+
+2025-01-10 09:14:31,844 INFO [PUSH-SUCC] 13ms, all delay time 563ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='product-service', ephemeral=true, revision=3}, originalSize=1, DataSize=1
+
+2025-01-10 09:14:45,653 INFO [PUSH-SUCC] 3ms, all delay time 532ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='user-service', ephemeral=true, revision=1}, originalSize=1, DataSize=1
+
+2025-01-10 09:14:53,530 INFO [PUSH-SUCC] 3ms, all delay time 585ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='order-service', ephemeral=true, revision=1}, originalSize=1, DataSize=1
+
+2025-01-10 09:14:59,325 INFO [PUSH-SUCC] 0ms, all delay time 563ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='product-service', ephemeral=true, revision=3}, originalSize=1, DataSize=1
+
+2025-01-10 09:18:02,125 INFO [PUSH-SUCC] 30ms, all delay time 545ms, SLA 545ms, Service{namespace='public', group='DEFAULT_GROUP', name='order-service', ephemeral=true, revision=2}, originalSize=0, DataSize=0, target=192.168.154.1
+
+2025-01-10 09:18:10,131 INFO [PUSH-SUCC] 14ms, all delay time 548ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='seata-server', ephemeral=true, revision=1}, originalSize=1, DataSize=1
+
+2025-01-10 09:18:13,356 INFO [PUSH-SUCC] 6ms, all delay time 506ms, SLA 506ms, Service{namespace='public', group='DEFAULT_GROUP', name='order-service', ephemeral=true, revision=3}, originalSize=1, DataSize=1, target=192.168.154.1
+
+2025-01-10 09:18:15,139 INFO [PUSH-SUCC] 3ms, all delay time 532ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='product-service', ephemeral=true, revision=3}, originalSize=1, DataSize=1
+
+2025-01-10 09:18:56,935 INFO [PUSH-SUCC] 4ms, all delay time 575ms, SLA 575ms, Service{namespace='public', group='DEFAULT_GROUP', name='order-service', ephemeral=true, revision=4}, originalSize=0, DataSize=0, target=192.168.154.1
+
+2025-01-10 09:19:04,732 INFO [PUSH-SUCC] 13ms, all delay time 607ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='seata-server', ephemeral=true, revision=1}, originalSize=1, DataSize=1
+
+2025-01-10 09:19:07,961 INFO [PUSH-SUCC] 3ms, all delay time 541ms, SLA 541ms, Service{namespace='public', group='DEFAULT_GROUP', name='order-service', ephemeral=true, revision=5}, originalSize=1, DataSize=1, target=192.168.154.1
+
+2025-01-10 09:19:10,594 INFO [PUSH-SUCC] 0ms, all delay time 542ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='product-service', ephemeral=true, revision=3}, originalSize=1, DataSize=1
+
+2025-01-10 09:22:37,912 INFO [PUSH-SUCC] 4ms, all delay time 602ms, SLA 602ms, Service{namespace='public', group='DEFAULT_GROUP', name='seata-server', ephemeral=true, revision=1}, originalSize=1, DataSize=1, target=192.168.154.1
+
+2025-01-10 09:22:37,912 INFO [PUSH-SUCC] 4ms, all delay time 602ms, SLA 602ms, Service{namespace='public', group='DEFAULT_GROUP', name='seata-server', ephemeral=true, revision=1}, originalSize=1, DataSize=1, target=192.168.154.1
+
+2025-01-10 09:22:37,913 INFO [PUSH-SUCC] 5ms, all delay time 603ms, SLA 603ms, Service{namespace='public', group='DEFAULT_GROUP', name='seata-server', ephemeral=true, revision=1}, originalSize=1, DataSize=1, target=192.168.154.1
+
+2025-01-10 09:22:48,053 INFO [PUSH-SUCC] 4ms, all delay time 504ms, SLA 504ms, Service{namespace='public', group='DEFAULT_GROUP', name='seata-server', ephemeral=true, revision=2}, originalSize=1, DataSize=1, target=192.168.154.1
+
+2025-01-10 09:22:48,053 INFO [PUSH-SUCC] 4ms, all delay time 504ms, SLA 504ms, Service{namespace='public', group='DEFAULT_GROUP', name='seata-server', ephemeral=true, revision=2}, originalSize=1, DataSize=1, target=192.168.154.1
+
+2025-01-10 09:22:48,053 INFO [PUSH-SUCC] 4ms, all delay time 504ms, SLA 504ms, Service{namespace='public', group='DEFAULT_GROUP', name='seata-server', ephemeral=true, revision=2}, originalSize=1, DataSize=1, target=192.168.154.1
+
+2025-01-10 09:26:37,330 INFO [PUSH-SUCC] 0ms, all delay time 523ms, SLA 523ms, Service{namespace='public', group='DEFAULT_GROUP', name='seata-server', ephemeral=true, revision=3}, originalSize=1, DataSize=1, target=192.168.154.1
+
+2025-01-10 09:26:37,330 INFO [PUSH-SUCC] 0ms, all delay time 523ms, SLA 523ms, Service{namespace='public', group='DEFAULT_GROUP', name='seata-server', ephemeral=true, revision=3}, originalSize=1, DataSize=1, target=192.168.154.1
+
+2025-01-10 09:26:37,330 INFO [PUSH-SUCC] 0ms, all delay time 523ms, SLA 523ms, Service{namespace='public', group='DEFAULT_GROUP', name='seata-server', ephemeral=true, revision=3}, originalSize=1, DataSize=1, target=192.168.154.1
+
+2025-01-10 09:26:37,739 INFO [PUSH-SUCC] 0ms, all delay time 503ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='user-service', ephemeral=true, revision=1}, originalSize=1, DataSize=1
+
+2025-01-10 09:26:43,366 INFO [PUSH-SUCC] 3ms, all delay time 530ms, SLA 530ms, Service{namespace='public', group='DEFAULT_GROUP', name='order-service', ephemeral=true, revision=6}, originalSize=0, DataSize=0, target=192.168.154.1
+
+2025-01-10 09:26:48,566 INFO [PUSH-SUCC] 11ms, all delay time 595ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='seata-server', ephemeral=true, revision=3}, originalSize=1, DataSize=1
+
+2025-01-10 09:26:51,549 INFO [PUSH-SUCC] 4ms, all delay time 554ms, SLA 554ms, Service{namespace='public', group='DEFAULT_GROUP', name='order-service', ephemeral=true, revision=7}, originalSize=1, DataSize=1, target=192.168.154.1
+
+2025-01-10 09:26:56,103 INFO [PUSH-SUCC] 0ms, all delay time 516ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='product-service', ephemeral=true, revision=3}, originalSize=1, DataSize=1
+
+2025-01-10 09:27:47,307 INFO [PUSH-SUCC] 3ms, all delay time 593ms, SLA 593ms, Service{namespace='public', group='DEFAULT_GROUP', name='order-service', ephemeral=true, revision=8}, originalSize=0, DataSize=0, target=192.168.154.1
+
+2025-01-10 09:27:55,093 INFO [PUSH-SUCC] 12ms, all delay time 579ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='seata-server', ephemeral=true, revision=3}, originalSize=1, DataSize=1
+
+2025-01-10 09:27:58,203 INFO [PUSH-SUCC] 3ms, all delay time 545ms, SLA 545ms, Service{namespace='public', group='DEFAULT_GROUP', name='order-service', ephemeral=true, revision=9}, originalSize=1, DataSize=1, target=192.168.154.1
+
+2025-01-10 09:28:00,209 INFO [PUSH-SUCC] 3ms, all delay time 568ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='product-service', ephemeral=true, revision=3}, originalSize=1, DataSize=1
+
+2025-01-10 09:28:02,834 INFO [PUSH-SUCC] 3ms, all delay time 535ms for subscriber 192.168.154.1, Service{namespace='public', group='DEFAULT_GROUP', name='user-service', ephemeral=true, revision=1}, originalSize=1, DataSize=1
+

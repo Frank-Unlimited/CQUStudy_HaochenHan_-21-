@@ -1,0 +1,1647 @@
+                _._                                                  
+           _.-``__ ''-._                                             
+      _.-``    `.  `_.  ''-._           Redis 3.2.100 (00000000/0) 64 bit
+  .-`` .-```.  ```\/    _.,_ ''-._                                   
+ (    '      ,       .-`  | `,    )     Running in standalone mode
+ |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6381
+ |    `-._   `._    /     _.-'    |     PID: 24280
+  `-._    `-._  `-./  _.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |           http://redis.io        
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |                                  
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+      `-._    `-.__.-'    _.-'                                       
+          `-._        _.-'                                           
+              `-.__.-'                                               
+
+[24280] 03 Jan 15:45:02.373 # Server started, Redis version 3.2.100
+[24280] 03 Jan 15:45:02.374 * The server is now ready to accept connections on port 6381
+[24280] 03 Jan 15:45:02.374 * Connecting to MASTER 127.0.0.1:6379
+[24280] 03 Jan 15:45:02.374 * MASTER <-> SLAVE sync started
+[24280] 03 Jan 15:45:02.375 * Non blocking connect for SYNC fired the event.
+[24280] 03 Jan 15:45:02.375 * Master replied to PING, replication can continue...
+[24280] 03 Jan 15:45:02.375 * Partial resynchronization not possible (no cached master)
+                _._                                                  
+           _.-``__ ''-._                                             
+      _.-``    `.  `_.  ''-._           Redis 3.2.100 (00000000/0) 64 bit
+  .-`` .-```.  ```\/    _.,_ ''-._                                   
+ (    '      ,       .-`  | `,    )     Running in standalone mode
+ |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6381
+ |    `-._   `._    /     _.-'    |     PID: 21280
+  `-._    `-._  `-./  _.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |           http://redis.io        
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |                                  
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+      `-._    `-.__.-'    _.-'                                       
+          `-._        _.-'                                           
+              `-.__.-'                                               
+
+[21280] 03 Jan 15:45:22.656 # Server started, Redis version 3.2.100
+[21280] 03 Jan 15:45:22.657 * The server is now ready to accept connections on port 6381
+[21280] 03 Jan 15:45:22.657 * Connecting to MASTER 127.0.0.1:6379
+[21280] 03 Jan 15:45:22.657 * MASTER <-> SLAVE sync started
+[21280] 03 Jan 15:45:22.657 * Non blocking connect for SYNC fired the event.
+[21280] 03 Jan 15:45:22.657 * Master replied to PING, replication can continue...
+[21280] 03 Jan 15:45:22.657 * Partial resynchronization not possible (no cached master)
+[21280] 03 Jan 15:45:22.666 * Full resync from master: 5270a0226e1df326e9bfae5ae9e0af7fa73a7c11:1
+[21280] 03 Jan 15:45:22.832 * MASTER <-> SLAVE sync: receiving 7487 bytes from master
+[21280] 03 Jan 15:45:22.846 * MASTER <-> SLAVE sync: Flushing old data
+[21280] 03 Jan 15:45:22.846 * MASTER <-> SLAVE sync: Loading DB in memory
+[21280] 03 Jan 15:45:22.846 * MASTER <-> SLAVE sync: Finished with success
+[21280] 03 Jan 15:54:54.457 # Connection with master lost.
+[21280] 03 Jan 15:54:54.457 * Caching the disconnected master state.
+[21280] 03 Jan 15:54:55.120 * Connecting to MASTER 127.0.0.1:6379
+[21280] 03 Jan 15:54:55.120 * MASTER <-> SLAVE sync started
+[21280] 03 Jan 15:54:57.176 * Non blocking connect for SYNC fired the event.
+[21280] 03 Jan 15:54:57.177 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[21280] 03 Jan 15:54:57.301 * Connecting to MASTER 127.0.0.1:6379
+[21280] 03 Jan 15:54:57.301 * MASTER <-> SLAVE sync started
+[21280] 03 Jan 15:54:59.349 * Non blocking connect for SYNC fired the event.
+[21280] 03 Jan 15:54:59.349 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[21280] 03 Jan 15:54:59.474 * Connecting to MASTER 127.0.0.1:6379
+[21280] 03 Jan 15:54:59.474 * MASTER <-> SLAVE sync started
+[21280] 03 Jan 15:55:01.511 * Non blocking connect for SYNC fired the event.
+[21280] 03 Jan 15:55:01.511 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[21280] 03 Jan 15:55:01.649 * Connecting to MASTER 127.0.0.1:6379
+[21280] 03 Jan 15:55:01.649 * MASTER <-> SLAVE sync started
+[21280] 03 Jan 15:55:03.695 * Non blocking connect for SYNC fired the event.
+[21280] 03 Jan 15:55:03.695 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[21280] 03 Jan 15:55:03.819 * Connecting to MASTER 127.0.0.1:6379
+[21280] 03 Jan 15:55:03.819 * MASTER <-> SLAVE sync started
+[21280] 03 Jan 15:55:05.851 * Non blocking connect for SYNC fired the event.
+[21280] 03 Jan 15:55:05.851 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[21280] 03 Jan 15:55:05.989 * Connecting to MASTER 127.0.0.1:6379
+[21280] 03 Jan 15:55:05.989 * MASTER <-> SLAVE sync started
+[21280] 03 Jan 15:55:08.017 * Non blocking connect for SYNC fired the event.
+[21280] 03 Jan 15:55:08.017 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[21280] 03 Jan 15:55:08.155 * Connecting to MASTER 127.0.0.1:6379
+[21280] 03 Jan 15:55:08.155 * MASTER <-> SLAVE sync started
+[21280] 03 Jan 15:55:10.201 * Non blocking connect for SYNC fired the event.
+[21280] 03 Jan 15:55:10.201 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[21280] 03 Jan 15:55:10.325 * Connecting to MASTER 127.0.0.1:6379
+[21280] 03 Jan 15:55:10.325 * MASTER <-> SLAVE sync started
+[21280] 03 Jan 15:55:12.366 * Non blocking connect for SYNC fired the event.
+[21280] 03 Jan 15:55:12.366 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[21280] 03 Jan 15:55:12.489 * Connecting to MASTER 127.0.0.1:6379
+[21280] 03 Jan 15:55:12.489 * MASTER <-> SLAVE sync started
+[21280] 03 Jan 15:55:14.535 * Non blocking connect for SYNC fired the event.
+[21280] 03 Jan 15:55:14.535 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[21280] 03 Jan 15:55:14.660 * Connecting to MASTER 127.0.0.1:6379
+[21280] 03 Jan 15:55:14.660 * MASTER <-> SLAVE sync started
+[21280] 03 Jan 15:55:16.704 * Non blocking connect for SYNC fired the event.
+[21280] 03 Jan 15:55:16.704 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[21280] 03 Jan 15:55:16.828 * Connecting to MASTER 127.0.0.1:6379
+[21280] 03 Jan 15:55:16.828 * MASTER <-> SLAVE sync started
+[21280] 03 Jan 15:55:18.870 * Non blocking connect for SYNC fired the event.
+[21280] 03 Jan 15:55:18.870 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[21280] 03 Jan 15:55:18.994 * Connecting to MASTER 127.0.0.1:6379
+[21280] 03 Jan 15:55:18.994 * MASTER <-> SLAVE sync started
+[21280] 03 Jan 15:55:21.036 * Non blocking connect for SYNC fired the event.
+[21280] 03 Jan 15:55:21.036 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[21280] 03 Jan 15:55:21.159 * Connecting to MASTER 127.0.0.1:6379
+[21280] 03 Jan 15:55:21.159 * MASTER <-> SLAVE sync started
+[21280] 03 Jan 15:55:23.199 * Non blocking connect for SYNC fired the event.
+[21280] 03 Jan 15:55:23.199 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[21280] 03 Jan 15:55:23.326 * Connecting to MASTER 127.0.0.1:6379
+[21280] 03 Jan 15:55:23.326 * MASTER <-> SLAVE sync started
+[21280] 03 Jan 15:55:25.374 * Non blocking connect for SYNC fired the event.
+[21280] 03 Jan 15:55:25.374 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[21280] 03 Jan 15:55:25.496 * Connecting to MASTER 127.0.0.1:6379
+[21280] 03 Jan 15:55:25.496 * MASTER <-> SLAVE sync started
+[21280] 03 Jan 15:55:27.541 * Non blocking connect for SYNC fired the event.
+[21280] 03 Jan 15:55:27.541 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[21280] 03 Jan 15:55:27.665 * Connecting to MASTER 127.0.0.1:6379
+[21280] 03 Jan 15:55:27.665 * MASTER <-> SLAVE sync started
+[21280] 03 Jan 15:55:29.706 * Non blocking connect for SYNC fired the event.
+[21280] 03 Jan 15:55:29.706 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[21280] 03 Jan 15:55:29.830 * Connecting to MASTER 127.0.0.1:6379
+[21280] 03 Jan 15:55:29.830 * MASTER <-> SLAVE sync started
+[21280] 03 Jan 15:55:31.879 * Non blocking connect for SYNC fired the event.
+[21280] 03 Jan 15:55:31.879 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[21280] 03 Jan 15:55:32.004 * Connecting to MASTER 127.0.0.1:6379
+[21280] 03 Jan 15:55:32.004 * MASTER <-> SLAVE sync started
+[21280] 03 Jan 15:55:34.057 * Non blocking connect for SYNC fired the event.
+[21280] 03 Jan 15:55:34.057 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[21280] 03 Jan 15:55:34.184 * Connecting to MASTER 127.0.0.1:6379
+[21280] 03 Jan 15:55:34.184 * MASTER <-> SLAVE sync started
+[21280] 03 Jan 15:55:36.220 * Non blocking connect for SYNC fired the event.
+[21280] 03 Jan 15:55:36.220 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[21280] 03 Jan 15:55:36.345 * Connecting to MASTER 127.0.0.1:6379
+[21280] 03 Jan 15:55:36.345 * MASTER <-> SLAVE sync started
+[21280] 03 Jan 15:55:38.379 * Non blocking connect for SYNC fired the event.
+[21280] 03 Jan 15:55:38.379 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[21280] 03 Jan 15:55:38.517 * Connecting to MASTER 127.0.0.1:6379
+[21280] 03 Jan 15:55:38.517 * MASTER <-> SLAVE sync started
+[21280] 03 Jan 15:55:40.563 * Non blocking connect for SYNC fired the event.
+[21280] 03 Jan 15:55:40.563 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[21280] 03 Jan 15:55:40.684 * Connecting to MASTER 127.0.0.1:6379
+[21280] 03 Jan 15:55:40.685 * MASTER <-> SLAVE sync started
+[21280] 03 Jan 15:55:42.732 * Non blocking connect for SYNC fired the event.
+[21280] 03 Jan 15:55:42.732 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[21280] 03 Jan 15:55:42.857 * Connecting to MASTER 127.0.0.1:6379
+[21280] 03 Jan 15:55:42.857 * MASTER <-> SLAVE sync started
+[21280] 03 Jan 15:55:44.892 * Non blocking connect for SYNC fired the event.
+[21280] 03 Jan 15:55:44.892 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[21280] 03 Jan 15:55:45.015 * Connecting to MASTER 127.0.0.1:6379
+[21280] 03 Jan 15:55:45.015 * MASTER <-> SLAVE sync started
+[21280] 03 Jan 15:55:47.058 * Non blocking connect for SYNC fired the event.
+[21280] 03 Jan 15:55:47.058 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[21280] 03 Jan 15:55:47.183 * Connecting to MASTER 127.0.0.1:6379
+[21280] 03 Jan 15:55:47.183 * MASTER <-> SLAVE sync started
+[21280] 03 Jan 15:55:49.237 * Non blocking connect for SYNC fired the event.
+[21280] 03 Jan 15:55:49.237 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[21280] 03 Jan 15:55:49.360 * Connecting to MASTER 127.0.0.1:6379
+[21280] 03 Jan 15:55:49.360 * MASTER <-> SLAVE sync started
+[21280] 03 Jan 15:55:51.407 * Non blocking connect for SYNC fired the event.
+[21280] 03 Jan 15:55:51.407 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[21280] 03 Jan 15:55:51.530 * Connecting to MASTER 127.0.0.1:6379
+[21280] 03 Jan 15:55:51.530 * MASTER <-> SLAVE sync started
+[21280] 03 Jan 15:55:53.582 * Non blocking connect for SYNC fired the event.
+[21280] 03 Jan 15:55:53.582 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[21280] 03 Jan 15:55:53.704 * Connecting to MASTER 127.0.0.1:6379
+[21280] 03 Jan 15:55:53.705 * MASTER <-> SLAVE sync started
+[21280] 03 Jan 15:55:55.739 * Non blocking connect for SYNC fired the event.
+[21280] 03 Jan 15:55:55.739 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[21280] 03 Jan 15:55:55.879 * Connecting to MASTER 127.0.0.1:6379
+[21280] 03 Jan 15:55:55.879 * MASTER <-> SLAVE sync started
+[21280] 03 Jan 15:55:57.916 * Non blocking connect for SYNC fired the event.
+[21280] 03 Jan 15:55:57.916 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[21280] 03 Jan 15:55:58.039 * Connecting to MASTER 127.0.0.1:6379
+[21280] 03 Jan 15:55:58.039 * MASTER <-> SLAVE sync started
+[21280] 03 Jan 15:56:00.079 * Non blocking connect for SYNC fired the event.
+[21280] 03 Jan 15:56:00.079 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[21280] 03 Jan 15:56:00.199 * Connecting to MASTER 127.0.0.1:6379
+[21280] 03 Jan 15:56:00.200 * MASTER <-> SLAVE sync started
+[21280] 03 Jan 15:56:02.241 * Non blocking connect for SYNC fired the event.
+[21280] 03 Jan 15:56:02.241 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[21280] 03 Jan 15:56:02.349 * Connecting to MASTER 127.0.0.1:6379
+[21280] 03 Jan 15:56:02.349 * MASTER <-> SLAVE sync started
+[21280] 03 Jan 15:56:04.396 * Non blocking connect for SYNC fired the event.
+[21280] 03 Jan 15:56:04.396 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[21280] 03 Jan 15:56:04.521 * Connecting to MASTER 127.0.0.1:6379
+[21280] 03 Jan 15:56:04.521 * MASTER <-> SLAVE sync started
+[21280] 03 Jan 15:56:06.562 * Non blocking connect for SYNC fired the event.
+[21280] 03 Jan 15:56:06.562 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[21280] 03 Jan 15:56:06.687 * Connecting to MASTER 127.0.0.1:6379
+[21280] 03 Jan 15:56:06.687 * MASTER <-> SLAVE sync started
+[21280] 03 Jan 15:56:08.732 * Non blocking connect for SYNC fired the event.
+[21280] 03 Jan 15:56:08.732 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[21280] 03 Jan 15:56:08.855 * Connecting to MASTER 127.0.0.1:6379
+[21280] 03 Jan 15:56:08.855 * MASTER <-> SLAVE sync started
+[21280] 03 Jan 15:56:10.891 * Non blocking connect for SYNC fired the event.
+[21280] 03 Jan 15:56:10.891 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[21280] 03 Jan 15:56:11.030 * Connecting to MASTER 127.0.0.1:6379
+[21280] 03 Jan 15:56:11.030 * MASTER <-> SLAVE sync started
+[21280] 03 Jan 15:56:13.083 * Non blocking connect for SYNC fired the event.
+[21280] 03 Jan 15:56:13.083 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[21280] 03 Jan 15:56:13.206 * Connecting to MASTER 127.0.0.1:6379
+[21280] 03 Jan 15:56:13.207 * MASTER <-> SLAVE sync started
+[21280] 03 Jan 15:56:15.243 * Non blocking connect for SYNC fired the event.
+[21280] 03 Jan 15:56:15.243 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[21280] 03 Jan 15:56:15.365 * Connecting to MASTER 127.0.0.1:6379
+[21280] 03 Jan 15:56:15.366 * MASTER <-> SLAVE sync started
+                _._                                                  
+           _.-``__ ''-._                                             
+      _.-``    `.  `_.  ''-._           Redis 3.2.100 (00000000/0) 64 bit
+  .-`` .-```.  ```\/    _.,_ ''-._                                   
+ (    '      ,       .-`  | `,    )     Running in standalone mode
+ |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6381
+ |    `-._   `._    /     _.-'    |     PID: 20820
+  `-._    `-._  `-./  _.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |           http://redis.io        
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |                                  
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+      `-._    `-.__.-'    _.-'                                       
+          `-._        _.-'                                           
+              `-.__.-'                                               
+
+[20820] 03 Jan 15:56:28.308 # Server started, Redis version 3.2.100
+[20820] 03 Jan 15:56:28.309 * DB loaded from disk: 0.000 seconds
+[20820] 03 Jan 15:56:28.309 * The server is now ready to accept connections on port 6381
+[20820] 03 Jan 15:56:28.309 * Connecting to MASTER 127.0.0.1:6379
+[20820] 03 Jan 15:56:28.309 * MASTER <-> SLAVE sync started
+[20820] 03 Jan 15:56:28.309 * Non blocking connect for SYNC fired the event.
+[20820] 03 Jan 15:56:28.309 * Master replied to PING, replication can continue...
+[20820] 03 Jan 15:56:28.310 * Partial resynchronization not possible (no cached master)
+[20820] 03 Jan 15:56:28.318 * Full resync from master: 2dba0207d7498e5938a18605bef6215de9f149b0:1
+[20820] 03 Jan 15:56:28.416 * MASTER <-> SLAVE sync: receiving 7522 bytes from master
+[20820] 03 Jan 15:56:28.417 * MASTER <-> SLAVE sync: Flushing old data
+[20820] 03 Jan 15:56:28.418 * MASTER <-> SLAVE sync: Loading DB in memory
+[20820] 03 Jan 15:56:28.418 * MASTER <-> SLAVE sync: Finished with success
+[20820] 03 Jan 15:57:35.479 # Connection with master lost.
+[20820] 03 Jan 15:57:35.479 * Caching the disconnected master state.
+[20820] 03 Jan 15:57:36.109 * Connecting to MASTER 127.0.0.1:6379
+[20820] 03 Jan 15:57:36.109 * MASTER <-> SLAVE sync started
+[20820] 03 Jan 15:57:38.142 * Non blocking connect for SYNC fired the event.
+[20820] 03 Jan 15:57:38.142 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[20820] 03 Jan 15:57:38.209 * Connecting to MASTER 127.0.0.1:6379
+[20820] 03 Jan 15:57:38.209 * MASTER <-> SLAVE sync started
+[20820] 03 Jan 15:57:40.226 * Non blocking connect for SYNC fired the event.
+[20820] 03 Jan 15:57:40.226 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[20820] 03 Jan 15:57:40.341 * Connecting to MASTER 127.0.0.1:6379
+[20820] 03 Jan 15:57:40.341 * MASTER <-> SLAVE sync started
+[20820] 03 Jan 15:57:42.357 * Non blocking connect for SYNC fired the event.
+[20820] 03 Jan 15:57:42.357 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[20820] 03 Jan 15:57:42.458 * Connecting to MASTER 127.0.0.1:6379
+[20820] 03 Jan 15:57:42.458 * MASTER <-> SLAVE sync started
+[20820] 03 Jan 15:57:44.489 * Non blocking connect for SYNC fired the event.
+[20820] 03 Jan 15:57:44.489 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[20820] 03 Jan 15:57:44.572 * Connecting to MASTER 127.0.0.1:6379
+[20820] 03 Jan 15:57:44.572 * MASTER <-> SLAVE sync started
+[20820] 03 Jan 15:57:46.589 * Non blocking connect for SYNC fired the event.
+[20820] 03 Jan 15:57:46.589 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[20820] 03 Jan 15:57:46.675 * Connecting to MASTER 127.0.0.1:6379
+[20820] 03 Jan 15:57:46.675 * MASTER <-> SLAVE sync started
+[20820] 03 Jan 15:57:48.707 * Non blocking connect for SYNC fired the event.
+[20820] 03 Jan 15:57:48.707 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[20820] 03 Jan 15:57:48.774 * Connecting to MASTER 127.0.0.1:6379
+[20820] 03 Jan 15:57:48.774 * MASTER <-> SLAVE sync started
+[20820] 03 Jan 15:57:50.807 * Non blocking connect for SYNC fired the event.
+[20820] 03 Jan 15:57:50.807 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[20820] 03 Jan 15:57:50.873 * Connecting to MASTER 127.0.0.1:6379
+[20820] 03 Jan 15:57:50.873 * MASTER <-> SLAVE sync started
+[20820] 03 Jan 15:57:52.890 * Non blocking connect for SYNC fired the event.
+[20820] 03 Jan 15:57:52.890 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[20820] 03 Jan 15:57:52.973 * Connecting to MASTER 127.0.0.1:6379
+[20820] 03 Jan 15:57:52.973 * MASTER <-> SLAVE sync started
+[20820] 03 Jan 15:57:55.006 * Non blocking connect for SYNC fired the event.
+[20820] 03 Jan 15:57:55.006 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[20820] 03 Jan 15:57:55.073 * Connecting to MASTER 127.0.0.1:6379
+[20820] 03 Jan 15:57:55.073 * MASTER <-> SLAVE sync started
+[20820] 03 Jan 15:57:57.122 * Non blocking connect for SYNC fired the event.
+[20820] 03 Jan 15:57:57.122 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[20820] 03 Jan 15:57:57.202 * Connecting to MASTER 127.0.0.1:6379
+[20820] 03 Jan 15:57:57.202 * MASTER <-> SLAVE sync started
+[20820] 03 Jan 15:57:59.207 * Non blocking connect for SYNC fired the event.
+[20820] 03 Jan 15:57:59.208 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[20820] 03 Jan 15:57:59.321 * Connecting to MASTER 127.0.0.1:6379
+[20820] 03 Jan 15:57:59.321 * MASTER <-> SLAVE sync started
+[20820] 03 Jan 15:58:01.338 * Non blocking connect for SYNC fired the event.
+[20820] 03 Jan 15:58:01.338 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[20820] 03 Jan 15:58:01.471 * Connecting to MASTER 127.0.0.1:6379
+[20820] 03 Jan 15:58:01.472 * MASTER <-> SLAVE sync started
+[20820] 03 Jan 15:58:03.489 * Non blocking connect for SYNC fired the event.
+[20820] 03 Jan 15:58:03.489 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[20820] 03 Jan 15:58:03.603 * Connecting to MASTER 127.0.0.1:6379
+[20820] 03 Jan 15:58:03.603 * MASTER <-> SLAVE sync started
+[20820] 03 Jan 15:58:05.637 * Non blocking connect for SYNC fired the event.
+[20820] 03 Jan 15:58:05.637 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[20820] 03 Jan 15:58:05.737 * Connecting to MASTER 127.0.0.1:6379
+[20820] 03 Jan 15:58:05.738 * MASTER <-> SLAVE sync started
+[20820] 03 Jan 15:58:07.769 * Non blocking connect for SYNC fired the event.
+[20820] 03 Jan 15:58:07.769 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[20820] 03 Jan 15:58:07.870 * Connecting to MASTER 127.0.0.1:6379
+[20820] 03 Jan 15:58:07.871 * MASTER <-> SLAVE sync started
+[20820] 03 Jan 15:58:09.901 * Non blocking connect for SYNC fired the event.
+[20820] 03 Jan 15:58:09.901 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[20820] 03 Jan 15:58:10.020 * Connecting to MASTER 127.0.0.1:6379
+[20820] 03 Jan 15:58:10.020 * MASTER <-> SLAVE sync started
+[20820] 03 Jan 15:58:12.053 * Non blocking connect for SYNC fired the event.
+[20820] 03 Jan 15:58:12.053 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[20820] 03 Jan 15:58:12.115 * Connecting to MASTER 127.0.0.1:6379
+[20820] 03 Jan 15:58:12.115 * MASTER <-> SLAVE sync started
+                _._                                                  
+           _.-``__ ''-._                                             
+      _.-``    `.  `_.  ''-._           Redis 3.2.100 (00000000/0) 64 bit
+  .-`` .-```.  ```\/    _.,_ ''-._                                   
+ (    '      ,       .-`  | `,    )     Running in standalone mode
+ |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6381
+ |    `-._   `._    /     _.-'    |     PID: 22456
+  `-._    `-._  `-./  _.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |           http://redis.io        
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |                                  
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+      `-._    `-.__.-'    _.-'                                       
+          `-._        _.-'                                           
+              `-.__.-'                                               
+
+[22456] 03 Jan 16:00:28.415 # Server started, Redis version 3.2.100
+[22456] 03 Jan 16:00:28.416 * DB loaded from disk: 0.000 seconds
+[22456] 03 Jan 16:00:28.416 * The server is now ready to accept connections on port 6381
+[22456] 03 Jan 16:00:28.416 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:00:28.416 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:00:28.416 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:00:28.416 * Master replied to PING, replication can continue...
+[22456] 03 Jan 16:00:28.417 * Partial resynchronization not possible (no cached master)
+[22456] 03 Jan 16:00:28.425 * Full resync from master: 68f01bbbdfe3a4a866697355390a2008dbb6436c:1
+[22456] 03 Jan 16:00:28.503 * MASTER <-> SLAVE sync: receiving 7522 bytes from master
+[22456] 03 Jan 16:00:28.503 * MASTER <-> SLAVE sync: Flushing old data
+[22456] 03 Jan 16:00:28.503 * MASTER <-> SLAVE sync: Loading DB in memory
+[22456] 03 Jan 16:00:28.503 * MASTER <-> SLAVE sync: Finished with success
+[22456] 03 Jan 16:02:45.320 # Connection with master lost.
+[22456] 03 Jan 16:02:45.320 * Caching the disconnected master state.
+[22456] 03 Jan 16:02:45.806 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:02:45.806 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:02:47.838 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:02:47.838 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:02:47.922 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:02:47.922 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:02:49.955 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:02:49.955 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:02:50.038 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:02:50.039 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:02:52.072 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:02:52.072 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:02:52.205 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:02:52.206 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:02:54.238 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:02:54.238 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:02:54.353 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:02:54.353 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:02:56.402 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:02:56.402 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:02:56.453 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:02:56.453 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:02:58.486 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:02:58.486 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:02:58.586 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:02:58.586 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:03:00.621 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:03:00.621 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:03:00.704 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:03:00.704 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:03:02.736 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:03:02.736 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:03:02.803 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:03:02.803 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:03:04.836 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:03:04.837 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:03:04.936 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:03:04.937 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:03:06.969 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:03:06.969 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:03:07.051 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:03:07.051 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:03:09.084 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:03:09.084 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:03:09.137 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:03:09.137 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:03:11.168 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:03:11.168 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:03:11.268 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:03:11.268 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:03:13.288 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:03:13.288 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:03:13.389 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:03:13.390 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:03:15.418 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:03:15.418 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:03:15.521 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:03:15.521 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:03:17.538 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:03:17.538 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:03:17.629 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:03:17.629 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:03:19.651 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:03:19.651 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:03:19.716 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:03:19.716 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:03:21.734 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:03:21.734 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:03:21.832 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:03:21.832 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:03:23.852 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:03:23.852 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:03:23.938 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:03:23.938 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:03:25.973 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:03:25.973 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:03:26.049 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:03:26.049 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:03:28.080 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:03:28.080 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:03:28.149 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:03:28.149 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:03:30.176 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:03:30.176 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:03:30.300 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:03:30.300 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:03:32.330 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:03:32.330 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:03:32.415 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:03:32.415 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:03:34.432 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:03:34.432 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:03:34.531 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:03:34.531 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:03:36.563 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:03:36.563 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:03:36.680 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:03:36.681 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:03:38.698 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:03:38.698 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:03:38.846 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:03:38.846 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:03:40.870 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:03:40.870 * Master replied to PING, replication can continue...
+[22456] 03 Jan 16:03:40.870 * Trying a partial resynchronization (request 68f01bbbdfe3a4a866697355390a2008dbb6436c:184).
+[22456] 03 Jan 16:03:40.870 * Full resync from master: f56812b3e447a307be7a2394bfafdf0830c880f9:1
+[22456] 03 Jan 16:03:40.870 * Discarding previously cached master state.
+[22456] 03 Jan 16:03:40.964 * MASTER <-> SLAVE sync: receiving 7522 bytes from master
+[22456] 03 Jan 16:03:40.964 * MASTER <-> SLAVE sync: Flushing old data
+[22456] 03 Jan 16:03:40.964 * MASTER <-> SLAVE sync: Loading DB in memory
+[22456] 03 Jan 16:03:40.964 * MASTER <-> SLAVE sync: Finished with success
+[22456] 03 Jan 16:25:47.482 # Connection with master lost.
+[22456] 03 Jan 16:25:47.483 * Caching the disconnected master state.
+[22456] 03 Jan 16:25:48.444 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:25:48.444 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:25:50.468 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:25:50.469 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:25:50.551 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:25:50.552 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:25:52.584 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:25:52.584 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:25:52.684 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:25:52.685 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:25:54.693 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:25:54.693 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:25:54.818 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:25:54.818 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:25:56.850 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:25:56.851 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:25:56.933 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:25:56.934 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:25:58.971 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:25:58.971 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:25:59.067 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:25:59.067 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:26:01.079 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:26:01.079 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:26:01.199 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:26:01.199 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:26:03.224 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:26:03.224 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:26:03.333 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:26:03.333 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:26:05.358 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:26:05.358 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:26:05.448 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:26:05.448 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:26:07.491 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:26:07.491 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:26:07.557 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:26:07.557 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:26:09.590 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:26:09.590 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:26:09.690 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:26:09.690 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:26:11.706 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:26:11.706 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:26:11.797 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:26:11.798 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:26:13.830 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:26:13.830 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:26:13.939 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:26:13.939 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:26:15.973 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:26:15.973 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:26:16.097 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:26:16.097 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:26:18.122 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:26:18.122 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:26:18.230 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:26:18.231 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:26:20.271 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:26:20.271 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:26:20.372 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:26:20.372 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:26:22.404 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:26:22.404 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:26:22.471 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:26:22.471 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:26:24.488 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:26:24.488 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:26:24.546 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:26:24.546 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:26:26.579 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:26:26.579 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:26:26.662 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:26:26.663 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:26:28.695 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:26:28.695 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:26:28.795 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:26:28.796 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:26:30.819 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:26:30.819 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:26:30.953 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:26:30.953 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:26:32.978 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:26:32.978 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:26:33.077 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:26:33.078 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:26:35.111 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:26:35.111 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:26:35.194 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:26:35.194 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:26:37.227 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:26:37.227 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:26:37.319 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:26:37.319 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:26:39.343 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:26:39.343 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:26:39.452 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:26:39.452 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:26:41.501 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:26:41.501 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:26:41.568 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:26:41.568 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:26:43.618 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:26:43.618 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:26:43.692 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:26:43.693 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:26:45.725 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:26:45.725 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:26:45.818 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:26:45.818 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:26:47.849 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:26:47.849 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:26:47.958 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:26:47.958 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:26:49.983 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:26:49.983 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:26:50.058 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:26:50.059 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:26:52.099 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:26:52.099 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:26:52.189 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:26:52.189 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:26:54.199 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:26:54.199 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:26:54.299 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:26:54.299 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:26:56.323 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:26:56.323 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:26:56.374 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:26:56.374 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:26:58.398 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:26:58.398 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:26:58.490 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:26:58.490 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:27:00.531 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:27:00.531 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:27:00.640 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:27:00.640 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:27:02.689 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:27:02.689 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:27:02.798 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:27:02.798 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:27:04.831 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:27:04.831 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:27:04.947 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:27:04.947 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:27:06.964 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:27:06.964 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:27:07.047 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:27:07.047 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:27:09.079 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:27:09.079 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:27:09.154 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:27:09.155 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:27:11.180 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:27:11.180 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:27:11.288 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:27:11.288 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:27:13.313 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:27:13.313 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:27:13.413 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:27:13.413 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:27:15.445 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:27:15.445 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:27:15.512 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:27:15.512 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:27:17.545 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:27:17.545 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:27:17.653 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:27:17.654 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:27:19.686 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:27:19.686 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:27:19.778 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:27:19.778 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:27:21.810 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:27:21.810 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:27:21.869 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:27:21.869 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:27:23.902 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:27:23.903 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:27:23.993 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:27:23.993 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:27:26.018 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:27:26.018 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:27:26.118 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:27:26.119 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:27:28.151 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:27:28.151 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:27:28.252 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:27:28.253 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:27:30.290 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:27:30.290 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:27:30.402 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:27:30.402 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:27:32.425 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:27:32.425 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:27:32.534 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:27:32.534 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:27:34.559 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:27:34.559 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[22456] 03 Jan 16:27:34.700 * Connecting to MASTER 127.0.0.1:6379
+[22456] 03 Jan 16:27:34.701 * MASTER <-> SLAVE sync started
+[22456] 03 Jan 16:27:36.728 * Non blocking connect for SYNC fired the event.
+[22456] 03 Jan 16:27:36.728 * Master replied to PING, replication can continue...
+[22456] 03 Jan 16:27:36.728 * Trying a partial resynchronization (request f56812b3e447a307be7a2394bfafdf0830c880f9:1710).
+[22456] 03 Jan 16:27:36.733 * Full resync from master: 4794733303b6799ccf56d90a3390a1b6cb142445:1
+[22456] 03 Jan 16:27:36.733 * Discarding previously cached master state.
+[22456] 03 Jan 16:27:36.834 * MASTER <-> SLAVE sync: receiving 7522 bytes from master
+[22456] 03 Jan 16:27:36.834 * MASTER <-> SLAVE sync: Flushing old data
+[22456] 03 Jan 16:27:36.834 * MASTER <-> SLAVE sync: Loading DB in memory
+[22456] 03 Jan 16:27:36.834 * MASTER <-> SLAVE sync: Finished with success
+                _._                                                  
+           _.-``__ ''-._                                             
+      _.-``    `.  `_.  ''-._           Redis 3.2.100 (00000000/0) 64 bit
+  .-`` .-```.  ```\/    _.,_ ''-._                                   
+ (    '      ,       .-`  | `,    )     Running in standalone mode
+ |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6381
+ |    `-._   `._    /     _.-'    |     PID: 13044
+  `-._    `-._  `-./  _.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |           http://redis.io        
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |                                  
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+      `-._    `-.__.-'    _.-'                                       
+          `-._        _.-'                                           
+              `-.__.-'                                               
+
+[13044] 03 Jan 16:29:15.126 # Server started, Redis version 3.2.100
+[13044] 03 Jan 16:29:15.127 * DB loaded from disk: 0.000 seconds
+[13044] 03 Jan 16:29:15.127 * The server is now ready to accept connections on port 6381
+[13044] 03 Jan 16:29:15.127 * Connecting to MASTER 127.0.0.1:6379
+[13044] 03 Jan 16:29:15.128 * MASTER <-> SLAVE sync started
+[13044] 03 Jan 16:29:15.128 * Non blocking connect for SYNC fired the event.
+[13044] 03 Jan 16:29:15.128 * Master replied to PING, replication can continue...
+[13044] 03 Jan 16:29:15.128 * Partial resynchronization not possible (no cached master)
+[13044] 03 Jan 16:29:15.132 * Full resync from master: 470a0711d11faa6e19f11d52e163cf81268fca67:1
+[13044] 03 Jan 16:29:15.292 * MASTER <-> SLAVE sync: receiving 7522 bytes from master
+[13044] 03 Jan 16:29:15.300 * MASTER <-> SLAVE sync: Flushing old data
+[13044] 03 Jan 16:29:15.300 * MASTER <-> SLAVE sync: Loading DB in memory
+[13044] 03 Jan 16:29:15.300 * MASTER <-> SLAVE sync: Finished with success
+                _._                                                  
+           _.-``__ ''-._                                             
+      _.-``    `.  `_.  ''-._           Redis 3.2.100 (00000000/0) 64 bit
+  .-`` .-```.  ```\/    _.,_ ''-._                                   
+ (    '      ,       .-`  | `,    )     Running in standalone mode
+ |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6381
+ |    `-._   `._    /     _.-'    |     PID: 3396
+  `-._    `-._  `-./  _.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |           http://redis.io        
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |                                  
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+      `-._    `-.__.-'    _.-'                                       
+          `-._        _.-'                                           
+              `-.__.-'                                               
+
+[3396] 03 Jan 16:32:41.662 # Server started, Redis version 3.2.100
+[3396] 03 Jan 16:32:41.662 * DB loaded from disk: 0.000 seconds
+[3396] 03 Jan 16:32:41.662 * The server is now ready to accept connections on port 6381
+[3396] 03 Jan 16:32:41.662 * Connecting to MASTER 127.0.0.1:6379
+[3396] 03 Jan 16:32:41.663 * MASTER <-> SLAVE sync started
+[3396] 03 Jan 16:32:41.663 * Non blocking connect for SYNC fired the event.
+[3396] 03 Jan 16:32:41.663 * Master replied to PING, replication can continue...
+[3396] 03 Jan 16:32:41.663 * Partial resynchronization not possible (no cached master)
+[3396] 03 Jan 16:32:41.667 * Full resync from master: c2141635022df95c853ae1beff11111ba92a345a:1
+[3396] 03 Jan 16:32:41.765 * MASTER <-> SLAVE sync: receiving 7522 bytes from master
+[3396] 03 Jan 16:32:41.765 * MASTER <-> SLAVE sync: Flushing old data
+[3396] 03 Jan 16:32:41.765 * MASTER <-> SLAVE sync: Loading DB in memory
+[3396] 03 Jan 16:32:41.765 * MASTER <-> SLAVE sync: Finished with success
+[3396] 03 Jan 16:35:09.567 # Connection with master lost.
+[3396] 03 Jan 16:35:09.567 * Caching the disconnected master state.
+[3396] 03 Jan 16:35:10.297 * Connecting to MASTER 127.0.0.1:6379
+[3396] 03 Jan 16:35:10.297 * MASTER <-> SLAVE sync started
+[3396] 03 Jan 16:35:12.339 * Non blocking connect for SYNC fired the event.
+[3396] 03 Jan 16:35:12.339 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[3396] 03 Jan 16:35:12.414 * Connecting to MASTER 127.0.0.1:6379
+[3396] 03 Jan 16:35:12.414 * MASTER <-> SLAVE sync started
+[3396] 03 Jan 16:35:14.454 * Non blocking connect for SYNC fired the event.
+[3396] 03 Jan 16:35:14.454 # Sending command to master in replication handshake: -Writing to master: Unknown error
+[3396] 03 Jan 16:35:14.562 * Connecting to MASTER 127.0.0.1:6379
+[3396] 03 Jan 16:35:14.562 * MASTER <-> SLAVE sync started
+[3396] 03 Jan 16:35:14.981 * Discarding previously cached master state.
+[3396] 03 Jan 16:35:14.981 * MASTER MODE enabled (user request from 'id=4 addr=127.0.0.1:61403 fd=9 name=sentinel-aef775ed-cmd age=33 idle=0 flags=x db=0 sub=0 psub=0 multi=3 qbuf=0 qbuf-free=32768 obl=36 oll=0 omem=0 events=r cmd=exec')
+[3396] 03 Jan 16:35:14.981 # CONFIG REWRITE executed with success.
+[3396] 03 Jan 16:35:16.424 * Slave 127.0.0.1:6380 asks for synchronization
+[3396] 03 Jan 16:35:16.424 * Full resync requested by slave 127.0.0.1:6380
+[3396] 03 Jan 16:35:16.424 * Starting BGSAVE for SYNC with target: disk
+[3396] 03 Jan 16:35:16.428 * Background saving started by pid 24600
+[3396] 03 Jan 16:35:16.519 # fork operation complete
+[3396] 03 Jan 16:35:16.520 * Background saving terminated with success
+[3396] 03 Jan 16:35:16.523 * Synchronization with slave 127.0.0.1:6380 succeeded
+[3396] 03 Jan 16:36:42.432 * Slave 127.0.0.1:6379 asks for synchronization
+[3396] 03 Jan 16:36:42.432 * Full resync requested by slave 127.0.0.1:6379
+[3396] 03 Jan 16:36:42.432 * Starting BGSAVE for SYNC with target: disk
+[3396] 03 Jan 16:36:42.432 * Background saving started by pid 20108
+[3396] 03 Jan 16:36:42.539 # fork operation complete
+[3396] 03 Jan 16:36:42.540 * Background saving terminated with success
+[3396] 03 Jan 16:36:42.540 * Synchronization with slave 127.0.0.1:6379 succeeded
+                _._                                                  
+           _.-``__ ''-._                                             
+      _.-``    `.  `_.  ''-._           Redis 3.2.100 (00000000/0) 64 bit
+  .-`` .-```.  ```\/    _.,_ ''-._                                   
+ (    '      ,       .-`  | `,    )     Running in standalone mode
+ |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6381
+ |    `-._   `._    /     _.-'    |     PID: 16380
+  `-._    `-._  `-./  _.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |           http://redis.io        
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |                                  
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+      `-._    `-.__.-'    _.-'                                       
+          `-._        _.-'                                           
+              `-.__.-'                                               
+
+[16380] 03 Jan 16:38:26.671 # Server started, Redis version 3.2.100
+[16380] 03 Jan 16:38:26.672 * DB loaded from disk: 0.000 seconds
+[16380] 03 Jan 16:38:26.672 * The server is now ready to accept connections on port 6381
+[16380] 03 Jan 16:38:26.836 * Slave 127.0.0.1:6379 asks for synchronization
+[16380] 03 Jan 16:38:26.836 * Full resync requested by slave 127.0.0.1:6379
+[16380] 03 Jan 16:38:26.836 * Starting BGSAVE for SYNC with target: disk
+[16380] 03 Jan 16:38:26.839 * Background saving started by pid 5212
+[16380] 03 Jan 16:38:26.988 # fork operation complete
+[16380] 03 Jan 16:38:26.988 * Background saving terminated with success
+[16380] 03 Jan 16:38:26.988 * Synchronization with slave 127.0.0.1:6379 succeeded
+[16380] 03 Jan 16:38:27.072 * Slave 127.0.0.1:6380 asks for synchronization
+[16380] 03 Jan 16:38:27.072 * Full resync requested by slave 127.0.0.1:6380
+[16380] 03 Jan 16:38:27.072 * Starting BGSAVE for SYNC with target: disk
+[16380] 03 Jan 16:38:27.072 * Background saving started by pid 15260
+[16380] 03 Jan 16:38:27.197 # fork operation complete
+[16380] 03 Jan 16:38:27.197 * Background saving terminated with success
+[16380] 03 Jan 16:38:27.197 * Synchronization with slave 127.0.0.1:6380 succeeded
+                _._                                                  
+           _.-``__ ''-._                                             
+      _.-``    `.  `_.  ''-._           Redis 3.2.100 (00000000/0) 64 bit
+  .-`` .-```.  ```\/    _.,_ ''-._                                   
+ (    '      ,       .-`  | `,    )     Running in standalone mode
+ |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6381
+ |    `-._   `._    /     _.-'    |     PID: 3536
+  `-._    `-._  `-./  _.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |           http://redis.io        
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |                                  
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+      `-._    `-.__.-'    _.-'                                       
+          `-._        _.-'                                           
+              `-.__.-'                                               
+
+[3536] 03 Jan 16:41:50.676 # Server started, Redis version 3.2.100
+[3536] 03 Jan 16:41:50.676 * DB loaded from disk: 0.000 seconds
+[3536] 03 Jan 16:41:50.676 * The server is now ready to accept connections on port 6381
+[3536] 03 Jan 16:41:50.915 * Slave 127.0.0.1:6379 asks for synchronization
+[3536] 03 Jan 16:41:50.915 * Full resync requested by slave 127.0.0.1:6379
+[3536] 03 Jan 16:41:50.915 * Starting BGSAVE for SYNC with target: disk
+[3536] 03 Jan 16:41:50.915 * Background saving started by pid 23684
+[3536] 03 Jan 16:41:51.104 * Slave 127.0.0.1:6380 asks for synchronization
+[3536] 03 Jan 16:41:51.104 * Full resync requested by slave 127.0.0.1:6380
+[3536] 03 Jan 16:41:51.104 * Waiting for end of BGSAVE for SYNC
+[3536] 03 Jan 16:41:51.119 # fork operation complete
+[3536] 03 Jan 16:41:51.119 * Background saving terminated with success
+[3536] 03 Jan 16:41:51.119 * Synchronization with slave 127.0.0.1:6379 succeeded
+[3536] 03 Jan 16:41:51.119 * Synchronization with slave 127.0.0.1:6380 succeeded
+                _._                                                  
+           _.-``__ ''-._                                             
+      _.-``    `.  `_.  ''-._           Redis 3.2.100 (00000000/0) 64 bit
+  .-`` .-```.  ```\/    _.,_ ''-._                                   
+ (    '      ,       .-`  | `,    )     Running in standalone mode
+ |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6381
+ |    `-._   `._    /     _.-'    |     PID: 21864
+  `-._    `-._  `-./  _.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |           http://redis.io        
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |                                  
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+      `-._    `-.__.-'    _.-'                                       
+          `-._        _.-'                                           
+              `-.__.-'                                               
+
+[21864] 03 Jan 16:43:09.208 # Server started, Redis version 3.2.100
+[21864] 03 Jan 16:43:09.209 * DB loaded from disk: 0.000 seconds
+[21864] 03 Jan 16:43:09.209 * The server is now ready to accept connections on port 6381
+[21864] 03 Jan 16:43:09.469 * Slave 127.0.0.1:6380 asks for synchronization
+[21864] 03 Jan 16:43:09.469 * Full resync requested by slave 127.0.0.1:6380
+[21864] 03 Jan 16:43:09.469 * Starting BGSAVE for SYNC with target: disk
+[21864] 03 Jan 16:43:09.469 * Background saving started by pid 25004
+[21864] 03 Jan 16:43:09.658 # fork operation complete
+[21864] 03 Jan 16:43:09.659 * Background saving terminated with success
+[21864] 03 Jan 16:43:09.662 * Synchronization with slave 127.0.0.1:6380 succeeded
+                _._                                                  
+           _.-``__ ''-._                                             
+      _.-``    `.  `_.  ''-._           Redis 3.2.100 (00000000/0) 64 bit
+  .-`` .-```.  ```\/    _.,_ ''-._                                   
+ (    '      ,       .-`  | `,    )     Running in standalone mode
+ |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6381
+ |    `-._   `._    /     _.-'    |     PID: 17924
+  `-._    `-._  `-./  _.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |           http://redis.io        
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |                                  
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+      `-._    `-.__.-'    _.-'                                       
+          `-._        _.-'                                           
+              `-.__.-'                                               
+
+[17924] 03 Jan 16:44:11.541 # Server started, Redis version 3.2.100
+[17924] 03 Jan 16:44:11.541 * DB loaded from disk: 0.000 seconds
+[17924] 03 Jan 16:44:11.541 * The server is now ready to accept connections on port 6381
+[17924] 03 Jan 16:44:11.541 * Connecting to MASTER 127.0.0.1:6379
+[17924] 03 Jan 16:44:11.541 * MASTER <-> SLAVE sync started
+[17924] 03 Jan 16:44:11.542 * Non blocking connect for SYNC fired the event.
+[17924] 03 Jan 16:44:11.542 * Master replied to PING, replication can continue...
+[17924] 03 Jan 16:44:11.542 * Partial resynchronization not possible (no cached master)
+[17924] 03 Jan 16:44:11.546 * Full resync from master: 68038d83aef3f9f0391f07f3dee17abb31de2ad8:1
+[17924] 03 Jan 16:44:11.718 * MASTER <-> SLAVE sync: receiving 7522 bytes from master
+[17924] 03 Jan 16:44:11.718 * MASTER <-> SLAVE sync: Flushing old data
+[17924] 03 Jan 16:44:11.718 * MASTER <-> SLAVE sync: Loading DB in memory
+[17924] 03 Jan 16:44:11.718 * MASTER <-> SLAVE sync: Finished with success
+[17924] 03 Jan 16:44:42.536 # Connection with master lost.
+[17924] 03 Jan 16:44:42.536 * Caching the disconnected master state.
+[17924] 03 Jan 16:44:43.400 * Connecting to MASTER 127.0.0.1:6379
+[17924] 03 Jan 16:44:43.400 * MASTER <-> SLAVE sync started
+[17924] 03 Jan 16:44:43.400 * Non blocking connect for SYNC fired the event.
+[17924] 03 Jan 16:44:43.400 * Master replied to PING, replication can continue...
+[17924] 03 Jan 16:44:43.400 * Trying a partial resynchronization (request 68038d83aef3f9f0391f07f3dee17abb31de2ad8:5062).
+[17924] 03 Jan 16:44:43.408 * Full resync from master: 68038d83aef3f9f0391f07f3dee17abb31de2ad8:1
+[17924] 03 Jan 16:44:43.408 * Discarding previously cached master state.
+[17924] 03 Jan 16:44:43.595 * MASTER <-> SLAVE sync: receiving 7522 bytes from master
+[17924] 03 Jan 16:44:43.595 * MASTER <-> SLAVE sync: Flushing old data
+[17924] 03 Jan 16:44:43.595 * MASTER <-> SLAVE sync: Loading DB in memory
+[17924] 03 Jan 16:44:43.595 * MASTER <-> SLAVE sync: Finished with success
+[3536] 03 Jan 16:45:46.520 # Creating Server TCP listening socket 127.0.0.1:6381: bind: No such file or directory
+                _._                                                  
+           _.-``__ ''-._                                             
+      _.-``    `.  `_.  ''-._           Redis 3.2.100 (00000000/0) 64 bit
+  .-`` .-```.  ```\/    _.,_ ''-._                                   
+ (    '      ,       .-`  | `,    )     Running in standalone mode
+ |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6381
+ |    `-._   `._    /     _.-'    |     PID: 23288
+  `-._    `-._  `-./  _.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |           http://redis.io        
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |                                  
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+      `-._    `-.__.-'    _.-'                                       
+          `-._        _.-'                                           
+              `-.__.-'                                               
+
+[23288] 03 Jan 16:45:53.694 # Server started, Redis version 3.2.100
+[23288] 03 Jan 16:45:53.695 * DB loaded from disk: 0.000 seconds
+[23288] 03 Jan 16:45:53.695 * The server is now ready to accept connections on port 6381
+[23288] 03 Jan 16:45:53.695 * Connecting to MASTER 127.0.0.1:6379
+[23288] 03 Jan 16:45:53.695 * MASTER <-> SLAVE sync started
+[23288] 03 Jan 16:45:53.695 * Non blocking connect for SYNC fired the event.
+[23288] 03 Jan 16:45:53.695 * Master replied to PING, replication can continue...
+[23288] 03 Jan 16:45:53.696 * Partial resynchronization not possible (no cached master)
+[23288] 03 Jan 16:45:53.710 * Full resync from master: 705cf18931db45a112aa5b3cefd14aa39acae69a:1
+[23288] 03 Jan 16:45:53.881 * MASTER <-> SLAVE sync: receiving 7522 bytes from master
+[23288] 03 Jan 16:45:53.881 * MASTER <-> SLAVE sync: Flushing old data
+[23288] 03 Jan 16:45:53.881 * MASTER <-> SLAVE sync: Loading DB in memory
+[23288] 03 Jan 16:45:53.881 * MASTER <-> SLAVE sync: Finished with success
+[23288] 03 Jan 16:46:16.832 # Connection with master lost.
+[23288] 03 Jan 16:46:16.832 * Caching the disconnected master state.
+[23288] 03 Jan 16:46:16.832 * Discarding previously cached master state.
+[23288] 03 Jan 16:46:16.832 * SLAVE OF 127.0.0.1:6380 enabled (user request from 'id=3 addr=127.0.0.1:62005 fd=7 name=sentinel-aef775ed-cmd age=20 idle=0 flags=x db=0 sub=0 psub=0 multi=3 qbuf=0 qbuf-free=32768 obl=36 oll=0 omem=0 events=r cmd=exec')
+[23288] 03 Jan 16:46:16.832 # CONFIG REWRITE executed with success.
+[23288] 03 Jan 16:46:17.780 * Connecting to MASTER 127.0.0.1:6380
+[23288] 03 Jan 16:46:17.780 * MASTER <-> SLAVE sync started
+[23288] 03 Jan 16:46:17.780 * Non blocking connect for SYNC fired the event.
+[23288] 03 Jan 16:46:17.780 * Master replied to PING, replication can continue...
+[23288] 03 Jan 16:46:17.783 * Partial resynchronization not possible (no cached master)
+[23288] 03 Jan 16:46:17.783 * Full resync from master: ee80a136111626be4f76276d6f68265524274223:1402
+[23288] 03 Jan 16:46:17.968 * MASTER <-> SLAVE sync: receiving 7522 bytes from master
+[23288] 03 Jan 16:46:17.968 * MASTER <-> SLAVE sync: Flushing old data
+[23288] 03 Jan 16:46:17.968 * MASTER <-> SLAVE sync: Loading DB in memory
+[23288] 03 Jan 16:46:17.968 * MASTER <-> SLAVE sync: Finished with success
+[23288] 03 Jan 16:46:26.188 # Connection with master lost.
+[23288] 03 Jan 16:46:26.188 * Caching the disconnected master state.
+[23288] 03 Jan 16:46:26.188 * Discarding previously cached master state.
+[23288] 03 Jan 16:46:26.188 * SLAVE OF 127.0.0.1:6379 enabled (user request from 'id=10 addr=127.0.0.1:62045 fd=15 name=sentinel-c8258f69-cmd age=10 idle=0 flags=x db=0 sub=0 psub=0 multi=3 qbuf=135 qbuf-free=32633 obl=36 oll=0 omem=0 events=r cmd=exec')
+[23288] 03 Jan 16:46:26.188 # CONFIG REWRITE executed with success.
+[23288] 03 Jan 16:46:26.454 * Connecting to MASTER 127.0.0.1:6379
+[23288] 03 Jan 16:46:26.454 * MASTER <-> SLAVE sync started
+[23288] 03 Jan 16:46:26.454 * Non blocking connect for SYNC fired the event.
+[23288] 03 Jan 16:46:26.454 * Master replied to PING, replication can continue...
+[23288] 03 Jan 16:46:26.454 * Partial resynchronization not possible (no cached master)
+[23288] 03 Jan 16:46:26.454 * Full resync from master: 705cf18931db45a112aa5b3cefd14aa39acae69a:1845
+[23288] 03 Jan 16:46:26.564 * MASTER <-> SLAVE sync: receiving 7522 bytes from master
+[23288] 03 Jan 16:46:26.564 * MASTER <-> SLAVE sync: Flushing old data
+[23288] 03 Jan 16:46:26.564 * MASTER <-> SLAVE sync: Loading DB in memory
+[23288] 03 Jan 16:46:26.564 * MASTER <-> SLAVE sync: Finished with success
+[23288] 03 Jan 16:46:36.333 # Connection with master lost.
+[23288] 03 Jan 16:46:36.333 * Caching the disconnected master state.
+[23288] 03 Jan 16:46:37.399 * Connecting to MASTER 127.0.0.1:6379
+[23288] 03 Jan 16:46:37.399 * MASTER <-> SLAVE sync started
+[23288] 03 Jan 16:46:37.399 * Non blocking connect for SYNC fired the event.
+[23288] 03 Jan 16:46:41.539 * Master replied to PING, replication can continue...
+[23288] 03 Jan 16:46:41.547 * Trying a partial resynchronization (request 705cf18931db45a112aa5b3cefd14aa39acae69a:4448).
+[23288] 03 Jan 16:46:41.547 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[23288] 03 Jan 16:46:41.547 * Discarding previously cached master state.
+[23288] 03 Jan 16:46:41.547 * Retrying with SYNC...
+[23288] 03 Jan 16:46:41.547 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[23288] 03 Jan 16:46:41.784 * Connecting to MASTER 127.0.0.1:6379
+[23288] 03 Jan 16:46:41.784 * MASTER <-> SLAVE sync started
+[23288] 03 Jan 16:46:41.784 * Non blocking connect for SYNC fired the event.
+[23288] 03 Jan 16:46:41.784 * Master replied to PING, replication can continue...
+[23288] 03 Jan 16:46:41.784 * Partial resynchronization not possible (no cached master)
+[23288] 03 Jan 16:46:41.784 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[23288] 03 Jan 16:46:41.784 * Retrying with SYNC...
+[23288] 03 Jan 16:46:41.784 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[23288] 03 Jan 16:46:42.876 * Connecting to MASTER 127.0.0.1:6379
+[23288] 03 Jan 16:46:42.876 * MASTER <-> SLAVE sync started
+[23288] 03 Jan 16:46:42.876 * Non blocking connect for SYNC fired the event.
+[23288] 03 Jan 16:46:47.527 * Master replied to PING, replication can continue...
+[23288] 03 Jan 16:46:47.527 * Partial resynchronization not possible (no cached master)
+[23288] 03 Jan 16:46:47.527 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[23288] 03 Jan 16:46:47.527 * Retrying with SYNC...
+[23288] 03 Jan 16:46:47.527 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[23288] 03 Jan 16:46:48.329 * Connecting to MASTER 127.0.0.1:6379
+[23288] 03 Jan 16:46:48.329 * MASTER <-> SLAVE sync started
+[23288] 03 Jan 16:46:48.329 * Non blocking connect for SYNC fired the event.
+[23288] 03 Jan 16:46:48.330 * Master replied to PING, replication can continue...
+[23288] 03 Jan 16:46:48.330 * Partial resynchronization not possible (no cached master)
+[23288] 03 Jan 16:46:48.330 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[23288] 03 Jan 16:46:48.330 * Retrying with SYNC...
+[23288] 03 Jan 16:46:48.331 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[23288] 03 Jan 16:46:49.418 * Connecting to MASTER 127.0.0.1:6379
+[23288] 03 Jan 16:46:49.418 * MASTER <-> SLAVE sync started
+[23288] 03 Jan 16:46:49.418 * Non blocking connect for SYNC fired the event.
+[23288] 03 Jan 16:46:53.516 * Master replied to PING, replication can continue...
+[23288] 03 Jan 16:46:53.522 * Partial resynchronization not possible (no cached master)
+[23288] 03 Jan 16:46:53.523 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[23288] 03 Jan 16:46:53.523 * Retrying with SYNC...
+[23288] 03 Jan 16:46:53.524 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[23288] 03 Jan 16:46:53.786 * Connecting to MASTER 127.0.0.1:6379
+[23288] 03 Jan 16:46:53.787 * MASTER <-> SLAVE sync started
+[23288] 03 Jan 16:46:53.787 * Non blocking connect for SYNC fired the event.
+[23288] 03 Jan 16:46:53.787 * Master replied to PING, replication can continue...
+[23288] 03 Jan 16:46:53.788 * Partial resynchronization not possible (no cached master)
+[23288] 03 Jan 16:46:53.788 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[23288] 03 Jan 16:46:53.788 * Retrying with SYNC...
+[23288] 03 Jan 16:46:53.789 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[23288] 03 Jan 16:46:54.876 * Connecting to MASTER 127.0.0.1:6379
+[23288] 03 Jan 16:46:54.876 * MASTER <-> SLAVE sync started
+[23288] 03 Jan 16:46:54.876 * Non blocking connect for SYNC fired the event.
+[23288] 03 Jan 16:46:59.508 * Master replied to PING, replication can continue...
+[23288] 03 Jan 16:46:59.512 * Partial resynchronization not possible (no cached master)
+[23288] 03 Jan 16:46:59.512 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[23288] 03 Jan 16:46:59.512 * Retrying with SYNC...
+[23288] 03 Jan 16:46:59.513 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[23288] 03 Jan 16:47:00.349 * Connecting to MASTER 127.0.0.1:6379
+[23288] 03 Jan 16:47:00.349 * MASTER <-> SLAVE sync started
+[23288] 03 Jan 16:47:00.349 * Non blocking connect for SYNC fired the event.
+[23288] 03 Jan 16:47:00.349 * Master replied to PING, replication can continue...
+[23288] 03 Jan 16:47:00.349 * Partial resynchronization not possible (no cached master)
+[23288] 03 Jan 16:47:00.349 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[23288] 03 Jan 16:47:00.349 * Retrying with SYNC...
+[23288] 03 Jan 16:47:00.349 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[23288] 03 Jan 16:47:01.455 * Connecting to MASTER 127.0.0.1:6379
+[23288] 03 Jan 16:47:01.455 * MASTER <-> SLAVE sync started
+[23288] 03 Jan 16:47:01.455 * Non blocking connect for SYNC fired the event.
+[23288] 03 Jan 16:47:05.508 * Master replied to PING, replication can continue...
+[23288] 03 Jan 16:47:05.508 * Partial resynchronization not possible (no cached master)
+[23288] 03 Jan 16:47:05.508 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[23288] 03 Jan 16:47:05.508 * Retrying with SYNC...
+[23288] 03 Jan 16:47:05.508 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[23288] 03 Jan 16:47:05.830 * Connecting to MASTER 127.0.0.1:6379
+[23288] 03 Jan 16:47:05.830 * MASTER <-> SLAVE sync started
+[23288] 03 Jan 16:47:05.830 * Non blocking connect for SYNC fired the event.
+[23288] 03 Jan 16:47:05.830 * Master replied to PING, replication can continue...
+[23288] 03 Jan 16:47:05.830 * Partial resynchronization not possible (no cached master)
+[23288] 03 Jan 16:47:05.830 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[23288] 03 Jan 16:47:05.830 * Retrying with SYNC...
+[23288] 03 Jan 16:47:05.830 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[23288] 03 Jan 16:47:06.945 * Connecting to MASTER 127.0.0.1:6379
+[23288] 03 Jan 16:47:06.945 * MASTER <-> SLAVE sync started
+[23288] 03 Jan 16:47:06.945 * MASTER MODE enabled (user request from 'id=16 addr=127.0.0.1:62064 fd=7 name=sentinel-c8258f69-cmd age=39 idle=0 flags=x db=0 sub=0 psub=0 multi=3 qbuf=14 qbuf-free=32754 obl=36 oll=0 omem=0 events=r cmd=exec')
+[23288] 03 Jan 16:47:06.945 # CONFIG REWRITE executed with success.
+                _._                                                  
+           _.-``__ ''-._                                             
+      _.-``    `.  `_.  ''-._           Redis 3.2.100 (00000000/0) 64 bit
+  .-`` .-```.  ```\/    _.,_ ''-._                                   
+ (    '      ,       .-`  | `,    )     Running in standalone mode
+ |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6381
+ |    `-._   `._    /     _.-'    |     PID: 16916
+  `-._    `-._  `-./  _.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |           http://redis.io        
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |                                  
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+      `-._    `-.__.-'    _.-'                                       
+          `-._        _.-'                                           
+              `-.__.-'                                               
+
+[16916] 03 Jan 16:49:07.790 # Server started, Redis version 3.2.100
+[16916] 03 Jan 16:49:07.790 * DB loaded from disk: 0.000 seconds
+[16916] 03 Jan 16:49:07.790 * The server is now ready to accept connections on port 6381
+                _._                                                  
+           _.-``__ ''-._                                             
+      _.-``    `.  `_.  ''-._           Redis 3.2.100 (00000000/0) 64 bit
+  .-`` .-```.  ```\/    _.,_ ''-._                                   
+ (    '      ,       .-`  | `,    )     Running in standalone mode
+ |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6381
+ |    `-._   `._    /     _.-'    |     PID: 2472
+  `-._    `-._  `-./  _.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |           http://redis.io        
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |                                  
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+      `-._    `-.__.-'    _.-'                                       
+          `-._        _.-'                                           
+              `-.__.-'                                               
+
+[2472] 03 Jan 16:50:25.415 # Server started, Redis version 3.2.100
+[2472] 03 Jan 16:50:25.415 * DB loaded from disk: 0.000 seconds
+[2472] 03 Jan 16:50:25.415 * The server is now ready to accept connections on port 6381
+[2472] 03 Jan 16:50:25.431 * Connecting to MASTER 127.0.0.1:6379
+[2472] 03 Jan 16:50:25.431 * MASTER <-> SLAVE sync started
+[2472] 03 Jan 16:50:25.431 * Non blocking connect for SYNC fired the event.
+[2472] 03 Jan 16:50:25.431 * Master replied to PING, replication can continue...
+[2472] 03 Jan 16:50:25.431 * Partial resynchronization not possible (no cached master)
+[2472] 03 Jan 16:50:25.431 * Full resync from master: d974a98b8e837b36198d73b9d7159c087e9fe8bb:1
+[2472] 03 Jan 16:50:25.635 * MASTER <-> SLAVE sync: receiving 7522 bytes from master
+[2472] 03 Jan 16:50:25.635 * MASTER <-> SLAVE sync: Flushing old data
+[2472] 03 Jan 16:50:25.635 * MASTER <-> SLAVE sync: Loading DB in memory
+[2472] 03 Jan 16:50:25.635 * MASTER <-> SLAVE sync: Finished with success
+                _._                                                  
+           _.-``__ ''-._                                             
+      _.-``    `.  `_.  ''-._           Redis 3.2.100 (00000000/0) 64 bit
+  .-`` .-```.  ```\/    _.,_ ''-._                                   
+ (    '      ,       .-`  | `,    )     Running in standalone mode
+ |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6381
+ |    `-._   `._    /     _.-'    |     PID: 17204
+  `-._    `-._  `-./  _.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |           http://redis.io        
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |                                  
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+      `-._    `-.__.-'    _.-'                                       
+          `-._        _.-'                                           
+              `-.__.-'                                               
+
+[17204] 03 Jan 16:59:28.408 # Server started, Redis version 3.2.100
+[17204] 03 Jan 16:59:28.408 * DB loaded from disk: 0.000 seconds
+[17204] 03 Jan 16:59:28.408 * The server is now ready to accept connections on port 6381
+[17204] 03 Jan 16:59:28.423 * Connecting to MASTER 127.0.0.1:6379
+[17204] 03 Jan 16:59:28.423 * MASTER <-> SLAVE sync started
+[17204] 03 Jan 16:59:28.423 * Non blocking connect for SYNC fired the event.
+[17204] 03 Jan 16:59:28.423 * Master replied to PING, replication can continue...
+[17204] 03 Jan 16:59:28.423 * Partial resynchronization not possible (no cached master)
+[17204] 03 Jan 16:59:28.437 * Full resync from master: 21840191892e5909943da2008120e49c7759820e:1
+[17204] 03 Jan 16:59:28.547 * MASTER <-> SLAVE sync: receiving 7522 bytes from master
+[17204] 03 Jan 16:59:28.563 * MASTER <-> SLAVE sync: Flushing old data
+[17204] 03 Jan 16:59:28.563 * MASTER <-> SLAVE sync: Loading DB in memory
+[17204] 03 Jan 16:59:28.563 * MASTER <-> SLAVE sync: Finished with success
+[17204] 03 Jan 16:59:39.637 # Connection with master lost.
+[17204] 03 Jan 16:59:39.637 * Caching the disconnected master state.
+[17204] 03 Jan 16:59:40.532 * Connecting to MASTER 127.0.0.1:6379
+[17204] 03 Jan 16:59:40.532 * MASTER <-> SLAVE sync started
+[17204] 03 Jan 16:59:40.532 * Non blocking connect for SYNC fired the event.
+[17204] 03 Jan 16:59:45.236 * Master replied to PING, replication can continue...
+[17204] 03 Jan 16:59:45.236 * Trying a partial resynchronization (request 21840191892e5909943da2008120e49c7759820e:2739).
+[17204] 03 Jan 16:59:45.236 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[17204] 03 Jan 16:59:45.236 * Discarding previously cached master state.
+[17204] 03 Jan 16:59:45.236 * Retrying with SYNC...
+[17204] 03 Jan 16:59:45.236 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[17204] 03 Jan 16:59:46.037 * Connecting to MASTER 127.0.0.1:6379
+[17204] 03 Jan 16:59:46.037 * MASTER <-> SLAVE sync started
+[17204] 03 Jan 16:59:46.037 * Non blocking connect for SYNC fired the event.
+[17204] 03 Jan 16:59:46.037 * Master replied to PING, replication can continue...
+[17204] 03 Jan 16:59:46.037 * Partial resynchronization not possible (no cached master)
+[17204] 03 Jan 16:59:46.037 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[17204] 03 Jan 16:59:46.037 * Retrying with SYNC...
+[17204] 03 Jan 16:59:46.037 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[17204] 03 Jan 16:59:47.137 * Connecting to MASTER 127.0.0.1:6379
+[17204] 03 Jan 16:59:47.137 * MASTER <-> SLAVE sync started
+[17204] 03 Jan 16:59:47.137 * Non blocking connect for SYNC fired the event.
+[17204] 03 Jan 16:59:51.227 * Master replied to PING, replication can continue...
+[17204] 03 Jan 16:59:51.233 * Partial resynchronization not possible (no cached master)
+[17204] 03 Jan 16:59:51.233 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[17204] 03 Jan 16:59:51.233 * Retrying with SYNC...
+[17204] 03 Jan 16:59:51.233 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[17204] 03 Jan 16:59:51.531 * Connecting to MASTER 127.0.0.1:6379
+[17204] 03 Jan 16:59:51.531 * MASTER <-> SLAVE sync started
+[17204] 03 Jan 16:59:51.531 * Non blocking connect for SYNC fired the event.
+[17204] 03 Jan 16:59:51.531 * Master replied to PING, replication can continue...
+[17204] 03 Jan 16:59:51.531 * Partial resynchronization not possible (no cached master)
+[17204] 03 Jan 16:59:51.531 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[17204] 03 Jan 16:59:51.531 * Retrying with SYNC...
+[17204] 03 Jan 16:59:51.531 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[17204] 03 Jan 16:59:52.629 * Connecting to MASTER 127.0.0.1:6379
+[17204] 03 Jan 16:59:52.630 * MASTER <-> SLAVE sync started
+[17204] 03 Jan 16:59:52.630 * Non blocking connect for SYNC fired the event.
+[17204] 03 Jan 16:59:57.217 * Master replied to PING, replication can continue...
+[17204] 03 Jan 16:59:57.217 * Partial resynchronization not possible (no cached master)
+[17204] 03 Jan 16:59:57.217 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[17204] 03 Jan 16:59:57.217 * Retrying with SYNC...
+[17204] 03 Jan 16:59:57.232 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[17204] 03 Jan 16:59:58.119 * Connecting to MASTER 127.0.0.1:6379
+[17204] 03 Jan 16:59:58.119 * MASTER <-> SLAVE sync started
+[17204] 03 Jan 16:59:58.119 * Non blocking connect for SYNC fired the event.
+[17204] 03 Jan 16:59:58.119 * Master replied to PING, replication can continue...
+[17204] 03 Jan 16:59:58.119 * Partial resynchronization not possible (no cached master)
+[17204] 03 Jan 16:59:58.119 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[17204] 03 Jan 16:59:58.119 * Retrying with SYNC...
+[17204] 03 Jan 16:59:58.119 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[17204] 03 Jan 16:59:59.218 * Connecting to MASTER 127.0.0.1:6379
+[17204] 03 Jan 16:59:59.218 * MASTER <-> SLAVE sync started
+[17204] 03 Jan 16:59:59.218 * Non blocking connect for SYNC fired the event.
+[17204] 03 Jan 17:00:03.218 * Master replied to PING, replication can continue...
+[17204] 03 Jan 17:00:03.233 * Partial resynchronization not possible (no cached master)
+[17204] 03 Jan 17:00:03.233 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[17204] 03 Jan 17:00:03.233 * Retrying with SYNC...
+[17204] 03 Jan 17:00:03.234 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[17204] 03 Jan 17:00:03.605 * Connecting to MASTER 127.0.0.1:6379
+[17204] 03 Jan 17:00:03.605 * MASTER <-> SLAVE sync started
+[17204] 03 Jan 17:00:03.605 * Non blocking connect for SYNC fired the event.
+[17204] 03 Jan 17:00:03.605 * Master replied to PING, replication can continue...
+[17204] 03 Jan 17:00:03.605 * Partial resynchronization not possible (no cached master)
+[17204] 03 Jan 17:00:03.605 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[17204] 03 Jan 17:00:03.605 * Retrying with SYNC...
+[17204] 03 Jan 17:00:03.605 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[17204] 03 Jan 17:00:04.666 * Connecting to MASTER 127.0.0.1:6379
+[17204] 03 Jan 17:00:04.666 * MASTER <-> SLAVE sync started
+[17204] 03 Jan 17:00:04.666 * Non blocking connect for SYNC fired the event.
+[17204] 03 Jan 17:00:09.268 * Master replied to PING, replication can continue...
+[17204] 03 Jan 17:00:09.269 * Partial resynchronization not possible (no cached master)
+[17204] 03 Jan 17:00:09.269 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[17204] 03 Jan 17:00:09.270 * Retrying with SYNC...
+[17204] 03 Jan 17:00:09.270 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[17204] 03 Jan 17:00:10.105 * Connecting to MASTER 127.0.0.1:6379
+[17204] 03 Jan 17:00:10.105 * MASTER <-> SLAVE sync started
+[17204] 03 Jan 17:00:10.105 * Non blocking connect for SYNC fired the event.
+[17204] 03 Jan 17:00:10.105 * Master replied to PING, replication can continue...
+[17204] 03 Jan 17:00:10.105 * Partial resynchronization not possible (no cached master)
+[17204] 03 Jan 17:00:10.105 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[17204] 03 Jan 17:00:10.105 * Retrying with SYNC...
+[17204] 03 Jan 17:00:10.105 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[17204] 03 Jan 17:00:11.189 * Connecting to MASTER 127.0.0.1:6379
+[17204] 03 Jan 17:00:11.189 * MASTER <-> SLAVE sync started
+[17204] 03 Jan 17:00:11.189 * Non blocking connect for SYNC fired the event.
+[17204] 03 Jan 17:00:15.237 * Master replied to PING, replication can continue...
+[17204] 03 Jan 17:00:15.237 * Partial resynchronization not possible (no cached master)
+[17204] 03 Jan 17:00:15.253 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[17204] 03 Jan 17:00:15.253 * Retrying with SYNC...
+[17204] 03 Jan 17:00:15.253 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[17204] 03 Jan 17:00:15.599 * Connecting to MASTER 127.0.0.1:6379
+[17204] 03 Jan 17:00:15.599 * MASTER <-> SLAVE sync started
+[17204] 03 Jan 17:00:15.599 * Non blocking connect for SYNC fired the event.
+[17204] 03 Jan 17:00:15.599 * Master replied to PING, replication can continue...
+[17204] 03 Jan 17:00:15.599 * Partial resynchronization not possible (no cached master)
+[17204] 03 Jan 17:00:15.599 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[17204] 03 Jan 17:00:15.599 * Retrying with SYNC...
+[17204] 03 Jan 17:00:15.599 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[17204] 03 Jan 17:00:16.698 * Connecting to MASTER 127.0.0.1:6379
+[17204] 03 Jan 17:00:16.698 * MASTER <-> SLAVE sync started
+[17204] 03 Jan 17:00:16.698 * Non blocking connect for SYNC fired the event.
+[17204] 03 Jan 17:00:21.299 * Master replied to PING, replication can continue...
+[17204] 03 Jan 17:00:21.299 * Partial resynchronization not possible (no cached master)
+[17204] 03 Jan 17:00:21.299 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[17204] 03 Jan 17:00:21.299 * Retrying with SYNC...
+[17204] 03 Jan 17:00:21.299 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[17204] 03 Jan 17:00:22.195 * Connecting to MASTER 127.0.0.1:6379
+[17204] 03 Jan 17:00:22.195 * MASTER <-> SLAVE sync started
+[17204] 03 Jan 17:00:22.195 * Non blocking connect for SYNC fired the event.
+[17204] 03 Jan 17:00:22.196 * Master replied to PING, replication can continue...
+[17204] 03 Jan 17:00:22.196 * Partial resynchronization not possible (no cached master)
+[17204] 03 Jan 17:00:22.196 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[17204] 03 Jan 17:00:22.196 * Retrying with SYNC...
+[17204] 03 Jan 17:00:22.196 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[17204] 03 Jan 17:00:23.294 * Connecting to MASTER 127.0.0.1:6379
+[17204] 03 Jan 17:00:23.294 * MASTER <-> SLAVE sync started
+[17204] 03 Jan 17:00:23.294 * Non blocking connect for SYNC fired the event.
+[17204] 03 Jan 17:00:27.295 * Master replied to PING, replication can continue...
+[17204] 03 Jan 17:00:27.307 * Partial resynchronization not possible (no cached master)
+[17204] 03 Jan 17:00:27.307 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[17204] 03 Jan 17:00:27.307 * Retrying with SYNC...
+[17204] 03 Jan 17:00:27.307 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[17204] 03 Jan 17:00:27.672 * Connecting to MASTER 127.0.0.1:6379
+[17204] 03 Jan 17:00:27.672 * MASTER <-> SLAVE sync started
+[17204] 03 Jan 17:00:27.672 * Non blocking connect for SYNC fired the event.
+[17204] 03 Jan 17:00:27.672 * Master replied to PING, replication can continue...
+[17204] 03 Jan 17:00:27.672 * Partial resynchronization not possible (no cached master)
+[17204] 03 Jan 17:00:27.672 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[17204] 03 Jan 17:00:27.672 * Retrying with SYNC...
+[17204] 03 Jan 17:00:27.672 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[17204] 03 Jan 17:00:28.771 * Connecting to MASTER 127.0.0.1:6379
+[17204] 03 Jan 17:00:28.771 * MASTER <-> SLAVE sync started
+[17204] 03 Jan 17:00:28.771 * Non blocking connect for SYNC fired the event.
+                _._                                                  
+           _.-``__ ''-._                                             
+      _.-``    `.  `_.  ''-._           Redis 3.2.100 (00000000/0) 64 bit
+  .-`` .-```.  ```\/    _.,_ ''-._                                   
+ (    '      ,       .-`  | `,    )     Running in standalone mode
+ |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6381
+ |    `-._   `._    /     _.-'    |     PID: 11616
+  `-._    `-._  `-./  _.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |           http://redis.io        
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |                                  
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+      `-._    `-.__.-'    _.-'                                       
+          `-._        _.-'                                           
+              `-.__.-'                                               
+
+[11616] 07 Jan 11:42:55.680 # Server started, Redis version 3.2.100
+[11616] 07 Jan 11:42:55.680 * DB loaded from disk: 0.001 seconds
+[11616] 07 Jan 11:42:55.680 * The server is now ready to accept connections on port 6381
+[11616] 07 Jan 11:42:55.680 * Connecting to MASTER 127.0.0.1:6379
+[11616] 07 Jan 11:42:55.681 * MASTER <-> SLAVE sync started
+[11616] 07 Jan 11:42:55.681 * Non blocking connect for SYNC fired the event.
+[11616] 07 Jan 11:42:55.681 * Master replied to PING, replication can continue...
+[11616] 07 Jan 11:42:55.681 * Partial resynchronization not possible (no cached master)
+[11616] 07 Jan 11:42:55.695 * Full resync from master: 1b57b4134ad612f3a413f9c04130f8d595f5bee0:1
+[11616] 07 Jan 11:42:55.900 * MASTER <-> SLAVE sync: receiving 7522 bytes from master
+[11616] 07 Jan 11:42:55.901 * MASTER <-> SLAVE sync: Flushing old data
+[11616] 07 Jan 11:42:55.901 * MASTER <-> SLAVE sync: Loading DB in memory
+[11616] 07 Jan 11:42:55.901 * MASTER <-> SLAVE sync: Finished with success
+[11616] 07 Jan 11:43:07.561 # Connection with master lost.
+[11616] 07 Jan 11:43:07.561 * Caching the disconnected master state.
+[11616] 07 Jan 11:43:07.764 * Connecting to MASTER 127.0.0.1:6379
+[11616] 07 Jan 11:43:07.764 * MASTER <-> SLAVE sync started
+[11616] 07 Jan 11:43:07.764 * Non blocking connect for SYNC fired the event.
+[11616] 07 Jan 11:43:07.764 * Master replied to PING, replication can continue...
+[11616] 07 Jan 11:43:07.764 * Trying a partial resynchronization (request 1b57b4134ad612f3a413f9c04130f8d595f5bee0:2469).
+[11616] 07 Jan 11:43:07.764 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[11616] 07 Jan 11:43:07.764 * Discarding previously cached master state.
+[11616] 07 Jan 11:43:07.764 * Retrying with SYNC...
+[11616] 07 Jan 11:43:07.764 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[11616] 07 Jan 11:43:08.862 * Connecting to MASTER 127.0.0.1:6379
+[11616] 07 Jan 11:43:08.862 * MASTER <-> SLAVE sync started
+[11616] 07 Jan 11:43:08.862 * Non blocking connect for SYNC fired the event.
+[11616] 07 Jan 11:43:13.231 * Master replied to PING, replication can continue...
+[11616] 07 Jan 11:43:13.232 * Partial resynchronization not possible (no cached master)
+[11616] 07 Jan 11:43:13.233 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[11616] 07 Jan 11:43:13.233 * Retrying with SYNC...
+[11616] 07 Jan 11:43:13.233 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[11616] 07 Jan 11:43:13.249 * Connecting to MASTER 127.0.0.1:6379
+[11616] 07 Jan 11:43:13.250 * MASTER <-> SLAVE sync started
+[11616] 07 Jan 11:43:13.250 * Non blocking connect for SYNC fired the event.
+[11616] 07 Jan 11:43:13.250 * Master replied to PING, replication can continue...
+[11616] 07 Jan 11:43:13.250 * Partial resynchronization not possible (no cached master)
+[11616] 07 Jan 11:43:13.250 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[11616] 07 Jan 11:43:13.250 * Retrying with SYNC...
+[11616] 07 Jan 11:43:13.250 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[11616] 07 Jan 11:43:14.341 * Connecting to MASTER 127.0.0.1:6379
+[11616] 07 Jan 11:43:14.341 * MASTER <-> SLAVE sync started
+[11616] 07 Jan 11:43:14.341 * Non blocking connect for SYNC fired the event.
+[11616] 07 Jan 11:43:19.226 * Master replied to PING, replication can continue...
+[11616] 07 Jan 11:43:19.228 * Partial resynchronization not possible (no cached master)
+[11616] 07 Jan 11:43:19.228 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[11616] 07 Jan 11:43:19.228 * Retrying with SYNC...
+[11616] 07 Jan 11:43:19.229 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[11616] 07 Jan 11:43:19.827 * Connecting to MASTER 127.0.0.1:6379
+[11616] 07 Jan 11:43:19.827 * MASTER <-> SLAVE sync started
+[11616] 07 Jan 11:43:19.828 * Non blocking connect for SYNC fired the event.
+[11616] 07 Jan 11:43:19.828 * Master replied to PING, replication can continue...
+[11616] 07 Jan 11:43:19.828 * Partial resynchronization not possible (no cached master)
+[11616] 07 Jan 11:43:19.828 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[11616] 07 Jan 11:43:19.828 * Retrying with SYNC...
+[11616] 07 Jan 11:43:19.829 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[11616] 07 Jan 11:43:20.922 * Connecting to MASTER 127.0.0.1:6379
+[11616] 07 Jan 11:43:20.922 * MASTER <-> SLAVE sync started
+[11616] 07 Jan 11:43:20.922 * Non blocking connect for SYNC fired the event.
+[11616] 07 Jan 11:43:25.213 * Master replied to PING, replication can continue...
+[11616] 07 Jan 11:43:25.218 * Partial resynchronization not possible (no cached master)
+[11616] 07 Jan 11:43:25.220 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[11616] 07 Jan 11:43:25.220 * Retrying with SYNC...
+[11616] 07 Jan 11:43:25.222 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[11616] 07 Jan 11:43:25.286 * Connecting to MASTER 127.0.0.1:6379
+[11616] 07 Jan 11:43:25.286 * MASTER <-> SLAVE sync started
+[11616] 07 Jan 11:43:25.287 * Non blocking connect for SYNC fired the event.
+[11616] 07 Jan 11:43:25.287 * Master replied to PING, replication can continue...
+[11616] 07 Jan 11:43:25.287 * Partial resynchronization not possible (no cached master)
+[11616] 07 Jan 11:43:25.287 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[11616] 07 Jan 11:43:25.287 * Retrying with SYNC...
+[11616] 07 Jan 11:43:25.288 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[11616] 07 Jan 11:43:26.379 * Connecting to MASTER 127.0.0.1:6379
+[11616] 07 Jan 11:43:26.379 * MASTER <-> SLAVE sync started
+[11616] 07 Jan 11:43:26.379 * Non blocking connect for SYNC fired the event.
+[11616] 07 Jan 11:43:31.211 * Master replied to PING, replication can continue...
+[11616] 07 Jan 11:43:31.216 * Partial resynchronization not possible (no cached master)
+[11616] 07 Jan 11:43:31.216 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[11616] 07 Jan 11:43:31.216 * Retrying with SYNC...
+[11616] 07 Jan 11:43:31.217 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[11616] 07 Jan 11:43:31.845 * Connecting to MASTER 127.0.0.1:6379
+[11616] 07 Jan 11:43:31.846 * MASTER <-> SLAVE sync started
+[11616] 07 Jan 11:43:31.846 * Non blocking connect for SYNC fired the event.
+[11616] 07 Jan 11:43:31.846 * Master replied to PING, replication can continue...
+[11616] 07 Jan 11:43:31.846 * Partial resynchronization not possible (no cached master)
+[11616] 07 Jan 11:43:31.846 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[11616] 07 Jan 11:43:31.846 * Retrying with SYNC...
+[11616] 07 Jan 11:43:31.846 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[11616] 07 Jan 11:43:32.933 * Connecting to MASTER 127.0.0.1:6379
+[11616] 07 Jan 11:43:32.933 * MASTER <-> SLAVE sync started
+[11616] 07 Jan 11:43:32.933 * Non blocking connect for SYNC fired the event.
+[11616] 07 Jan 11:43:37.222 * Master replied to PING, replication can continue...
+[11616] 07 Jan 11:43:37.224 * Partial resynchronization not possible (no cached master)
+[11616] 07 Jan 11:43:37.224 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[11616] 07 Jan 11:43:37.224 * Retrying with SYNC...
+[11616] 07 Jan 11:43:37.225 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[11616] 07 Jan 11:43:37.307 * Connecting to MASTER 127.0.0.1:6379
+[11616] 07 Jan 11:43:37.307 * MASTER <-> SLAVE sync started
+[11616] 07 Jan 11:43:37.307 * Non blocking connect for SYNC fired the event.
+[11616] 07 Jan 11:43:37.307 * Master replied to PING, replication can continue...
+[11616] 07 Jan 11:43:37.308 * Partial resynchronization not possible (no cached master)
+[11616] 07 Jan 11:43:37.308 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[11616] 07 Jan 11:43:37.308 * Retrying with SYNC...
+[11616] 07 Jan 11:43:37.308 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[11616] 07 Jan 11:43:38.422 * Connecting to MASTER 127.0.0.1:6379
+[11616] 07 Jan 11:43:38.422 * MASTER <-> SLAVE sync started
+[11616] 07 Jan 11:43:38.422 * Non blocking connect for SYNC fired the event.
+[11616] 07 Jan 11:43:43.214 * Master replied to PING, replication can continue...
+[11616] 07 Jan 11:43:43.222 * Partial resynchronization not possible (no cached master)
+[11616] 07 Jan 11:43:43.228 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[11616] 07 Jan 11:43:43.228 * Retrying with SYNC...
+[11616] 07 Jan 11:43:43.230 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[11616] 07 Jan 11:43:43.992 * Connecting to MASTER 127.0.0.1:6379
+[11616] 07 Jan 11:43:43.992 * MASTER <-> SLAVE sync started
+[11616] 07 Jan 11:43:43.992 * Non blocking connect for SYNC fired the event.
+[11616] 07 Jan 11:43:43.992 * Master replied to PING, replication can continue...
+[11616] 07 Jan 11:43:43.993 * Partial resynchronization not possible (no cached master)
+[11616] 07 Jan 11:43:43.993 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[11616] 07 Jan 11:43:43.993 * Retrying with SYNC...
+[11616] 07 Jan 11:43:43.993 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[11616] 07 Jan 11:43:45.112 * Connecting to MASTER 127.0.0.1:6379
+[11616] 07 Jan 11:43:45.112 * MASTER <-> SLAVE sync started
+[11616] 07 Jan 11:43:45.112 * Non blocking connect for SYNC fired the event.
+[11616] 07 Jan 11:43:49.251 * Master replied to PING, replication can continue...
+[11616] 07 Jan 11:43:49.252 * Partial resynchronization not possible (no cached master)
+[11616] 07 Jan 11:43:49.252 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[11616] 07 Jan 11:43:49.252 * Retrying with SYNC...
+[11616] 07 Jan 11:43:49.252 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[11616] 07 Jan 11:43:49.581 * Connecting to MASTER 127.0.0.1:6379
+[11616] 07 Jan 11:43:49.581 * MASTER <-> SLAVE sync started
+[11616] 07 Jan 11:43:49.581 * Non blocking connect for SYNC fired the event.
+[11616] 07 Jan 11:43:49.581 * Master replied to PING, replication can continue...
+[11616] 07 Jan 11:43:49.582 * Partial resynchronization not possible (no cached master)
+[11616] 07 Jan 11:43:49.582 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[11616] 07 Jan 11:43:49.582 * Retrying with SYNC...
+[11616] 07 Jan 11:43:49.582 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[11616] 07 Jan 11:43:50.668 * Connecting to MASTER 127.0.0.1:6379
+[11616] 07 Jan 11:43:50.668 * MASTER <-> SLAVE sync started
+[11616] 07 Jan 11:43:50.668 * Non blocking connect for SYNC fired the event.
+[11616] 07 Jan 11:43:55.256 * Master replied to PING, replication can continue...
+[11616] 07 Jan 11:43:55.262 * Partial resynchronization not possible (no cached master)
+[11616] 07 Jan 11:43:55.262 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[11616] 07 Jan 11:43:55.262 * Retrying with SYNC...
+[11616] 07 Jan 11:43:55.262 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[11616] 07 Jan 11:43:56.195 * Connecting to MASTER 127.0.0.1:6379
+[11616] 07 Jan 11:43:56.195 * MASTER <-> SLAVE sync started
+[11616] 07 Jan 11:43:56.195 * Non blocking connect for SYNC fired the event.
+[11616] 07 Jan 11:43:56.195 * Master replied to PING, replication can continue...
+[11616] 07 Jan 11:43:56.195 * Partial resynchronization not possible (no cached master)
+[11616] 07 Jan 11:43:56.195 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[11616] 07 Jan 11:43:56.195 * Retrying with SYNC...
+[11616] 07 Jan 11:43:56.196 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[11616] 07 Jan 11:43:57.300 * Connecting to MASTER 127.0.0.1:6379
+[11616] 07 Jan 11:43:57.300 * MASTER <-> SLAVE sync started
+[11616] 07 Jan 11:43:57.300 * Non blocking connect for SYNC fired the event.
+[11616] 07 Jan 11:44:01.264 * Master replied to PING, replication can continue...
+[11616] 07 Jan 11:44:01.271 * Partial resynchronization not possible (no cached master)
+[11616] 07 Jan 11:44:01.271 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[11616] 07 Jan 11:44:01.271 * Retrying with SYNC...
+[11616] 07 Jan 11:44:01.272 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[11616] 07 Jan 11:44:01.691 * Connecting to MASTER 127.0.0.1:6379
+[11616] 07 Jan 11:44:01.691 * MASTER <-> SLAVE sync started
+[11616] 07 Jan 11:44:01.691 * Non blocking connect for SYNC fired the event.
+[11616] 07 Jan 11:44:01.691 * Master replied to PING, replication can continue...
+[11616] 07 Jan 11:44:01.691 * Partial resynchronization not possible (no cached master)
+[11616] 07 Jan 11:44:01.691 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[11616] 07 Jan 11:44:01.692 * Retrying with SYNC...
+[11616] 07 Jan 11:44:01.692 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[11616] 07 Jan 11:44:02.784 * Connecting to MASTER 127.0.0.1:6379
+[11616] 07 Jan 11:44:02.785 * MASTER <-> SLAVE sync started
+[11616] 07 Jan 11:44:02.785 * Non blocking connect for SYNC fired the event.
+[11616] 07 Jan 11:44:07.282 * Master replied to PING, replication can continue...
+[11616] 07 Jan 11:44:07.285 * Partial resynchronization not possible (no cached master)
+[11616] 07 Jan 11:44:07.286 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[11616] 07 Jan 11:44:07.286 * Retrying with SYNC...
+[11616] 07 Jan 11:44:07.286 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[11616] 07 Jan 11:44:08.275 * Connecting to MASTER 127.0.0.1:6379
+[11616] 07 Jan 11:44:08.275 * MASTER <-> SLAVE sync started
+[11616] 07 Jan 11:44:08.275 * Non blocking connect for SYNC fired the event.
+[11616] 07 Jan 11:44:13.283 # Error reply to PING from master: '-Reading from master: Unknown error'
+[11616] 07 Jan 11:44:13.712 * Connecting to MASTER 127.0.0.1:6379
+[11616] 07 Jan 11:44:13.713 * MASTER <-> SLAVE sync started
+[11616] 07 Jan 11:44:13.713 * Non blocking connect for SYNC fired the event.
+[11616] 07 Jan 11:44:13.713 * Master replied to PING, replication can continue...
+[11616] 07 Jan 11:44:13.714 * Partial resynchronization not possible (no cached master)
+[11616] 07 Jan 11:44:13.740 * Full resync from master: 1b57b4134ad612f3a413f9c04130f8d595f5bee0:1
+[11616] 07 Jan 11:44:13.938 * MASTER <-> SLAVE sync: receiving 7522 bytes from master
+[11616] 07 Jan 11:44:13.951 * MASTER <-> SLAVE sync: Flushing old data
+[11616] 07 Jan 11:44:13.951 * MASTER <-> SLAVE sync: Loading DB in memory
+[11616] 07 Jan 11:44:13.952 * MASTER <-> SLAVE sync: Finished with success
+[11616] 07 Jan 11:44:15.480 * SLAVE OF would result into synchronization with the master we are already connected with. No operation performed.
+[11616] 07 Jan 11:44:15.481 # CONFIG REWRITE executed with success.
+[11616] 07 Jan 11:44:23.355 # Connection with master lost.
+[11616] 07 Jan 11:44:23.355 * Caching the disconnected master state.
+[11616] 07 Jan 11:44:23.573 * Connecting to MASTER 127.0.0.1:6379
+[11616] 07 Jan 11:44:23.574 * MASTER <-> SLAVE sync started
+[11616] 07 Jan 11:44:23.574 * Non blocking connect for SYNC fired the event.
+[11616] 07 Jan 11:44:23.574 * Master replied to PING, replication can continue...
+[11616] 07 Jan 11:44:23.574 * Trying a partial resynchronization (request 1b57b4134ad612f3a413f9c04130f8d595f5bee0:2874).
+[11616] 07 Jan 11:44:23.574 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[11616] 07 Jan 11:44:23.574 * Discarding previously cached master state.
+[11616] 07 Jan 11:44:23.574 * Retrying with SYNC...
+[11616] 07 Jan 11:44:23.575 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[11616] 07 Jan 11:44:24.664 * Connecting to MASTER 127.0.0.1:6379
+[11616] 07 Jan 11:44:24.664 * MASTER <-> SLAVE sync started
+[11616] 07 Jan 11:44:24.665 * Non blocking connect for SYNC fired the event.
+[11616] 07 Jan 11:44:29.139 * Master replied to PING, replication can continue...
+[11616] 07 Jan 11:44:29.143 * Partial resynchronization not possible (no cached master)
+[11616] 07 Jan 11:44:29.144 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[11616] 07 Jan 11:44:29.144 * Retrying with SYNC...
+[11616] 07 Jan 11:44:29.145 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[11616] 07 Jan 11:44:30.249 * Connecting to MASTER 127.0.0.1:6379
+[11616] 07 Jan 11:44:30.251 * MASTER <-> SLAVE sync started
+[11616] 07 Jan 11:44:30.251 * Non blocking connect for SYNC fired the event.
+[11616] 07 Jan 11:44:35.171 * Master replied to PING, replication can continue...
+[11616] 07 Jan 11:44:35.191 * Partial resynchronization not possible (no cached master)
+[11616] 07 Jan 11:44:35.192 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[11616] 07 Jan 11:44:35.192 * Retrying with SYNC...
+[11616] 07 Jan 11:44:35.193 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[11616] 07 Jan 11:44:35.819 * Connecting to MASTER 127.0.0.1:6379
+[11616] 07 Jan 11:44:35.819 * MASTER <-> SLAVE sync started
+[11616] 07 Jan 11:44:35.820 * Non blocking connect for SYNC fired the event.
+[11616] 07 Jan 11:44:35.820 * Master replied to PING, replication can continue...
+[11616] 07 Jan 11:44:35.820 * Partial resynchronization not possible (no cached master)
+[11616] 07 Jan 11:44:35.821 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[11616] 07 Jan 11:44:35.821 * Retrying with SYNC...
+[11616] 07 Jan 11:44:35.822 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[11616] 07 Jan 11:44:36.933 * Connecting to MASTER 127.0.0.1:6379
+[11616] 07 Jan 11:44:36.933 * MASTER <-> SLAVE sync started
+[11616] 07 Jan 11:44:36.933 * Non blocking connect for SYNC fired the event.
+[11616] 07 Jan 11:44:41.180 * Master replied to PING, replication can continue...
+[11616] 07 Jan 11:44:41.184 * Partial resynchronization not possible (no cached master)
+[11616] 07 Jan 11:44:41.184 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[11616] 07 Jan 11:44:41.184 * Retrying with SYNC...
+[11616] 07 Jan 11:44:41.185 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[11616] 07 Jan 11:44:41.319 * Connecting to MASTER 127.0.0.1:6379
+[11616] 07 Jan 11:44:41.319 * MASTER <-> SLAVE sync started
+[11616] 07 Jan 11:44:41.319 * Non blocking connect for SYNC fired the event.
+[11616] 07 Jan 11:44:41.319 * Master replied to PING, replication can continue...
+[11616] 07 Jan 11:44:41.319 * Partial resynchronization not possible (no cached master)
+[11616] 07 Jan 11:44:41.320 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[11616] 07 Jan 11:44:41.320 * Retrying with SYNC...
+[11616] 07 Jan 11:44:41.320 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[11616] 07 Jan 11:44:42.406 * Connecting to MASTER 127.0.0.1:6379
+[11616] 07 Jan 11:44:42.406 * MASTER <-> SLAVE sync started
+[11616] 07 Jan 11:44:42.406 * Non blocking connect for SYNC fired the event.
+[11616] 07 Jan 11:44:47.178 * Master replied to PING, replication can continue...
+[11616] 07 Jan 11:44:47.180 * Partial resynchronization not possible (no cached master)
+[11616] 07 Jan 11:44:47.180 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[11616] 07 Jan 11:44:47.180 * Retrying with SYNC...
+[11616] 07 Jan 11:44:47.181 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[11616] 07 Jan 11:44:47.854 * Connecting to MASTER 127.0.0.1:6379
+[11616] 07 Jan 11:44:47.855 * MASTER <-> SLAVE sync started
+[11616] 07 Jan 11:44:47.855 * Non blocking connect for SYNC fired the event.
+[11616] 07 Jan 11:44:47.855 * Master replied to PING, replication can continue...
+[11616] 07 Jan 11:44:47.855 * Partial resynchronization not possible (no cached master)
+[11616] 07 Jan 11:44:47.855 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[11616] 07 Jan 11:44:47.855 * Retrying with SYNC...
+[11616] 07 Jan 11:44:47.856 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[11616] 07 Jan 11:44:48.942 * Connecting to MASTER 127.0.0.1:6379
+[11616] 07 Jan 11:44:48.942 * MASTER <-> SLAVE sync started
+[11616] 07 Jan 11:44:48.942 * Non blocking connect for SYNC fired the event.
+[11616] 07 Jan 11:44:53.167 * Master replied to PING, replication can continue...
+[11616] 07 Jan 11:44:53.168 * Partial resynchronization not possible (no cached master)
+[11616] 07 Jan 11:44:53.168 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[11616] 07 Jan 11:44:53.168 * Retrying with SYNC...
+[11616] 07 Jan 11:44:53.169 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[11616] 07 Jan 11:44:53.314 * Connecting to MASTER 127.0.0.1:6379
+[11616] 07 Jan 11:44:53.315 * MASTER <-> SLAVE sync started
+[11616] 07 Jan 11:44:53.315 * Non blocking connect for SYNC fired the event.
+[11616] 07 Jan 11:44:53.315 * Master replied to PING, replication can continue...
+[11616] 07 Jan 11:44:53.315 * Partial resynchronization not possible (no cached master)
+[11616] 07 Jan 11:44:53.315 * Master does not support PSYNC or is in error state (reply: -ERR Can't SYNC while not connected with my master)
+[11616] 07 Jan 11:44:53.315 * Retrying with SYNC...
+[11616] 07 Jan 11:44:53.316 # MASTER aborted replication with an error: ERR Can't SYNC while not connected with my master
+[11616] 07 Jan 11:44:54.405 * Connecting to MASTER 127.0.0.1:6379
+[11616] 07 Jan 11:44:54.405 * MASTER <-> SLAVE sync started
+[11616] 07 Jan 11:44:54.405 * Non blocking connect for SYNC fired the event.
+[11616] 07 Jan 11:44:54.468 * MASTER MODE enabled (user request from 'id=10 addr=127.0.0.1:50474 fd=14 name=sentinel-aef775ed-cmd age=39 idle=0 flags=x db=0 sub=0 psub=0 multi=3 qbuf=0 qbuf-free=32768 obl=36 oll=0 omem=0 events=r cmd=exec')
+[11616] 07 Jan 11:44:54.469 # CONFIG REWRITE executed with success.
+[11616] 07 Jan 11:44:56.503 * Slave 127.0.0.1:6380 asks for synchronization
+[11616] 07 Jan 11:44:56.503 * Full resync requested by slave 127.0.0.1:6380
+[11616] 07 Jan 11:44:56.503 * Starting BGSAVE for SYNC with target: disk
+[11616] 07 Jan 11:44:56.503 * Background saving started by pid 6404
+[11616] 07 Jan 11:44:56.597 # fork operation complete
+[11616] 07 Jan 11:44:56.597 * Background saving terminated with success
+[11616] 07 Jan 11:44:56.597 * Synchronization with slave 127.0.0.1:6380 succeeded
+[11616] 07 Jan 11:45:00.140 * Slave 127.0.0.1:6379 asks for synchronization
+[11616] 07 Jan 11:45:00.141 * Full resync requested by slave 127.0.0.1:6379
+[11616] 07 Jan 11:45:00.141 * Starting BGSAVE for SYNC with target: disk
+[11616] 07 Jan 11:45:00.143 * Background saving started by pid 10404
+[11616] 07 Jan 11:45:00.321 # fork operation complete
+[11616] 07 Jan 11:45:00.321 * Background saving terminated with success
+[11616] 07 Jan 11:45:00.323 * Synchronization with slave 127.0.0.1:6379 succeeded
+[11616] 07 Jan 13:14:12.555 # Connection with slave 127.0.0.1:6379 lost.
+[11616] 07 Jan 13:14:13.325 # Connection with slave 127.0.0.1:6380 lost.
+                _._                                                  
+           _.-``__ ''-._                                             
+      _.-``    `.  `_.  ''-._           Redis 3.2.100 (00000000/0) 64 bit
+  .-`` .-```.  ```\/    _.,_ ''-._                                   
+ (    '      ,       .-`  | `,    )     Running in standalone mode
+ |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6381
+ |    `-._   `._    /     _.-'    |     PID: 3004
+  `-._    `-._  `-./  _.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |           http://redis.io        
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |                                  
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+      `-._    `-.__.-'    _.-'                                       
+          `-._        _.-'                                           
+              `-.__.-'                                               
+
+[3004] 07 Jan 15:24:41.156 # Server started, Redis version 3.2.100
+[3004] 07 Jan 15:24:41.157 * DB loaded from disk: 0.001 seconds
+[3004] 07 Jan 15:24:41.157 * The server is now ready to accept connections on port 6381
+[3004] 07 Jan 15:24:41.167 * Slave 127.0.0.1:6379 asks for synchronization
+[3004] 07 Jan 15:24:41.168 * Full resync requested by slave 127.0.0.1:6379
+[3004] 07 Jan 15:24:41.168 * Starting BGSAVE for SYNC with target: disk
+[3004] 07 Jan 15:24:41.170 * Background saving started by pid 27812
+[3004] 07 Jan 15:24:41.259 # fork operation complete
+[3004] 07 Jan 15:24:41.259 * Background saving terminated with success
+[3004] 07 Jan 15:24:41.261 * Synchronization with slave 127.0.0.1:6379 succeeded
+[3004] 07 Jan 15:24:41.630 * Slave 127.0.0.1:6380 asks for synchronization
+[3004] 07 Jan 15:24:41.630 * Full resync requested by slave 127.0.0.1:6380
+[3004] 07 Jan 15:24:41.630 * Starting BGSAVE for SYNC with target: disk
+[3004] 07 Jan 15:24:41.632 * Background saving started by pid 30552
+[3004] 07 Jan 15:24:41.803 # fork operation complete
+[3004] 07 Jan 15:24:41.803 * Background saving terminated with success
+[3004] 07 Jan 15:24:41.804 * Synchronization with slave 127.0.0.1:6380 succeeded
+                _._                                                  
+           _.-``__ ''-._                                             
+      _.-``    `.  `_.  ''-._           Redis 3.2.100 (00000000/0) 64 bit
+  .-`` .-```.  ```\/    _.,_ ''-._                                   
+ (    '      ,       .-`  | `,    )     Running in standalone mode
+ |`-._`-...-` __...-.``-._|'` _.-'|     Port: 6381
+ |    `-._   `._    /     _.-'    |     PID: 12444
+  `-._    `-._  `-./  _.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |           http://redis.io        
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+ |`-._`-._    `-.__.-'    _.-'_.-'|                                  
+ |    `-._`-._        _.-'_.-'    |                                  
+  `-._    `-._`-.__.-'_.-'    _.-'                                   
+      `-._    `-.__.-'    _.-'                                       
+          `-._        _.-'                                           
+              `-.__.-'                                               
+
+[12444] 08 Jan 10:53:27.509 # Server started, Redis version 3.2.100
+[12444] 08 Jan 10:53:27.509 * DB loaded from disk: 0.000 seconds
+[12444] 08 Jan 10:53:27.509 * The server is now ready to accept connections on port 6381
+[12444] 08 Jan 10:53:27.856 * Slave 127.0.0.1:6379 asks for synchronization
+[12444] 08 Jan 10:53:27.856 * Full resync requested by slave 127.0.0.1:6379
+[12444] 08 Jan 10:53:27.856 * Starting BGSAVE for SYNC with target: disk
+[12444] 08 Jan 10:53:27.859 * Background saving started by pid 20128
+[12444] 08 Jan 10:53:27.966 # fork operation complete
+[12444] 08 Jan 10:53:27.966 * Background saving terminated with success
+[12444] 08 Jan 10:53:27.968 * Synchronization with slave 127.0.0.1:6379 succeeded
+[12444] 08 Jan 10:53:27.982 * Slave 127.0.0.1:6380 asks for synchronization
+[12444] 08 Jan 10:53:27.982 * Full resync requested by slave 127.0.0.1:6380
+[12444] 08 Jan 10:53:27.982 * Starting BGSAVE for SYNC with target: disk
+[12444] 08 Jan 10:53:27.985 * Background saving started by pid 4872
+[12444] 08 Jan 10:53:28.078 # fork operation complete
+[12444] 08 Jan 10:53:28.078 * Background saving terminated with success
+[12444] 08 Jan 10:53:28.079 * Synchronization with slave 127.0.0.1:6380 succeeded

@@ -1,0 +1,216 @@
+<!--<!DOCTYPE html>-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <meta charset="UTF-8">-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+<!--    <title>推荐系统 Demo</title>-->
+<!--    <style>-->
+<!--        body {-->
+<!--            font-family: Arial, sans-serif;-->
+<!--            margin: 20px;-->
+<!--            padding: 20px;-->
+<!--        }-->
+
+<!--        h1 {-->
+<!--            font-size: 24px;-->
+<!--            color: #333;-->
+<!--        }-->
+
+<!--        button {-->
+<!--            margin: 5px;-->
+<!--            padding: 10px 20px;-->
+<!--            font-size: 16px;-->
+<!--            cursor: pointer;-->
+<!--            border: 1px solid #ccc;-->
+<!--            background-color: #f8f8f8;-->
+<!--            transition: background-color 0.2s ease;-->
+<!--        }-->
+
+<!--        button:hover {-->
+<!--            background-color: #ddd;-->
+<!--        }-->
+<!--    </style>-->
+<!--    <script>-->
+<!--        // 喜欢某个商品-->
+<!--        function likeItem(itemId) {-->
+<!--            fetch(`/api/like/${itemId}`, {-->
+<!--                method: 'POST',-->
+<!--                headers: { 'Content-Type': 'application/json' },-->
+<!--            })-->
+<!--                .then(response => {-->
+<!--                    if (response.ok) {-->
+<!--                        alert(`已记录喜欢商品 ${itemId}`);-->
+<!--                    } else {-->
+<!--                        alert(`记录失败，请重试`);-->
+<!--                    }-->
+<!--                })-->
+<!--                .catch(error => console.error('Error:', error));-->
+<!--        }-->
+
+<!--        // 获取推荐商品-->
+<!--        function getRecommendations() {-->
+<!--            const userId = 'A'; // 假设当前用户为 A-->
+<!--            fetch(`/api/recommendation/${userId}`)-->
+<!--                .then(response => response.json())-->
+<!--                .then(data => {-->
+<!--                    let recommendations = "推荐商品及其概率：\n";-->
+<!--                    for (const [item, probability] of Object.entries(data)) {-->
+<!--                        recommendations += `商品 ${item}: ${probability.toFixed(2)}\n`;-->
+<!--                    }-->
+<!--                    alert(recommendations);-->
+<!--                })-->
+<!--                .catch(error => console.error('Error:', error));-->
+<!--        }-->
+<!--    </script>-->
+<!--</head>-->
+<!--<body>-->
+<!--<h1>推荐系统 Demo</h1>-->
+<!--<div>-->
+<!--    <button onclick="likeItem('a')">选购商品 a</button>-->
+<!--    <button onclick="likeItem('b')">选购商品 b</button>-->
+<!--    <button onclick="likeItem('c')">选购商品 c</button>-->
+<!--    <button onclick="likeItem('d')">选购商品 d</button>-->
+<!--    <button onclick="likeItem('e')">选购商品 e</button>-->
+<!--</div>-->
+<!--<br>-->
+<!--<button onclick="getRecommendations()">获取推荐商品</button>-->
+<!--</body>-->
+<!--</html>-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>推荐系统 Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            display: flex;
+        }
+
+        h1 {
+            font-size: 24px;
+            color: #333;
+        }
+
+        button {
+            margin: 5px;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border: 1px solid #ccc;
+            background-color: #f8f8f8;
+            transition: background-color 0.2s ease;
+        }
+
+        button:hover {
+            background-color: #ddd;
+        }
+
+        .content {
+            flex: 1;
+        }
+
+        .sidebar {
+            width: 300px;
+            margin-left: 20px;
+            border-left: 2px solid #ccc;
+            padding-left: 10px;
+        }
+
+        .sidebar h2 {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar li {
+            margin: 5px 0;
+            font-size: 16px;
+        }
+    </style>
+    <script>
+        // 存储已选购的商品
+        let selectedItems = [];
+
+        // 喜欢某个商品
+        function likeItem(itemId) {
+            fetch(`/api/like/${itemId}`, {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+            })
+                .then(response => {
+                    if (response.ok) {
+                        alert(`已记录喜欢商品 ${itemId}`);
+                        addToSelectedItems(itemId);
+                    } else {
+                        alert(`记录失败，请重试`);
+                    }
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        // 将商品添加到已选购商品栏
+        function addToSelectedItems(itemId) {
+            if (!selectedItems.includes(itemId)) {
+                selectedItems.push(itemId);
+                updateSelectedItems();
+            }
+        }
+
+        // 更新右侧已选购商品栏
+        function updateSelectedItems() {
+            const selectedList = document.getElementById('selected-items');
+            selectedList.innerHTML = ''; // 清空当前列表
+            selectedItems.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `商品 ${item}`;
+                selectedList.appendChild(li);
+            });
+        }
+
+        // 获取推荐商品
+        function getRecommendations() {
+            const userId = 'A'; // 假设当前用户为 A
+            fetch(`/api/recommendation/${userId}`)
+                .then(response => response.json())
+                .then(data => {
+                    let recommendations = "推荐商品及其概率：\n";
+                    for (const [item, probability] of Object.entries(data)) {
+                        recommendations += `商品 ${item}: ${probability.toFixed(2)}\n`;
+                    }
+                    alert(recommendations);
+                })
+                .catch(error => console.error('Error:', error));
+        }
+    </script>
+</head>
+<body>
+<div class="content">
+    <h1>推荐系统 Demo</h1>
+    <div>
+        <button onclick="likeItem('a')">选购商品 a</button>
+        <button onclick="likeItem('b')">选购商品 b</button>
+        <button onclick="likeItem('c')">选购商品 c</button>
+        <button onclick="likeItem('d')">选购商品 d</button>
+        <button onclick="likeItem('e')">选购商品 e</button>
+    </div>
+    <br>
+    <button onclick="getRecommendations()">获取推荐商品</button>
+</div>
+<div class="sidebar">
+    <h2>已选购商品</h2>
+    <ul id="selected-items">
+        <!-- 动态添加选购的商品 -->
+    </ul>
+</div>
+</body>
+</html>
+

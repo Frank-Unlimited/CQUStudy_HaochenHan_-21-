@@ -1,0 +1,14 @@
+2025-01-09 21:15:31,125 INFO [ClientConnectionEventListenerRegistry] registry listener - ConnectionBasedClientManager
+
+2025-01-09 21:15:33,304 INFO [ClientConnectionEventListenerRegistry] registry listener - ConfigConnectionEventListener
+
+2025-01-09 21:15:33,368 INFO [ClientConnectionEventListenerRegistry] registry listener - RpcAckCallbackInitorOrCleaner
+
+2025-01-09 21:15:33,682 INFO Nacos GrpcSdkServer Rpc server starting at port 9848
+
+2025-01-09 21:15:33,954 INFO Nacos GrpcSdkServer Rpc server started at port 9848
+
+2025-01-09 21:15:33,954 INFO Nacos GrpcClusterServer Rpc server starting at port 9849
+
+2025-01-09 21:15:33,954 INFO Nacos GrpcClusterServer Rpc server started at port 9849
+

@@ -1,0 +1,994 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)https://www.cnblogs.com/fxwl/p/7990906.html -->
+<html lang="zh-cn"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="origin">
+    <meta name="description" content="MyCAT 配置解析 server.xml	Mycat的配置文件，设置账号、参数等schema.xml	Mycat对应的物理数据库和数据库表的配置rule.xml	Mycat分片（分库分表）规则 一 ">
+    <meta property="og:description" content="MyCAT 配置解析 server.xml	Mycat的配置文件，设置账号、参数等schema.xml	Mycat对应的物理数据库和数据库表的配置rule.xml	Mycat分片（分库分表）规则 一 ">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>MyCat配置详解 - 安宁~ - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="https://common.cnblogs.com/favicon.svg" type="image/svg+xml">
+    
+    <link rel="stylesheet" href="./MyCat配置详解 - 安宁_ - 博客园_files/blog-common.min.css">
+    <link id="MainCss" rel="stylesheet" href="./MyCat配置详解 - 安宁_ - 博客园_files/bundle-banlieue13.min.css">
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="./MyCat配置详解 - 安宁_ - 博客园_files/bundle-banlieue13-mobile.min.css">
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/fxwl/rss">
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/fxwl/rsd.xml">
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/fxwl/wlwmanifest.xml">
+    <script src="./MyCat配置详解 - 安宁_ - 博客园_files/osd.js"></script><script async="" src="./MyCat配置详解 - 安宁_ - 博客园_files/analytics.js"></script><script>
+        var currentBlogId = 297248;
+        var currentBlogApp = 'fxwl';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var isBlogOwner = false;
+        var skinName = 'Banlieue13';
+        var visitorUserId = '';
+    </script>
+        <script>
+            var currentPostDateAdded = '2017-12-06 08:29';
+        </script>
+    <script src="./MyCat配置详解 - 安宁_ - 博客园_files/jquery-2.2.0.min.js"></script>
+    <script src="./MyCat配置详解 - 安宁_ - 博客园_files/blog-common.min.js"></script>
+    
+    
+    
+<script src="./MyCat配置详解 - 安宁_ - 博客园_files/pubads_impl_2020120801.js" async=""></script><link rel="preload" href="./MyCat配置详解 - 安宁_ - 博客园_files/f.txt" as="script"><script type="text/javascript" src="./MyCat配置详解 - 安宁_ - 博客园_files/f.txt"></script><link rel="prefetch" href="https://1c2bf7da2844b045ccd186874785003f.safeframe.googlesyndication.com/safeframe/1-0-37/html/container.html"><link rel="prefetch" href="https://tpc.googlesyndication.com/safeframe/1-0-37/html/container.html"></head>
+<body class="has-navbar has-bannerbar">
+    <a name="top"></a>
+            <a href="https://brands.cnblogs.com/aws/free?source=blog-bannerbar" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;aws-pc-bannerbar&#39;)">
+                <div class="bannerbar aws forpc">
+                    <img class="left" src="./MyCat配置详解 - 安宁_ - 博客园_files/bannerbar-aws-logo.png" alt="">
+                    <img class="right" src="./MyCat配置详解 - 安宁_ - 博客园_files/bannerbar-aws-ssh.png" alt="">
+                </div>
+            </a>
+            <div id="bannerbar" class="bannerbar-mobile formobile">
+                <a href="https://www.cnblogs.com/cmt/p/14152738.html" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;sephora-mobile-bannerbar&#39;)">
+                    <img src="./MyCat配置详解 - 安宁_ - 博客园_files/35695-20201220150807860-80833722.png" alt="">
+                </a>
+            </div>
+    <div id="top_nav" class="navbar forpc">
+        <nav id="nav_main" class="navbar-main">
+            <ul id="nav_left" class="navbar-list navbar-left">
+                <li class="navbar-branding"><a href="https://www.cnblogs.com/" title="开发者的网上家园"><img src="./MyCat配置详解 - 安宁_ - 博客园_files/logo.svg" alt="博客园Logo"></a></li>
+                <li><a href="https://www.cnblogs.com/" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;skin-navbar-sitehome&#39;)">首页</a></li>
+                <li><a href="https://news.cnblogs.com/" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;skin-navbar-news&#39;)">新闻</a></li>
+                <li><a href="https://q.cnblogs.com/" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;skin-navbar-q&#39;)">博问</a></li>
+                <li><a id="nav_brandzone" href="https://brands.cnblogs.com/" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;skin-navbar-brands&#39;)">专区</a></li>
+                <li><a href="https://ing.cnblogs.com/" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;skin-navbar-ing&#39;)">闪存</a></li>
+                <li><a href="https://edu.cnblogs.com/" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;skin-navbar-edu&#39;)">班级</a></li>
+            </ul>
+            <ul id="nav_right" class="navbar-list navbar-right">
+                <li>
+                    <form id="zzk_search" class="navbar-search" action="https://zzk.cnblogs.com/s" method="get">
+                        <input name="w" id="zzk_search_input" placeholder="代码改变世界" type="text" tabindex="3">
+                        <button type="submit" id="zzk_search_button">
+                            <img src="./MyCat配置详解 - 安宁_ - 博客园_files/search.svg" alt="搜索">
+                        </button>
+                    </form>
+                </li>
+                <li id="navbar_login_status" class="navbar-list">
+                    <a id="navblog-myblog-icon" class="navbar-user-info navbar-blog" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx" alt="我的博客" title="我的博客" style="display: none;">
+                        <img id="myblog_icon" class="navbar-icon" src="./MyCat配置详解 - 安宁_ - 博客园_files/myblog.svg" alt="我的博客">
+                    </a>
+                    <a class="navbar-user-info navbar-message navbar-icon-wrapper" href="https://msg.cnblogs.com/" alt="短消息" title="短消息" style="display: none;">
+                        <img id="msg_icon" class="navbar-icon" src="./MyCat配置详解 - 安宁_ - 博客园_files/message.svg" alt="短消息">
+                        <span id="msg_count" style="display: none"></span>
+                    </a>
+                    <div id="user_info" class="navbar-user-info dropdown" style="display: none;">
+                        <a class="dropdown-button" href="https://home.cnblogs.com/">
+                            <img id="user_icon" class="navbar-avatar" src="./MyCat配置详解 - 安宁_ - 博客园_files/avatar-default.svg" alt="用户头像">
+                        </a>
+                        <div class="dropdown-menu">
+                            <a id="navblog-myblog-text" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx">我的博客</a>
+                            <a href="https://home.cnblogs.com/">我的园子</a>
+                            <a href="https://account.cnblogs.com/settings/account">账号设置</a>
+                            <a href="javascript:void(0)" onclick="logout();">退出登录</a>
+                        </div>
+                    </div>
+                    <a class="navbar-anonymous" href="https://account.cnblogs.com/signup/" style="display: inline;">注册</a>
+                    <a class="navbar-anonymous" href="javascript:void(0);" onclick="login()" style="display: inline;">登录</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    
+    
+<!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+	<a href="https://www.cnblogs.com/fxwl/"><img id="blogLogo" src="./MyCat配置详解 - 安宁_ - 博客园_files/logo.gif" alt="返回主页"></a>			
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/fxwl/">安徒生star</a>
+</h1>
+<h2></h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+</div><!--end: header 头部 -->
+
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="navigator">
+			
+<ul id="navList">
+	<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+	<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/fxwl/">
+首页</a>
+</li>
+	<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+	<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E5%AE%89%E5%AE%81~">
+联系</a></li>
+	<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+	<li>
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/fxwl/rss/">
+订阅</a>
+	
+<a id="blog_nav_rss_image" href="https://www.cnblogs.com/fxwl/rss/">
+    <img src="./MyCat配置详解 - 安宁_ - 博客园_files/xml.gif" alt="订阅">
+</a></li>
+</ul>
+
+
+
+			<div class="blogStats">
+				
+				<!--done-->
+随笔- 28&nbsp;
+文章- 0&nbsp;
+评论- 21&nbsp;
+
+
+
+				
+			</div><!--end: blogStats -->
+		</div><!--end: navigator 博客导航栏 -->
+		<div id="post_detail">
+<!--done-->
+<div id="topics">
+	<div class="post">
+		<h1 class="postTitle">
+			
+<a id="cb_post_title_url" class="postTitle2 vertical-middle" href="https://www.cnblogs.com/fxwl/p/7990906.html">
+    <span>MyCat配置详解</span>
+    
+
+
+</a>
+
+		</h1>
+		<div class="clear"></div>
+		<div class="postBody">
+			
+<div id="cnblogs_post_body" class="blogpost-body">
+    <p>MyCAT 配置解析</p>
+<p><br>server.xml	Mycat的配置文件，设置账号、参数等<br>schema.xml	Mycat对应的物理数据库和数据库表的配置<br>rule.xml	Mycat分片（分库分表）规则</p>
+<p>一 ：wrapper.conf<br>	--配置jdk<br>	wrapper.java.command=D:/Program Files/Java/jdk1.8.0_131/bin/java.exe</p>
+<p>	<br>二：server.xml<br>1、user标签 <br>	&lt;user name="root"&gt;<br>		&lt;property name="password"&gt;&lt;/property&gt;<br>		&lt;property name="schemas"&gt;TESTDB&lt;/property&gt;<br>	&lt;/user&gt;<br>	user	用户配置节点<br>	--name	登录的用户名，也就是连接Mycat的用户名<br>	--password	登录的密码，也就是连接Mycat的密码<br>	--schemas	数据库名，这里会和schema.xml中的配置关联，多个用逗号分开，例如需要这个用户需要管理两个数据库db1,db2，则配置db1,dbs	<br>	<br>2、privileges标签 <br>	对用户的 schema以及表进行精细化的DML权限控制<br>	&lt;privileges  check="false"&gt;<br>	&lt;/privileges&gt;<br>	--check		表示是否开启DML权限检查。默认是关闭。server.dtd文件中 &lt;!ELEMENT privileges (schema)*&gt; 说明可以有多个schema的配置。<br>	--dml		顺序说明：insert,update,select,delete<br>	&lt;schema name="db1" dml="0110" &gt;<br>			&lt;table name="tb01" dml="0000"&gt;&lt;/table&gt;<br>			&lt;table name="tb02" dml="1111"&gt;&lt;/table&gt;<br>	&lt;/schema&gt;<br>			db1的权限是update,select。 <br>			tb01的权限是啥都不能干。 <br>			tb02的权限是insert,update,select,delete。 <br>			其他表默认是udpate,select。</p>
+<p>2. system标签<br>	这个标签内嵌套的所有 property 标签都与系统配置有关。<br>	&lt;property name="charset"&gt;utf8&lt;/property&gt; <br>	字符集<br>	&lt;property name="processors"&gt;1&lt;/property&gt; <br>	处理线程数量，默认是cpu数量。</p>
+<p>	&lt;property name="processorBufferChunk"&gt;4096&lt;/property&gt; <br>	每次读取留的数量，默认4096。</p>
+<p>	&lt;property name="processorBufferPool"&gt;409600&lt;/property&gt;<br>	创建共享buffer需要占用的总空间大小。processorBufferChunk*processors*100。</p>
+<p>	&lt;property name="processorBufferPoolType"&gt;0&lt;/property&gt;<br>	默认为0。0表示DirectByteBufferPool，1表示ByteBufferArena。</p>
+<p>	&lt;property name="processorBufferLocalPercent"&gt;100&lt;/property&gt;<br>	二级共享buffer是processorBufferPool的百分比，这里设置的是百分比。</p>
+<p>	&lt;property name="sequnceHandlerType"&gt;100&lt;/property&gt;<br>	全局ID生成方式。(0:为本地文件方式，1:为数据库方式；2:为时间戳序列方式；3:为ZK生成ID；4:为ZK递增ID生成。</p>
+<p>	&lt;property name="useCompression"&gt;1&lt;/property&gt;<br>	是否开启mysql压缩协议。1为开启，0为关闭，默认关闭。</p>
+<p>	&lt;property name="packetHeaderSize"&gt;4&lt;/property&gt; <br>	指定 Mysql 协议中的报文头长度。默认 4。</p>
+<p>	&lt;property name="maxPacketSize"&gt;16M&lt;/property&gt;<br>	指定 Mysql 协议可以携带的数据最大长度。默认 16M。</p>
+<p>	&lt;property name="idleTimeout"&gt;1800000&lt;/property&gt;<br>	指定连接的空闲超时时间。某连接在发起空闲检查下，发现距离上次使用超过了空闲时间，那么这个连接会被回收，就是被直接的关闭掉。默认 30 分钟，单位毫秒。</p>
+<p>	&lt;property name="txIsolation"&gt;3&lt;/property&gt;<br>	前端连接的初始化事务隔离级别，只在初始化的时候使用，后续会根据客户端传递过来的属性对后端数据库连接进行同步。默认为 REPEATED_READ，设置值为数字默认 3。 <br>	READ_UNCOMMITTED = 1; <br>	READ_COMMITTED = 2; <br>	REPEATED_READ = 3; <br>	SERIALIZABLE = 4;</p>
+<p>	&lt;property name="sqlExecuteTimeout"&gt;300&lt;/property&gt;<br>	SQL 执行超时的时间，Mycat 会检查连接上最后一次执行 SQL 的时间，若超过这个时间则会直接关闭这连接。默认时间为 300 秒，单位秒。</p>
+<p>	&lt;property name="processorCheckPeriod"&gt;1000&lt;/property&gt;<br>	清理 NIOProcessor 上前后端空闲、超时和关闭连接的间隔时间。默认是 1 秒，单 <br>	位毫秒。</p>
+<p>	&lt;property name="dataNodeIdleCheckPeriod"&gt;300000&lt;/property&gt; <br>	对后端连接进行空闲、超时检查的时间间隔，默认是 300 秒，单位毫秒。</p>
+<p>	&lt;property name="dataNodeHeartbeatPeriod"&gt;10000&lt;/property&gt;<br>	对后端所有读、写库发起心跳的间隔时间，默认是 10 秒，单位毫秒。</p>
+<p>	&lt;property name="bindIp"&gt;0.0.0.0&lt;/property&gt;<br>	mycat 服务监听的 IP 地址，默认值为 0.0.0.0。</p>
+<p>	&lt;property name="serverPort"&gt;8066&lt;/property&gt;<br>	定义 mycat 的使用端口，默认值为 8066。</p>
+<p>	&lt;property name="managerPort"&gt;9066&lt;/property&gt;<br>	定义 mycat 的管理端口，默认值为 9066。</p>
+<p>	&lt;property name="fakeMySQLVersion"&gt;5.6&lt;/property&gt;<br>	mycat 模拟的 mysql 版本号，默认值为 5.6 版本，如非特需，不要修改这个值，目前支持设置 5.5,5.6,5.7 版本，其他版本可能会有问题。</p>
+<p>	&lt;property name="useSqlStat"&gt;0&lt;/property&gt;  <br>	是否开启实时统计。1为开启；0为关闭 。</p>
+<p>	&lt;property name="useGlobleTableCheck"&gt;0&lt;/property&gt;   <br>	是否开启全局表一致性检测。1为开启；0为关闭 。</p>
+<p>	&lt;property name="handleDistributedTransactions"&gt;0&lt;/property&gt;<br>	分布式事务开关。0为不过滤分布式事务；1为过滤分布式事务；2 为不过滤分布式事务,但是记录分布式事务日志。</p>
+<p>	&lt;property name="maxStringLiteralLength"&gt;65535&lt;/property&gt;<br>	默认是65535。 64K 用于sql解析时最大文本长度 <br>	以上举例的属性仅仅是一部分，可以配置的变量很多，具体可以查看SystemConfig这个类的属性内容。 <br>	System标签下的属性，一般是上线后，需要根据实际运行的情况，分析后调优的时候进行修改。<br>	<br>	<br>3. Firewall标签<br>	顾名思义，这个就是关于防火墙的设置，也就是在网络层对请求的地址进行限制，主要是从安全角度来保证Mycat不被匿名IP进行访问<br>	&lt;firewall&gt; <br>		   &lt;whitehost&gt;<br>			  &lt;host host="127.0.0.1" user="mycat"/&gt;<br>			  &lt;host host="127.0.0.2" user="mycat"/&gt;<br>		   &lt;/whitehost&gt;<br>		   &lt;blacklist check="false"&gt;<br>		   &lt;/blacklist&gt;<br>	&lt;/firewall&gt;<br>	设置很简单，很容易理解，只要设置了白名单，表示开启了防火墙，只有白名单的连接才可以进行连接。</p>
+<p>&nbsp;</p>
+<p>三：schema.xml<br>	--schema	数据库设置，此数据库为逻辑数据库，name与server.xml中schema对应<br>	--dataNode	分片信息，也就是分库相关配置<br>	--dataHost	物理数据库，真正存储数据的数据库<br>1、schema 标签<br>	&lt;schema name="TESTDB" checkSQLschema="false" sqlMaxLimit="10"&gt;<br>	&lt;/schema&gt;<br>		schema标签用来定义mycat实例中的逻辑库，mycat可以有多个逻辑库，每个逻辑库都有自己的相关配置。可以使用schema标签来划分这些不同的逻辑库<br>	如果不配置schema标签，所有表的配置会属于同一个默认的逻辑库。逻辑库的概念和MySql的database的概念一样，我们在查询两个不同逻辑库中的表的时候，需要切换到该逻辑库下进行查询。<br>	<br>	--name				逻辑数据库名，与server.xml中的schema对应<br>	--checkSQLschema	数据库前缀相关设置，当该值为true时，例如我们执行语句select * from TESTDB.company 。mycat会把语句修改为 select * from company 去掉TESTDB。<br>	--sqlMaxLimit	  	当该值设置为某个数值时，每条执行的sql语句，如果没有加上limit语句，Mycat会自动加上对应的值。不写的话，默认返回所有的值。<br>						需要注意的是，如果运行的schema为非拆分库的，那么该属性不会生效。需要自己sql语句加limit。<br>2、table 标签<br>	&lt;table name="travelrecord" dataNode="dn1,dn2,dn3" rule="auto-sharding-long" /&gt;<br>	&lt;table name="company" primaryKey="ID" type="global" dataNode="dn1,dn2,dn3" /&gt;<br>	--name			表名，物理数据库中表名<br>	--dataNode		表存储到哪些节点，多个节点用逗号分隔。节点为下文dataNode设置的name<br>	--primaryKey	主键字段名，自动生成主键时需要设置<br>	--autoIncrement	是否自增<br>	--rule			分片规则名，具体规则下文rule详细介绍<br>	--type 			该属性定义了逻辑表的类型，目前逻辑表只有全局表和普通表。全局表： global 普通表：无 <br>					注：全局表查询任意节点，普通表查询所有节点效率低<br>	--autoIncrement mysql对非自增长主键，使用last_insert_id() 是不会返回结果的，只会返回0.所以，只有定义了自增长主键的表，才可以用last_insert_id()返回主键值。<br>					mycat提供了自增长主键功能，但是对应的mysql节点上数据表，没有auto_increment,那么在mycat层调用last_insert_id()也是不会返回结果的。<br>	--needAddLimit 	指定表是否需要自动的在每个语句后面加上limit限制，由于使用了分库分表，数据量有时候会特别庞大，这时候执行查询语句，<br>					忘记加上limt就会等好久，所以mycat自动为我们加上了limit 100，这个属性默认为true，可以自己设置为false禁用。如果使用这个功能，最好配合使用数据库模式的全局序列。<br>	--subTables		分表，分表目前不支持Join。</p>
+<p>	1) childTable标签<br>		&lt;table name="customer" primaryKey="ID" dataNode="dn1,dn2" rule="sharding-by-intfile"&gt;   <br>			&lt;childTable name="c_a" primaryKey="ID" joinKey="customer_id" parentKey="id" /&gt;<br>		&lt;/table&gt;<br>		--childTable 标签用于定义 E-R 分片的子表。通过标签上的属性与父表进行关联。 <br>		--name			子表的名称<br>		--joinKey		子表中字段的名称<br>		--parentKey		父表中字段名称<br>		--primaryKey	同Table<br>		--needAddLimit	同Table<br>	<br>3、dataNode标签<br>	&lt;dataNode name="dn1" dataHost="localhost1" database="db1" /&gt;<br>		datanode标签定义了mycat中的数据节点，也就是我们所说的数据分片。一个datanode标签就是一个独立的数据分片。<br>    例子中的表述的意思为，使用名字为localhost1数据库实例上的db1物理数据库，这就组成一个数据分片，最后我们用dn1来标示这个分片。<br>	--name		定义数据节点的名字，这个名字需要唯一。我们在table标签上用这个名字来建立表与分片对应的关系<br>	--dataHost	用于定义该分片属于哪个数据库实例，属性与datahost标签上定义的name对应<br>	--database	用于定义该分片属于数据库实例上 的具体库。<br>	<br>	<br>4、dataHost标签<br>	这个标签直接定义了具体数据库实例，读写分离配置和心跳语句。<br>	&lt;dataHost name="localhost1" maxCon="1000" minCon="10" balance="0" writeType="0" dbType="mysql" dbDriver="native" switchType="1"  slaveThreshold="100"&gt;<br>		&lt;heartbeat&gt;select user()&lt;/heartbeat&gt;<br>		&lt;writeHost host="hostM1" url="192.168.1.100:3306" user="root" password="123456"&gt;<br>			&lt;readHost host="hostS1" url="192.168.1.101:3306" user="root" password="123456" /&gt;<br>		&lt;/writeHost&gt;<br>	&lt;/dataHost&gt;<br>	--name		唯一标示dataHost标签，供上层使用<br>	--maxCon	指定每个读写实例连接池的最大连接。<br>	--minCon		指定每个读写实例连接池的最小连接，初始化连接池的大小<br>	--balance		负载均称类型<br>					balance="0"：不开启读写分离机制，所有读操作都发送到当前可用的writeHost上<br>					balance="1"：全部的readHost与stand by writeHost参与select语句的负载均衡，简单的说，当双主双从模式（M1-S1，M2-S2 并且M1 M2互为主备），正常情况下，M2,S1,S2都参与select语句的负载均衡。<br>					balance="2"：所有读操作都随机的在writeHost、readHost上分发<br>					balance="3"：所有读请求随机的分发到writeHst对应的readHost执行，writeHost不负担读写压力。（1.4之后版本有）<br>	--writeType		负载均衡类型。<br>					writeType="0", 所有写操作发送到配置的第一个 writeHost，第一个挂了切到还生存的第二个writeHost，重新启动后已切换后的为准，切换记录在配置文件中:dnindex.properties .<br>					writeType="1"，所有写操作都随机的发送到配置的 writeHost。1.5以后版本废弃不推荐。<br>	--switchType	-1不自动切换<br>					1 默认值 自动切换<br>					2 基于MySql主从同步的状态决定是否切换心跳语句为 show slave status<br>					3 基于mysql galary cluster 的切换机制（适合集群）1.4.1 心跳语句为 show status like 'wsrep%'<br>	--dbType		指定后端链接的数据库类型目前支持二进制的mysql协议，还有其他使用jdbc链接的数据库，例如：mongodb，oracle，spark等<br>	--dbDriver		指定连接后段数据库使用的driver，目前可选的值有native和JDBC。使用native的话，因为这个值执行的是二进制的mysql协议，所以可以使用mysql和maridb，其他类型的则需要使用JDBC驱动来支持。<br>					如果使用JDBC的话需要符合JDBC4标准的驱动jar 放到mycat\lib目录下，并检查驱动jar包中包括如下目录结构文件 META-INF\services\java.sql.Driver。  在这个文件写上具体的driver类名，例如com.mysql.jdbc.Driver<br>					writeHost readHost指定后端数据库的相关配置给mycat，用于实例化后端连接池。<br>	--tempReadHostAvailable	<br>					如果配置了这个属性 writeHost 下面的 readHost 仍旧可用，默认 0 可配置（0、1）。<br>	<br>	1）heartbeat标签 <br>			这个标签内指明用于和后端数据库进行心跳检查的语句。 <br>		例如：MYSQL 可以使用 select user()，Oracle 可以使用 select 1 from dual 等。<br>	2) writeHost /readHost 标签 <br>			这两个标签都指定后端数据库的相关配置，用于实例化后端连接池。唯一不同的是，writeHost 指定写实例、readHost 指定读实例。 <br>		在一个 dataHost 内可以定义多个 writeHost 和 readHost。但是，如果 writeHost 指定的后端数据库宕机，那么这个 writeHost 绑定的所有 readHost 都将不可用。<br>		另一方面，由于这个 writeHost 宕机，系统会自动的检测到，并切换到备用的 writeHost 上去。这两个标签的属性相同，这里就一起介绍。<br>				<br>				--host			用于标识不同实例，一般 writeHost 我们使用*M1，readHost 我们用*S1。<br>				--url			后端实例连接地址。Native：地址：端口 JDBC：jdbc的url<br>				--password		后端存储实例需要的密码<br>				--user			后端存储实例需要的用户名字<br>				--weight		权重 配置在 readhost 中作为读节点的权重<br>				--usingDecrypt	是否对密码加密，默认0。具体加密方法看官方文档。<br>四： Rule.xml<br>	ule.xml 里面就定义了我们对表进行拆分所涉及到的规则定义。我们可以灵活的对表使用不同的分片算法，或者对表使用相同的算法但具体的参数不同。 包含的标签 tableRule 和 function。<br>				<br>1. tableRule 标签</p>
+<p>	这个标签定义表规则。 <br>	定义的表规则，在 schema.xml：<br>	&lt;tableRule name="rule1"&gt;<br>		&lt;rule&gt;<br>			&lt;columns&gt;id&lt;/columns&gt;<br>			&lt;algorithm&gt;func1&lt;/algorithm&gt;<br>		&lt;/rule&gt;<br>	&lt;/tableRule&gt;<br>	--name 			属性指定唯一的名字，用于标识不同的表规则。 内嵌的 rule 标签则指定对物理表中的哪一列进行拆分和使用什么路由算法。 <br>	--columns 		内指定要拆分的列名字。 <br>	--algorithm 	使用 function 标签中的 name 属性。连接表规则和具体路由算法。当然，多个表规则可以连接到 同一个路由算法上。table 标签内使用。让逻辑表使用这个规则进行分片。	<br>2. function 标签<br>	&lt;function name="hash-int" class="org.opencloudb.route.function.PartitionByFileMap"&gt;<br>		&lt;property name="mapFile"&gt;partition-hash-int.txt&lt;/property&gt;<br>	&lt;/function&gt;<br>	--name 			指定算法的名字。 <br>	--class 		制定路由算法具体的类名字。 <br>	--property 		为具体算法需要用到的一些属性。</p>
+</div>
+<div id="MySignature"></div>
+<div class="clear"></div>
+<div id="blog_post_info_block"><div id="BlogPostCategory">
+    分类: 
+            <a href="https://www.cnblogs.com/fxwl/category/867631.html" target="_blank">技术笔记</a>,             <a href="https://www.cnblogs.com/fxwl/category/1126877.html" target="_blank">mycat</a></div>
+<div id="EntryTag">
+    标签: 
+            <a href="https://www.cnblogs.com/fxwl/tag/mycat%E9%85%8D%E7%BD%AE%E8%AF%A6%E8%A7%A3/">mycat配置详解</a>,             <a href="https://www.cnblogs.com/fxwl/tag/server/">server</a>,             <a href="https://www.cnblogs.com/fxwl/tag/schema/">schema</a>,             <a href="https://www.cnblogs.com/fxwl/tag/rule/">rule</a></div>
+
+    <div id="blog_post_info">
+<div id="green_channel">
+        <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(7990906,cb_blogId,1);green_channel_success(this,&#39;谢谢推荐！&#39;);">好文要顶</a>
+        <a id="green_channel_follow" onclick="follow(&#39;27b4ef75-8054-e611-9fc1-ac853d9f53cc&#39;);" href="javascript:void(0);">关注我</a>
+    <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a>
+    <a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="./MyCat配置详解 - 安宁_ - 博客园_files/icon_weibo_24.png" alt=""></a>
+    <a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareOnWechat()"><img src="./MyCat配置详解 - 安宁_ - 博客园_files/wechat.png" alt=""></a>
+</div>
+<div id="author_profile">
+    <div id="author_profile_info" class="author_profile_info">
+            <a href="https://home.cnblogs.com/u/fxwl/" target="_blank"><img src="./MyCat配置详解 - 安宁_ - 博客园_files/sample_face.gif" class="author_avatar" alt=""></a>
+        <div id="author_profile_detail" class="author_profile_info">
+            <a href="https://home.cnblogs.com/u/fxwl/">安宁~</a><br>
+            <a href="https://home.cnblogs.com/u/fxwl/followees/">关注 - 2</a><br>
+            <a href="https://home.cnblogs.com/u/fxwl/followers/">粉丝 - 18</a>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="author_profile_honor"></div>
+    <div id="author_profile_follow">
+                <a href="javascript:void(0);" onclick="follow(&#39;27b4ef75-8054-e611-9fc1-ac853d9f53cc&#39;);return false;">+加关注</a>
+    </div>
+</div>
+<div id="div_digg">
+    <div class="diggit" onclick="votePost(7990906,&#39;Digg&#39;)">
+        <span class="diggnum" id="digg_count">4</span>
+    </div>
+    <div class="buryit" onclick="votePost(7990906,&#39;Bury&#39;)">
+        <span class="burynum" id="bury_count">0</span>
+    </div>
+    <div class="clear"></div>
+    <div class="diggword" id="digg_tips">
+    </div>
+</div>
+
+<script type="text/javascript">
+    currentDiggType = 0;
+</script></div>
+    <div class="clear"></div>
+    <div id="post_next_prev">
+
+    <a href="https://www.cnblogs.com/fxwl/p/7886761.html" class="p_n_p_prefix">« </a> 上一篇：    <a href="https://www.cnblogs.com/fxwl/p/7886761.html" title="发布于 2017-11-23 20:11">maven 整合支付宝，导入alipay-sdk-java包到本地仓库</a>
+    <br>
+    <a href="https://www.cnblogs.com/fxwl/p/7992382.html" class="p_n_p_prefix">» </a> 下一篇：    <a href="https://www.cnblogs.com/fxwl/p/7992382.html" title="发布于 2017-12-06 15:37">mycat 入门教程</a>
+
+</div>
+</div>
+		</div>
+		<div class="postDesc">posted @ 
+<span id="post-date">2017-12-06 08:29</span>&nbsp;
+<a href="https://www.cnblogs.com/fxwl/">安宁~</a>&nbsp;
+阅读(<span id="post_view_count">36131</span>)&nbsp;
+评论(<span id="post_comment_count">0</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=7990906" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(7990906);return false;">收藏</a></div>
+	</div>
+	
+	
+</div><!--end: topics 文章、评论容器-->
+<script src="./MyCat配置详解 - 安宁_ - 博客园_files/highlight.min.js"></script>
+<script>markdown_highlight();</script>
+<script>
+    var allowComments = true, cb_blogId = 297248, cb_blogApp = 'fxwl', cb_blogUserGuid = '27b4ef75-8054-e611-9fc1-ac853d9f53cc';
+    var cb_entryId = 7990906, cb_entryCreatedDate = '2017-12-06 08:29', cb_postType = 1;
+    updatePostStats(
+        [cb_entryId],
+        function(id, count) { $("#post_view_count").text(count) },
+        function(id, count) { $("#post_comment_count").text(count) })
+</script>
+<a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="https://www.cnblogs.com/fxwl/p/7990906.html#" onclick="return RefreshPage();">刷新页面</a><a href="https://www.cnblogs.com/fxwl/p/7990906.html#top">返回顶部</a></div>
+    <div id="comment_form_container" style="visibility: visible;"><div class="login_tips">
+    登录后才能发表评论，立即 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return login(&#39;commentform&#39;);">登录</a> 或
+    <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return register();">注册</a>，
+    <a href="https://www.cnblogs.com/">访问</a> 网站首页
+</div>
+<a href="https://www.cnblogs.com/cmt/p/14003277.html" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;T2-login-tip-aws&#39;)">写给园友们的一封求助信</a>
+</div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"><a href="http://www.softbam.com/index.htm" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;T2-ucancode-1103&#39;)">【推荐】News: 大型组态、工控、仿真、CADGIS 50万行VC++源码免费下载</a><br><a href="https://www.cnblogs.com/cmt/p/14152738.html" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;T2-丝芙兰-圣诞&#39;)">【推荐】博客园x丝芙兰-圣诞特别活动：圣诞选礼，美力送递</a><br><a href="https://brands.cnblogs.com/huawei" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;T2-华为专区&#39;)">【推荐】了不起的开发者，挡不住的华为，园子里的品牌专区</a><br><a href="https://brands.cnblogs.com/aws/free?source=CH" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;T2-AWS&#39;)">【福利】AWS携手博客园为开发者送免费套餐+50元京东E卡</a><br><a href="https://brands.cnblogs.com/agora" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;T2-声网专区&#39;)">【推荐】未知数的距离，毫秒间的传递，声网与你实时互动</a><br><a href="https://brands.cnblogs.com/aerospike" target="_blank" onclick="ga(&#39;send&#39;, &#39;event&#39;, &#39;Link&#39;, &#39;click&#39;, &#39;T2-Aerospike专区&#39;)">【推荐】新一代 NoSQL 数据库，Aerospike专区新鲜入驻</a><br></div>
+    <div id="opt_under_post"></div>
+    <div id="cnblogs_c1" class="c_ad_block">
+        <div id="div-gpt-ad-1592365906576-0" style="width: 300px; height: 250px;" data-google-query-id="CO-Xsdys4O0CFRDEfAod2gIJzQ"><div id="google_ads_iframe_/1090369/C1_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/1090369/C1_0" title="3rd party ad content" name="google_ads_iframe_/1090369/C1_0" width="300" height="250" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" data-google-container-id="1" style="border: 0px; vertical-align: bottom;" data-load-complete="true" src="./MyCat配置详解 - 安宁_ - 博客园_files/saved_resource.html"></iframe></div></div>
+    </div>
+    <div id="under_post_news"><div class="recomm-block"><b>相关博文：</b><br>·  <a title="MyCat" href="https://www.cnblogs.com/sakura-yxf/p/12020338.html" target="_blank" onclick="clickRecomItmem(12020338)">MyCat</a><br>·  <a title="MyCat（1.4）Mycat日志" href="https://www.cnblogs.com/gered/p/12098377.html" target="_blank" onclick="clickRecomItmem(12098377)">MyCat（1.4）Mycat日志</a><br>·  <a title="MyCat（1.2）Mycat的安装" href="https://www.cnblogs.com/gered/p/12091819.html" target="_blank" onclick="clickRecomItmem(12091819)">MyCat（1.2）Mycat的安装</a><br>·  <a title="MyCat（1.3）Mycat配置文件" href="https://www.cnblogs.com/gered/p/12092027.html" target="_blank" onclick="clickRecomItmem(12092027)">MyCat（1.3）Mycat配置文件</a><br>·  <a title="MyCat（1.1）Mycat基本概念" href="https://www.cnblogs.com/gered/p/12082605.html" target="_blank" onclick="clickRecomItmem(12082605)">MyCat（1.1）Mycat基本概念</a><br>»  <a target="_blank" href="https://recomm.cnblogs.com/blogpost/7990906">更多推荐...</a></div></div>
+    <div id="cnblogs_c2" class="c_ad_block">
+        <div id="div-gpt-ad-1592366332455-0" style="width: 468px; height: 60px;" data-google-query-id="CPCXsdys4O0CFRDEfAod2gIJzQ"><div id="google_ads_iframe_/1090369/C2_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/1090369/C2_0" title="3rd party ad content" name="google_ads_iframe_/1090369/C2_0" width="468" height="60" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" data-google-container-id="2" style="border: 0px; vertical-align: bottom;" data-load-complete="true" src="./MyCat配置详解 - 安宁_ - 博客园_files/saved_resource(1).html"></iframe></div></div>
+    </div>
+    <div id="under_post_kb">
+<div class="itnews c_ad_block">
+    <b>最新 IT 新闻</b>:
+    <br>
+ ·          <a href="https://news.cnblogs.com/n/683699/" target="_blank">滴滴版“花呗”上线，互联网巨头们为何钟爱搞金融？</a>
+        <br>
+ ·          <a href="https://news.cnblogs.com/n/683698/" target="_blank">陆奇最新万字演讲：世界新格局下的创业创新机会</a>
+        <br>
+ ·          <a href="https://news.cnblogs.com/n/683697/" target="_blank">蓝驰创投陈维广：新能源市场存在泡沫 但市场才刚开始</a>
+        <br>
+ ·          <a href="https://news.cnblogs.com/n/683696/" target="_blank">网红孵化但难孵者众 网红孵化基地要凉了？</a>
+        <br>
+ ·          <a href="https://news.cnblogs.com/n/683695/" target="_blank">研究人员研发出一种只在癌细胞内溶解的载药纳米颗粒</a>
+        <br>
+    » <a href="https://news.cnblogs.com/" title="IT 新闻" target="_blank">更多新闻...</a>
+</div></div>
+    <div id="HistoryToday" class="c_ad_block"></div>
+    <script type="text/javascript">
+       var commentManager = new blogCommentManager();
+       commentManager.renderComments(0);
+       fixPostBody();
+       deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);       deliverT2();
+       deliverC1C2();
+       loadNewsAndKb();
+       loadBlogSignature();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);       LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+       GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+       loadOptUnderPost();
+       GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+   </script>
+</div>
+
+</div>
+
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+
+	<div id="sideBar">
+		<div id="sideBarMain">
+			<div id="sidebar_news" class="newsItem"><!--done-->
+<div class="newsItem">
+<h3 class="catListTitle">公告</h3>
+	
+<div id="blog-news">
+    
+    <div id="profile_block">
+        昵称：
+        <a href="https://home.cnblogs.com/u/fxwl/">
+            安宁~
+        </a>
+        <br>
+        园龄：
+        <a href="https://home.cnblogs.com/u/fxwl/" title="入园时间：2016-07-28">
+            4年4个月
+        </a>
+        <br>
+        粉丝：
+        <a href="https://home.cnblogs.com/u/fxwl/followers/">
+            18
+        </a>
+        <br>
+        关注：
+        <a href="https://home.cnblogs.com/u/fxwl/followees/">
+            2
+        </a>
+        <div id="p_b_follow">
+<a href="javascript:void(0)" onclick="follow(&#39;27b4ef75-8054-e611-9fc1-ac853d9f53cc&#39;)">+加关注</a></div>
+        <script>getFollowStatus('27b4ef75-8054-e611-9fc1-ac853d9f53cc');</script>
+    </div>
+</div>
+</div>
+
+</div>
+<div id="sidebar_c3"></div>
+			<div id="calendar"><div id="blog-calendar" style="">
+
+<table id="blogCalendar" class="Cal" cellspacing="0" cellpadding="0" title="Calendar" border="0">
+    <tbody>
+        <tr>
+            <td colspan="7">
+                <table class="CalTitle" cellspacing="0" border="0">
+                    <tbody>
+                        <tr>
+                            <td class="CalNextPrev">
+                                <a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2020/11/22&#39;); return false;">&lt;</a>
+                            </td>
+                            <td align="center">2020年12月</td>
+                            <td align="right" class="CalNextPrev">
+                                <a href="javascript:void(0);" onclick="loadBlogCalendar(&#39;2021/01/22&#39;); return false;">&gt;</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    <tr>
+        <th class="CalDayHeader" align="center" abbr="日" scope="col">日</th>
+        <th class="CalDayHeader" align="center" abbr="一" scope="col">一</th>
+        <th class="CalDayHeader" align="center" abbr="二" scope="col">二</th>
+        <th class="CalDayHeader" align="center" abbr="三" scope="col">三</th>
+        <th class="CalDayHeader" align="center" abbr="四" scope="col">四</th>
+        <th class="CalDayHeader" align="center" abbr="五" scope="col">五</th>
+        <th class="CalDayHeader" align="center" abbr="六" scope="col">六</th>
+    </tr>
+            <tr>
+                            <td class="CalOtherMonthDay" align="center">29</td>
+                            <td class="CalOtherMonthDay" align="center">30</td>
+                        <td class="" align="center">
+                            1
+                        </td>
+                        <td class="" align="center">
+                            2
+                        </td>
+                        <td class="" align="center">
+                            3
+                        </td>
+                        <td class="" align="center">
+                            4
+                        </td>
+                    <td class="CalWeekendDay" align="center">
+                        5
+                    </td>
+            </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            6
+                        </td>
+                            <td class="" align="center">
+                                7
+                            </td>
+                            <td class="" align="center">
+                                8
+                            </td>
+                            <td class="" align="center">
+                                9
+                            </td>
+                            <td class="" align="center">
+                                10
+                            </td>
+                            <td class="" align="center">
+                                11
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            12
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            13
+                        </td>
+                            <td class="" align="center">
+                                14
+                            </td>
+                            <td class="" align="center">
+                                15
+                            </td>
+                            <td class="" align="center">
+                                16
+                            </td>
+                            <td class="" align="center">
+                                17
+                            </td>
+                            <td class="" align="center">
+                                18
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            19
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            20
+                        </td>
+                            <td class="" align="center">
+                                21
+                            </td>
+                            <td class="CalTodayDay" align="center">
+                                22
+                            </td>
+                            <td class="" align="center">
+                                23
+                            </td>
+                            <td class="" align="center">
+                                24
+                            </td>
+                            <td class="" align="center">
+                                25
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            26
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            27
+                        </td>
+                            <td class="" align="center">
+                                28
+                            </td>
+                            <td class="" align="center">
+                                29
+                            </td>
+                            <td class="" align="center">
+                                30
+                            </td>
+                            <td class="" align="center">
+                                31
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                1
+                            </td>
+                        <td class="CalOtherMonthDay" align="center">
+                            2
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalOtherMonthDay" align="center">
+                            3
+                        </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                4
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                5
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                6
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                7
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                8
+                            </td>
+                        <td class="CalOtherMonthDay" align="center">
+                            9
+                        </td>
+                </tr>
+    </tbody>
+</table></div><script>loadBlogDefaultCalendar();</script></div>
+			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"><!-- 搜索 -->
+<div id="sidebar_search" class="sidebar-block">
+    <div id="sidebar_search" class="mySearch">
+        <h3 class="catListTitle">搜索</h3>
+        <div id="sidebar_search_box">
+            <div id="widget_my_zzk" class="div_my_zzk">
+                <input type="text" id="q" onkeydown="return zzk_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="zzk_go()" type="button" value="找找看" id="btnZzk" class="btn_my_zzk">
+            </div>
+            <div id="widget_my_google" class="div_my_zzk">
+                <input type="text" name="google_q" id="google_q" onkeydown="return google_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="google_go()" type="button" value="谷歌搜索" class="btn_my_zzk">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 常用链接 -->
+<div id="sidebar_shortcut" class="sidebar-block"><div class="catListLink">
+<h3 class="catListTitle">
+常用链接
+</h3>
+<ul>
+    
+<li><a href="https://www.cnblogs.com/fxwl/p/" title="我的博客的随笔列表">我的随笔</a></li>
+<li><a href="https://www.cnblogs.com/fxwl/MyComments.html" title="我的发表过的评论列表">我的评论</a></li>
+<li><a href="https://www.cnblogs.com/fxwl/OtherPosts.html" title="我评论过的随笔列表">我的参与</a></li>
+<li><a href="https://www.cnblogs.com/fxwl/RecentComments.html" title="我的博客的评论列表">最新评论</a></li>
+<li><a href="https://www.cnblogs.com/fxwl/tag/" title="我的博客的标签列表">我的标签</a></li>
+
+    <li><a id="itemListLink" onclick="this.blur();WarpClass(&#39;itemListLink&#39;, &#39;itemListLin_con&#39;);return false;" href="https://www.cnblogs.com/fxwl/p/7990906.html#">更多链接</a></li>
+</ul>
+</div>
+
+</div>
+
+<!-- 最新随笔 -->
+
+
+<!-- 我的标签 -->
+<div id="sidebar_toptags" class="sidebar-block"><div class="catListTag">
+<h3 class="catListTitle">我的标签</h3>
+<ul>
+        <li>
+            <a href="https://www.cnblogs.com/fxwl/tag/Excel/">Excel<span class="tag-count">(3)</span></a>
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/fxwl/tag/POI/">POI<span class="tag-count">(2)</span></a>
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/fxwl/tag/web/">web<span class="tag-count">(2)</span></a>
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/fxwl/tag/%E8%A7%A3%E6%9E%90Excel/">解析Excel<span class="tag-count">(2)</span></a>
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/fxwl/tag/%E7%88%AC%E8%99%AB/">爬虫<span class="tag-count">(2)</span></a>
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/fxwl/tag/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/">文件上传<span class="tag-count">(2)</span></a>
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/fxwl/tag/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E5%92%8C%E4%B8%8B%E8%BD%BD/">文件上传和下载<span class="tag-count">(1)</span></a>
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/fxwl/tag/%E6%97%A0%E6%B3%95%E5%90%AF%E5%8A%A8/">无法启动<span class="tag-count">(1)</span></a>
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/fxwl/tag/%E6%97%A0%E9%A9%B1%E5%8A%A8%E6%89%93%E5%8D%B0/">无驱动打印<span class="tag-count">(1)</span></a>
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/fxwl/tag/%E4%BF%AE%E6%94%B9%E7%BC%96%E7%A0%81/">修改编码<span class="tag-count">(1)</span></a>
+        </li>
+    <li>
+        <a href="https://www.cnblogs.com/fxwl/tag/">更多</a>
+    </li>
+
+</ul>
+</div>
+
+</div>
+
+<!-- 积分与排名 -->
+
+
+<!-- 随笔分类、随笔档案、文章分类、新闻分类、相册、链接 -->
+<div id="sidebar_categories">
+
+    <div class="catListPostCategory">
+        <h3 class="catListTitle">
+            
+随笔分类
+
+
+
+        </h3>
+
+        <ul>
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/fxwl/category/861205.html" rel="" target="">
+    ibatis(1)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/fxwl/category/1126880.html" rel="" target="">
+    java(5)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/fxwl/category/874500.html" rel="" target="">
+    javascript(6)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/fxwl/category/1126879.html" rel="" target="">
+    lunix(1)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/fxwl/category/1126877.html" rel="" target="">
+    mycat(2)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/fxwl/category/882428.html" rel="" target="">
+    MyEclipse(4)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/fxwl/category/867631.html" rel="" target="">
+    技术笔记(2)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/fxwl/category/1126882.html" rel="" target="">
+    支付(2)
+</a>
+ 
+
+                </li>                
+            
+        </ul>
+    </div>    
+    <div class="catListPostArchive">
+        <h3 class="catListTitle">
+            
+随笔档案
+
+
+
+        </h3>
+
+        <ul>
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/fxwl/archive/2017/12.html" rel="" target="">
+    2017年12月(2)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/fxwl/archive/2017/11.html" rel="" target="">
+    2017年11月(1)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/fxwl/archive/2017/10.html" rel="" target="">
+    2017年10月(1)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/fxwl/archive/2017/07.html" rel="" target="">
+    2017年7月(1)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/fxwl/archive/2017/04.html" rel="" target="">
+    2017年4月(1)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/fxwl/archive/2017/03.html" rel="" target="">
+    2017年3月(2)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/fxwl/archive/2017/02.html" rel="" target="">
+    2017年2月(1)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/fxwl/archive/2017/01.html" rel="" target="">
+    2017年1月(2)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/fxwl/archive/2016/11.html" rel="" target="">
+    2016年11月(3)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/fxwl/archive/2016/10.html" rel="" target="">
+    2016年10月(4)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/fxwl/archive/2016/09.html" rel="" target="">
+    2016年9月(2)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/fxwl/archive/2016/08.html" rel="" target="">
+    2016年8月(8)
+</a>
+ 
+
+                </li>                
+            
+        </ul>
+    </div>    
+</div>
+
+<!-- 最新评论 -->
+<div id="sidebar_recentcomments" class="sidebar-block"><div class="catListComment">
+<h3 class="catListTitle">最新评论</h3>
+
+	<div class="RecentCommentBlock">
+        <ul>
+                    <li class="recent_comment_title"><a href="https://www.cnblogs.com/fxwl/p/7641724.html">1. Re:Eclipse闪退/打不开/无法启动/一闪而过</a></li>
+                    <li class="recent_comment_body">6. 解决了。感谢</li>
+                    <li class="recent_comment_author">--bcdea</li>
+                    <li class="recent_comment_title"><a href="https://www.cnblogs.com/fxwl/p/7641724.html">2. Re:Eclipse闪退/打不开/无法启动/一闪而过</a></li>
+                    <li class="recent_comment_body">6,也没有用</li>
+                    <li class="recent_comment_author">--lhclqslove</li>
+                    <li class="recent_comment_title"><a href="https://www.cnblogs.com/fxwl/p/6322442.html">3. Re:svn提交失败  ：“svn: E200007: Commit failed”</a></li>
+                    <li class="recent_comment_body">eclipse插件照这个操作没用。去官网 下载一个新svn客户端，再下载一个中文语言包。打开客户端，右键项目，选 “清理”，勾选上 “破除写锁”...</li>
+                    <li class="recent_comment_author">--孤∮帆</li>
+                    <li class="recent_comment_title"><a href="https://www.cnblogs.com/fxwl/p/7641724.html">4. Re:Eclipse闪退/打不开/无法启动/一闪而过</a></li>
+                    <li class="recent_comment_body">不错，很好用</li>
+                    <li class="recent_comment_author">--陈疯子123</li>
+                    <li class="recent_comment_title"><a href="https://www.cnblogs.com/fxwl/p/6322442.html">5. Re:svn提交失败  ：“svn: E200007: Commit failed”</a></li>
+                    <li class="recent_comment_body">成功了，多谢</li>
+                    <li class="recent_comment_author">--BobLiang</li>
+        </ul>
+    </div>
+</div>
+
+</div>
+
+
+<!-- 阅读排行榜 -->
+<div id="sidebar_topviewedposts" class="sidebar-block"><div class="catListView">
+<h3 class="catListTitle">阅读排行榜</h3>
+	<div id="TopViewPostsBlock">
+        <ul style="word-break:break-all">
+                    <li>
+                        <a href="https://www.cnblogs.com/fxwl/p/5961372.html">
+                            1. HTML CSS + DIV实现整体布局(69747)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/fxwl/p/7990906.html">
+                            2. MyCat配置详解(36129)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/fxwl/p/6322442.html">
+                            3. svn提交失败  ：“svn: E200007: Commit failed”(23597)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/fxwl/p/5725476.html">
+                            4. ibatis中：org.springframework.jdbc.UncategorizedSQLException：异常(23201)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/fxwl/p/7641724.html">
+                            5. Eclipse闪退/打不开/无法启动/一闪而过(18251)
+                        </a>
+                    </li>
+        </ul>
+    </div>
+</div>
+
+</div>
+
+<!-- 评论排行榜 -->
+<div id="sidebar_topcommentedposts" class="sidebar-block"><div class="catListFeedback">
+<h3 class="catListTitle">评论排行榜</h3>
+	<div id="TopFeedbackPostsBlock">
+        <ul style="word-break:break-all">
+                    <li>
+                        <a href="https://www.cnblogs.com/fxwl/p/6000094.html">
+                            1. 微信支付---统一下单(10)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/fxwl/p/7641724.html">
+                            2. Eclipse闪退/打不开/无法启动/一闪而过(5)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/fxwl/p/6322442.html">
+                            3. svn提交失败  ：“svn: E200007: Commit failed”(2)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/fxwl/p/5896893.html">
+                            4. POI上传，导入excel文件到服务器1(2)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/fxwl/p/7886761.html">
+                            5. maven 整合支付宝，导入alipay-sdk-java包到本地仓库(1)
+                        </a>
+                    </li>
+        </ul>
+    </div>
+</div>
+
+</div>
+
+<!-- 推荐排行榜 -->
+<div id="sidebar_topdiggedposts" class="sidebar-block"><div id="topdigg_posts_wrap">
+    <div class="catListView">
+        <h3 class="catListTitle">推荐排行榜</h3>
+        <div id="TopDiggPostsBlock">
+            <ul style="word-break: break-all">
+                        <li>
+                            <a href="https://www.cnblogs.com/fxwl/p/7990906.html">
+                                1. MyCat配置详解(4)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/fxwl/p/5961372.html">
+                                2. HTML CSS + DIV实现整体布局(4)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/fxwl/p/7641724.html">
+                                3. Eclipse闪退/打不开/无法启动/一闪而过(2)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/fxwl/p/6000094.html">
+                                4. 微信支付---统一下单(2)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/fxwl/p/6597918.html">
+                                5. Java实现POS打印机自定义无驱打印(1)
+                            </a>
+                        </li>
+            </ul>
+        </div>
+    </div>
+</div></div></div>
+                    <script>loadBlogSideColumn();</script>
+			</div>
+			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright © 2020 安宁~
+<br><span id="poweredby">Powered by .NET 5.0.1-servicing.20575.16 on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+
+
+<iframe id="google_osd_static_frame_744505734161" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;" src="./MyCat配置详解 - 安宁_ - 博客园_files/saved_resource(2).html"></iframe></body></html>
