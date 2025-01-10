@@ -1,0 +1,2 @@
+微服项目开发/software/nacos-server-2.2.0/nacos/target/nacos-server.jar filter=lfs diff=lfs merge=lfs -text
+微服项目开发/software/MinIO/minio.exe filter=lfs diff=lfs merge=lfs -text
